@@ -79,7 +79,7 @@ android {
 
     namespace "com.foodpilotrn"
     defaultConfig {
-        applicationId "com.foodpilotrn"
+        applicationId "com.nexus.tastepilot"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,0 +1,103 @@
+import {MealSuggestion, Restaurant} from '../types';
+
+export const dailyMock: MealSuggestion[] = [
+  {
+    id: 'daily-1',
+    name: 'Chicken Teriyaki Bowl',
+    cuisine: 'Japanese',
+    estimatedMin: 12,
+    estimatedMax: 18,
+    reason: 'Fits your budget, matches your preferences, and is different from your recent meals.',
+    searchKeyword: 'chicken teriyaki',
+    imageUrl: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'daily-2',
+    name: 'Bibimbap',
+    cuisine: 'Korean',
+    estimatedMin: 13,
+    estimatedMax: 19,
+    reason: 'A balanced rice bowl and a good variety pick for today.',
+    searchKeyword: 'bibimbap',
+    imageUrl: 'https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'daily-3',
+    name: 'Mediterranean Chicken Plate',
+    cuisine: 'Mediterranean',
+    estimatedMin: 14,
+    estimatedMax: 20,
+    reason: 'High-protein option that usually fits a moderate lunch budget.',
+    searchKeyword: 'mediterranean chicken plate',
+    imageUrl: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80',
+  },
+];
+
+export const travelMock: MealSuggestion[] = [
+  {
+    id: 'travel-1',
+    name: 'Takoyaki',
+    cuisine: 'Japanese',
+    estimatedMin: 6,
+    estimatedMax: 12,
+    reason: 'A well-known Osaka street-food specialty and an easy local dish to try.',
+    searchKeyword: 'takoyaki',
+    localSpecialty: true,
+    imageUrl: 'https://images.unsplash.com/photo-1615361200141-f45040f367be?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'travel-2',
+    name: 'Okonomiyaki',
+    cuisine: 'Japanese',
+    estimatedMin: 10,
+    estimatedMax: 18,
+    reason: 'One of the signature savory dishes associated with Osaka.',
+    searchKeyword: 'okonomiyaki',
+    localSpecialty: true,
+    imageUrl: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'travel-3',
+    name: 'Kushikatsu',
+    cuisine: 'Japanese',
+    estimatedMin: 9,
+    estimatedMax: 16,
+    reason: 'Popular local skewers that are easy to find in highly rated Osaka eateries.',
+    searchKeyword: 'kushikatsu',
+    localSpecialty: true,
+    imageUrl: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=1200&q=80',
+  },
+];
+
+export const restaurantsMock: Restaurant[] = [
+  {
+    id: 'r1',
+    name: 'Local Favorite Kitchen',
+    rating: 4.8,
+    reviews: 2480,
+    distanceMeters: 420,
+    address: '5 minutes from your current location',
+    priceLevel: '$$',
+    imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'r2',
+    name: 'City Food House',
+    rating: 4.7,
+    reviews: 1320,
+    distanceMeters: 860,
+    address: 'Central district',
+    priceLevel: '$$',
+    imageUrl: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'r3',
+    name: 'Neighborhood Table',
+    rating: 4.6,
+    reviews: 784,
+    distanceMeters: 1280,
+    address: 'Nearby dining area',
+    priceLevel: '$',
+    imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+  },
+];
