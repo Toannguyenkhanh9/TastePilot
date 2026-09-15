@@ -1,36 +1,73 @@
-import React, {useEffect, useState} from 'react';
-import {Alert, ScrollView, StyleSheet, Text, TextInput, View} from 'react-native';
+import React, {useEffect, useRef, useState} from 'react';
+import {
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {useTranslation} from 'react-i18next';
 import {RootStackParamList} from '../navigation/types';
 import {useApp} from '../context/AppContext';
 import {Chip} from '../components/Chip';
 import {PrimaryButton} from '../components/PrimaryButton';
 import {LocationSummary} from '../components/LocationSummary';
+import {LocalBanner} from '../components/LocalBanner';
+import {MealTypeSelector} from '../components/MealTypeSelector';
+import {BudgetControl} from '../components/BudgetControl';
 import {getCurrentLocation} from '../services/locationService';
 import {resolveCurrentLocation} from '../services/placeService';
 import {getDailyRecommendations} from '../services/recommendationService';
-import {LocationContext} from '../types';
+import {LocationContext, MealTypeSelection} from '../types';
+import {resolveMealType} from '../services/mealPeriodService';
+import {formatBudgetInput, parseBudgetInput} from '../utils/budgetInput';
+import {APP_LOCAL_BANNERS} from '../utils/localArt';
 
-const options = ['Healthy', 'High Protein', 'Vegetarian', 'Quick Meal', 'Something New'];
+const optionDefs = [
+  {id: 'Healthy', labelKey: 'daily.prefs.healthy'},
+  {id: 'High Protein', labelKey: 'daily.prefs.highProtein'},
+  {id: 'Vegetarian', labelKey: 'daily.prefs.vegetarian'},
+  {id: 'Quick Meal', labelKey: 'daily.prefs.quickMeal'},
+  {id: 'Something New', labelKey: 'daily.prefs.somethingNew'},
+];
 
 type Props = NativeStackScreenProps<RootStackParamList, 'DailyMeal'>;
 
 export function DailyMealScreen({navigation}: Props) {
+  const {t} = useTranslation();
   const {profile, history, locationContext, setLocationContext} = useApp();
-  const [budget, setBudget] = useState(String(profile.defaultBudget));
+  const scrollRef = useRef<ScrollView>(null);
+  const [budgetY, setBudgetY] = useState(0);
+  const [budget, setBudget] = useState(formatBudgetInput(profile.defaultBudget, profile.locale));
+  const [budgetEnabled, setBudgetEnabled] = useState(true);
   const [selected, setSelected] = useState<string[]>([]);
+  const [mealTypeSelection, setMealTypeSelection] = useState<MealTypeSelection>('auto');
   const [loading, setLoading] = useState(false);
   const [detecting, setDetecting] = useState(false);
   const [activeLocation, setActiveLocation] = useState<LocationContext | null>(
     locationContext?.source === 'current' ? locationContext : null,
   );
 
-  const activeCurrency = profile.autoCurrency !== false
-    ? activeLocation?.currency || profile.currency
-    : profile.currency;
+  const resolvedMealType = resolveMealType(mealTypeSelection);
 
-  const toggle = (value: string) => {
-    setSelected(prev => prev.includes(value) ? prev.filter(x => x !== value) : [...prev, value]);
+  const activeCurrency =
+    profile.autoCurrency !== false ? activeLocation?.currency || profile.currency : profile.currency;
+
+  const toggle = (value: string) =>
+    setSelected(prev =>
+      prev.includes(value) ? prev.filter(x => x !== value) : [...prev, value],
+    );
+
+  const revealBudgetInput = () => {
+    setTimeout(() => {
+      scrollRef.current?.scrollTo({
+        y: Math.max(0, budgetY - 24),
+        animated: true,
+      });
+    }, Platform.OS === 'android' ? 220 : 120);
   };
 
   const detectLocation = async () => {
@@ -38,9 +75,6 @@ export function DailyMealScreen({navigation}: Props) {
     try {
       const coordinates = await getCurrentLocation();
       const resolved = await resolveCurrentLocation(coordinates, profile.currency);
-      if (profile.autoCurrency !== false && resolved.currency !== activeCurrency && budget === String(profile.defaultBudget)) {
-        setBudget('');
-      }
       setActiveLocation(resolved);
       setLocationContext(resolved);
       return resolved;
@@ -51,24 +85,27 @@ export function DailyMealScreen({navigation}: Props) {
 
   useEffect(() => {
     detectLocation().catch(() => undefined);
-    // Intentionally detect once when entering the foreground screen.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submit = async () => {
-    const amount = Number(budget.replace(',', '.'));
-    if (!amount || amount <= 0) return Alert.alert('Budget', `Please enter a valid budget in ${activeCurrency}.`);
+    const amount = budgetEnabled ? parseBudgetInput(budget) : undefined;
+    if (budgetEnabled && (!amount || amount <= 0)) {
+      Alert.alert(
+        t('daily.invalidBudgetTitle'),
+        t('daily.invalidBudgetText', {currency: activeCurrency}),
+      );
+      return;
+    }
 
     setLoading(true);
     try {
-      let resolved = activeLocation;
-      if (!resolved) {
-        try { resolved = await detectLocation(); } catch { resolved = null; }
-      }
-
-      const requestCurrency = profile.autoCurrency !== false
-        ? resolved?.currency || profile.currency
-        : profile.currency;
+      const resolved = activeLocation || (await detectLocation().catch(() => null));
+      const requestCurrency =
+        profile.autoCurrency !== false
+          ? resolved?.currency || profile.currency
+          : profile.currency;
+      const requestProfile = {...profile, currency: requestCurrency};
 
       const suggestions = await getDailyRecommendations({
         budget: amount,
@@ -76,66 +113,134 @@ export function DailyMealScreen({navigation}: Props) {
         location: resolved?.coordinates,
         locationContext: resolved || undefined,
         history,
-        profile: {...profile, currency: requestCurrency},
+        profile: requestProfile,
+        mealType: resolvedMealType,
       });
+
+      if (!suggestions.length) {
+        Alert.alert(t('budgetNoMatchTitle'), t('budgetNoMatchText'));
+        return;
+      }
 
       navigation.navigate('MealResults', {
         mode: 'daily',
-        title: "Today's picks",
+        title: t('daily.routeTitle'),
         suggestions,
         currency: requestCurrency,
         locale: profile.locale,
         locationContext: resolved || undefined,
+        requestContext: {
+          mode: 'daily',
+          budget: amount,
+          preferences: selected,
+          location: resolved?.coordinates,
+          locationContext: resolved || undefined,
+          history,
+          profile: requestProfile,
+          mealType: resolvedMealType,
+        },
       });
     } catch (e) {
-      Alert.alert('Could not load suggestions', e instanceof Error ? e.message : 'Unknown error');
+      Alert.alert(
+        t('mealResults.couldNotRefreshTitle'),
+        e instanceof Error ? e.message : 'Unknown error',
+      );
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
-      <Text style={styles.title}>What should I eat today?</Text>
-      <Text style={styles.subtitle}>We avoid recent meals and prioritize options that fit your budget, preferences, and nearby availability.</Text>
+    <KeyboardAvoidingView
+      style={styles.flex}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 84 : 0}>
+      <ScrollView
+        ref={scrollRef}
+        contentContainerStyle={styles.container}
+        keyboardShouldPersistTaps="handled"
+        keyboardDismissMode="interactive"
+        automaticallyAdjustKeyboardInsets={Platform.OS === 'ios'}>
+        <LocalBanner
+          imageSource={APP_LOCAL_BANNERS.daily}
+          eyebrow={t('daily.heroEyebrow')}
+          title={t('daily.heroTitle')}
+          subtitle={t('daily.heroSubtitle')}
+          height={210}
+        />
 
-      <LocationSummary value={activeLocation} loading={detecting} onRefresh={() => detectLocation().catch(() => undefined)} />
+        <LocationSummary
+          value={activeLocation}
+          loading={detecting}
+          onRefresh={() => detectLocation().catch(() => undefined)}
+          title={t('daily.yourArea')}
+        />
 
-      <Text style={styles.label}>Budget ({activeCurrency})</Text>
-      <TextInput
-        style={styles.input}
-        value={budget}
-        onChangeText={setBudget}
-        keyboardType="decimal-pad"
-        placeholder={activeCurrency === profile.currency ? String(profile.defaultBudget) : `Enter ${activeCurrency} budget`}
-        placeholderTextColor="#aaa"
-      />
-      {profile.autoCurrency !== false && activeLocation?.currency && activeLocation.currency !== profile.currency ? (
-        <Text style={styles.currencyHint}>TastePilot detected the local currency as {activeLocation.currency}. Enter a budget in local currency.</Text>
-      ) : null}
+        <MealTypeSelector
+          value={mealTypeSelection}
+          onChange={setMealTypeSelection}
+          mode="daily"
+        />
 
-      <Text style={styles.label}>Optional preferences</Text>
-      <View style={styles.chips}>{options.map(x => <Chip key={x} label={x} selected={selected.includes(x)} onPress={() => toggle(x)} />)}</View>
+        <View onLayout={event => setBudgetY(event.nativeEvent.layout.y)} style={styles.budgetBlock}>
+          <BudgetControl
+            currency={activeCurrency}
+            locale={profile.locale}
+            enabled={budgetEnabled}
+            value={budget}
+            onEnabledChange={setBudgetEnabled}
+            onChangeText={value => setBudget(formatBudgetInput(value, profile.locale))}
+            onFocus={revealBudgetInput}
+            placeholder={
+              activeCurrency === profile.currency
+                ? formatBudgetInput(profile.defaultBudget, profile.locale)
+                : t('budgetPlaceholder', {currency: activeCurrency})
+            }
+          />
+        </View>
 
-      <View style={styles.info}>
-        <Text style={styles.infoTitle}>Personalized automatically</Text>
-        <Text style={styles.infoText}>Recent meal history, your saved preferences, local area and nearby availability are used to reduce repetition.</Text>
-      </View>
+        <Text style={styles.label}>{t('daily.optionalPreferences')}</Text>
+        <View style={styles.chips}>
+          {optionDefs.map(option => (
+            <Chip
+              key={option.id}
+              label={t(option.labelKey)}
+              selected={selected.includes(option.id)}
+              onPress={() => toggle(option.id)}
+            />
+          ))}
+        </View>
 
-      <PrimaryButton title="Find my meal" onPress={submit} loading={loading} />
-    </ScrollView>
+        <View style={styles.infoCard}>
+          <Text style={styles.infoTitle}>{t('daily.howItWorksTitle')}</Text>
+          <Text style={styles.infoText}>{t('daily.howItWorksText')}</Text>
+        </View>
+
+        <PrimaryButton title={t('daily.button')} onPress={submit} loading={loading} />
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {padding: 20, paddingBottom: 36, backgroundColor: '#fff', flexGrow: 1},
-  title: {fontSize: 30, lineHeight: 36, fontWeight: '900', color: '#171717'},
-  subtitle: {fontSize: 15, lineHeight: 22, color: '#707070', marginTop: 8},
-  label: {fontSize: 14, fontWeight: '800', color: '#303030', marginTop: 26, marginBottom: 10},
-  input: {height: 58, borderRadius: 16, borderWidth: 1, borderColor: '#dedede', paddingHorizontal: 16, fontSize: 21, fontWeight: '800', color: '#171717'},
+  flex: {flex: 1, backgroundColor: '#fbfaf8'},
+  container: {padding: 20, paddingBottom: 120, backgroundColor: '#fbfaf8', flexGrow: 1},
+  budgetBlock: {marginTop: 2},
+  label: {fontSize: 14, fontWeight: '800', color: '#303030', marginTop: 10, marginBottom: 10},
+  input: {
+    height: 60,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#eadfd7',
+    backgroundColor: '#fff',
+    paddingHorizontal: 16,
+    fontSize: 24,
+    fontWeight: '800',
+    color: '#171717',
+  },
   currencyHint: {fontSize: 12, lineHeight: 18, color: '#6c7890', marginTop: 8},
-  chips: {flexDirection: 'row', flexWrap: 'wrap'},
-  info: {backgroundColor: '#f7f7f7', borderRadius: 18, padding: 16, marginVertical: 24},
-  infoTitle: {fontSize: 15, fontWeight: '800', color: '#222'},
-  infoText: {fontSize: 13, color: '#707070', lineHeight: 20, marginTop: 6},
+  chips: {flexDirection: 'row', flexWrap: 'wrap', marginBottom: 14},
+  infoCard: {backgroundColor: '#fff2df', borderRadius: 20, padding: 16, marginBottom: 24},
+  infoTitle: {fontSize: 15, fontWeight: '800', color: '#171717'},
+  infoText: {fontSize: 13, color: '#666', lineHeight: 19, marginTop: 6},
 });

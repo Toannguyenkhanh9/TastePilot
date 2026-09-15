@@ -1,4 +1,24 @@
-import {LocationContext, MealSuggestion, Restaurant} from '../types';
+import {
+  Coordinates,
+  LocationContext,
+  MealHistoryItem,
+  MealSuggestion,
+  MealType,
+  Restaurant,
+  UserProfile,
+} from '../types';
+
+export type MealResultsRequestContext = {
+  mode: 'daily' | 'travel';
+  budget?: number;
+  preferences?: string[];
+  destination?: string;
+  location?: Coordinates;
+  locationContext?: LocationContext;
+  history?: MealHistoryItem[];
+  profile: UserProfile;
+  mealType?: MealType;
+};
 
 export type RootStackParamList = {
   MainTabs: undefined;
@@ -12,6 +32,7 @@ export type RootStackParamList = {
     currency: string;
     locale: string;
     locationContext?: LocationContext;
+    requestContext: MealResultsRequestContext;
   };
   Restaurants: {
     meal: MealSuggestion;

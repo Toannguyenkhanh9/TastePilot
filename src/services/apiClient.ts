@@ -1,14 +1,29 @@
 import {API_BASE_URL} from './config';
 
-export async function postJson<T>(path: string, body: unknown): Promise<T> {
-  const response = await fetch(`${API_BASE_URL}/${path}`, {
+export async function postJson<T>(
+  path: string,
+  body: unknown,
+): Promise<T> {
+  const url = `${API_BASE_URL}/${path}`;
+
+  console.log('[TastePilot API]', url);
+  console.log('[TastePilot Body]', body);
+
+  const response = await fetch(url, {
     method: 'POST',
-    headers: {'Content-Type': 'application/json'},
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify(body),
   });
 
   const text = await response.text();
+
+  console.log('[TastePilot Status]', response.status);
+  console.log('[TastePilot Response]', text);
+
   let data: unknown;
+
   try {
     data = text ? JSON.parse(text) : {};
   } catch {
@@ -16,9 +31,14 @@ export async function postJson<T>(path: string, body: unknown): Promise<T> {
   }
 
   if (!response.ok) {
-    const message = typeof data === 'object' && data && 'error' in data
-      ? String((data as {error?: unknown}).error || `API error ${response.status}`)
-      : `API error ${response.status}`;
+    const message =
+      typeof data === 'object' && data && 'error' in data
+        ? String(
+            (data as {error?: unknown}).error ||
+              `API error ${response.status}`,
+          )
+        : `API error ${response.status}`;
+
     throw new Error(message);
   }
 

@@ -1,28 +1,38 @@
 import React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {ActivityIndicator, Pressable, StyleSheet, Text, View} from 'react-native';
+import {useTranslation} from 'react-i18next';
 import {LocationContext} from '../types';
 
 type Props = {
   value?: LocationContext | null;
+  title?: string;
   loading?: boolean;
   onRefresh?: () => void;
-  title?: string;
 };
 
-export function LocationSummary({value, loading, onRefresh, title = 'Your area'}: Props) {
-  const place = [value?.city, value?.country].filter(Boolean).join(', ');
+export function LocationSummary({value, title, loading, onRefresh}: Props) {
+  const {t} = useTranslation();
+  const resolvedTitle = title || t('daily.yourArea');
 
   return (
-    <View style={styles.card}>
-      <View style={styles.icon}><Text style={styles.iconText}>📍</Text></View>
-      <View style={styles.copy}>
-        <Text style={styles.kicker}>{title}</Text>
-        <Text style={styles.place}>{loading ? 'Detecting location…' : place || 'Location not detected yet'}</Text>
-        {value?.currency ? <Text style={styles.meta}>Local currency · {value.currency}</Text> : null}
+    <View style={styles.wrap}>
+      <View style={styles.iconBox}>
+        <Text style={styles.icon}>📍</Text>
+      </View>
+      <View style={styles.content}>
+        <Text style={styles.label}>{resolvedTitle.toUpperCase()}</Text>
+        <Text style={styles.value}>
+          {value
+            ? [value.city, value.country].filter(Boolean).join(', ') || value.formattedAddress
+            : t('common.locationNotDetected')}
+        </Text>
+        <Text style={styles.meta}>
+          {t('common.localCurrency')} · {value?.currency || '—'}
+        </Text>
       </View>
       {onRefresh ? (
-        <Pressable style={styles.refresh} onPress={onRefresh} disabled={loading}>
-          <Text style={styles.refreshText}>{loading ? '…' : 'Refresh'}</Text>
+        <Pressable style={styles.refreshButton} onPress={onRefresh} disabled={loading}>
+          {loading ? <ActivityIndicator size="small" /> : <Text style={styles.refreshText}>{t('common.refresh')}</Text>}
         </Pressable>
       ) : null}
     </View>
@@ -30,13 +40,23 @@ export function LocationSummary({value, loading, onRefresh, title = 'Your area'}
 }
 
 const styles = StyleSheet.create({
-  card: {flexDirection: 'row', alignItems: 'center', backgroundColor: '#f4f8ff', borderRadius: 18, padding: 14, marginTop: 18, borderWidth: 1, borderColor: '#e4edf9'},
-  icon: {width: 42, height: 42, borderRadius: 13, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center'},
-  iconText: {fontSize: 20},
-  copy: {flex: 1, marginLeft: 12},
-  kicker: {fontSize: 11, fontWeight: '900', letterSpacing: 0.7, color: '#6a7890', textTransform: 'uppercase'},
-  place: {fontSize: 15, fontWeight: '900', color: '#1b2430', marginTop: 3},
-  meta: {fontSize: 12, color: '#6a7890', marginTop: 3},
-  refresh: {paddingHorizontal: 10, paddingVertical: 8},
-  refreshText: {fontSize: 12, fontWeight: '900', color: '#2457a7'},
+  wrap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 24,
+    backgroundColor: '#f2f6fb',
+    padding: 14,
+    borderWidth: 1,
+    borderColor: '#e3ebf4',
+    marginTop: 4,
+    marginBottom: 10,
+  },
+  iconBox: {width: 48, height: 48, borderRadius: 16, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center'},
+  icon: {fontSize: 22},
+  content: {flex: 1, marginLeft: 12},
+  label: {fontSize: 11, fontWeight: '900', letterSpacing: 1.1, color: '#6f8096'},
+  value: {fontSize: 16, fontWeight: '900', color: '#1a2433', marginTop: 2},
+  meta: {fontSize: 12, color: '#78879b', marginTop: 4},
+  refreshButton: {paddingHorizontal: 10, paddingVertical: 8},
+  refreshText: {fontSize: 14, fontWeight: '800', color: '#2c5da9'},
 });

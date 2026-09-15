@@ -2,6 +2,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Text} from 'react-native';
+import {useTranslation} from 'react-i18next';
 import {HomeScreen} from '../screens/HomeScreen';
 import {SavedScreen} from '../screens/SavedScreen';
 import {HistoryScreen} from '../screens/HistoryScreen';
@@ -21,25 +22,50 @@ function TabIcon({emoji}: {emoji: string}) {
 }
 
 function MainTabs() {
+  const {t} = useTranslation();
+
   return (
-    <Tab.Navigator screenOptions={{headerShown: false, tabBarLabelStyle: {fontSize: 11, fontWeight: '700'}, tabBarStyle: {height: 62, paddingBottom: 7, paddingTop: 6}}}>
-      <Tab.Screen name="Home" component={HomeScreen} options={{tabBarIcon: () => <TabIcon emoji="🏠" />}} />
-      <Tab.Screen name="Saved" component={SavedScreen} options={{tabBarIcon: () => <TabIcon emoji="❤️" />}} />
-      <Tab.Screen name="History" component={HistoryScreen} options={{tabBarIcon: () => <TabIcon emoji="🕘" />}} />
-      <Tab.Screen name="Profile" component={ProfileScreen} options={{tabBarIcon: () => <TabIcon emoji="⚙️" />}} />
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarLabelStyle: {fontSize: 11, fontWeight: '700'},
+        tabBarStyle: {height: 62, paddingBottom: 7, paddingTop: 6},
+      }}>
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{tabBarLabel: t('tabs.home'), tabBarIcon: () => <TabIcon emoji="🏠" />}}
+      />
+      <Tab.Screen
+        name="Saved"
+        component={SavedScreen}
+        options={{tabBarLabel: t('tabs.saved'), tabBarIcon: () => <TabIcon emoji="❤️" />}}
+      />
+      <Tab.Screen
+        name="History"
+        component={HistoryScreen}
+        options={{tabBarLabel: t('tabs.history'), tabBarIcon: () => <TabIcon emoji="🕘" />}}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{tabBarLabel: t('tabs.profile'), tabBarIcon: () => <TabIcon emoji="⚙️" />}}
+      />
     </Tab.Navigator>
   );
 }
 
 export function RootNavigator() {
+  const {t} = useTranslation();
+
   return (
-    <Stack.Navigator screenOptions={{headerBackTitle: 'Back', headerShadowVisible: false}}>
+    <Stack.Navigator screenOptions={{headerBackTitle: t('common.back'), headerShadowVisible: false}}>
       <Stack.Screen name="MainTabs" component={MainTabs} options={{headerShown: false}} />
-      <Stack.Screen name="DailyMeal" component={DailyMealScreen} options={{title: 'Daily Meal'}} />
-      <Stack.Screen name="TravelFood" component={TravelFoodScreen} options={{title: 'Travel Food'}} />
-      <Stack.Screen name="MealResults" component={MealResultsScreen} options={{title: 'Suggestions'}} />
-      <Stack.Screen name="Restaurants" component={RestaurantsScreen} options={{title: 'Nearby Places'}} />
-      <Stack.Screen name="RestaurantDetail" component={RestaurantDetailScreen} options={{title: 'Restaurant'}} />
+      <Stack.Screen name="DailyMeal" component={DailyMealScreen} options={{title: t('screens.dailyMeal')}} />
+      <Stack.Screen name="TravelFood" component={TravelFoodScreen} options={{title: t('screens.travelFood')}} />
+      <Stack.Screen name="MealResults" component={MealResultsScreen} options={{title: t('screens.suggestions')}} />
+      <Stack.Screen name="Restaurants" component={RestaurantsScreen} options={{title: t('screens.nearbyPlaces')}} />
+      <Stack.Screen name="RestaurantDetail" component={RestaurantDetailScreen} options={{title: t('screens.restaurant')}} />
     </Stack.Navigator>
   );
 }

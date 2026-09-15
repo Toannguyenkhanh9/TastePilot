@@ -1,0 +1,366 @@
+{
+  "version": "2026.09.15",
+  "note": "Reference meal anchors for approximate local price ranges. Restaurant priceLevel/menu data should override these estimates when available.",
+  "currencyFallbackTypicalMeal": {
+    "VND": 70000,
+    "JPY": 1400,
+    "KRW": 12000,
+    "THB": 140,
+    "USD": 16,
+    "GBP": 13,
+    "EUR": 14,
+    "INR": 350,
+    "IDR": 45000,
+    "MYR": 16,
+    "SGD": 10,
+    "CNY": 45,
+    "HKD": 80,
+    "TWD": 170,
+    "AUD": 22,
+    "CAD": 20,
+    "BRL": 35,
+    "MXN": 160,
+    "RUB": 850,
+    "AED": 45,
+    "SAR": 40,
+    "PHP": 220,
+    "TRY": 420,
+    "CHF": 25,
+    "SEK": 150,
+    "NOK": 190,
+    "DKK": 120,
+    "NZD": 22
+  },
+  "countries": {
+    "VN": {
+      "currency": "VND",
+      "typicalMeal": 70000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "ho chi minh": 1.05,
+        "hồ chí minh": 1.05,
+        "saigon": 1.05,
+        "hanoi": 1.0,
+        "hà nội": 1.0,
+        "da nang": 0.95,
+        "đà nẵng": 0.95
+      }
+    },
+    "JP": {
+      "currency": "JPY",
+      "typicalMeal": 1400,
+      "updatedAt": "2026-09",
+      "cities": {
+        "tokyo": 1.2,
+        "osaka": 1.0,
+        "kyoto": 1.1,
+        "fukuoka": 0.95
+      }
+    },
+    "KR": {
+      "currency": "KRW",
+      "typicalMeal": 12000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "seoul": 1.15,
+        "busan": 0.95,
+        "incheon": 1.0
+      }
+    },
+    "TH": {
+      "currency": "THB",
+      "typicalMeal": 140,
+      "updatedAt": "2026-09",
+      "cities": {
+        "bangkok": 1.15,
+        "chiang mai": 0.9,
+        "phuket": 1.25
+      }
+    },
+    "US": {
+      "currency": "USD",
+      "typicalMeal": 16,
+      "updatedAt": "2026-09",
+      "cities": {
+        "new york": 1.55,
+        "san francisco": 1.6,
+        "los angeles": 1.3,
+        "chicago": 1.15,
+        "houston": 1.0
+      }
+    },
+    "GB": {
+      "currency": "GBP",
+      "typicalMeal": 13,
+      "updatedAt": "2026-09",
+      "cities": {
+        "london": 1.5,
+        "manchester": 1.0,
+        "edinburgh": 1.1
+      }
+    },
+    "FR": {
+      "currency": "EUR",
+      "typicalMeal": 15,
+      "updatedAt": "2026-09",
+      "cities": {
+        "paris": 1.4,
+        "lyon": 1.05,
+        "marseille": 1.0
+      }
+    },
+    "DE": {
+      "currency": "EUR",
+      "typicalMeal": 14,
+      "updatedAt": "2026-09",
+      "cities": {
+        "munich": 1.2,
+        "berlin": 1.05,
+        "hamburg": 1.1
+      }
+    },
+    "IT": {
+      "currency": "EUR",
+      "typicalMeal": 14,
+      "updatedAt": "2026-09",
+      "cities": {
+        "rome": 1.15,
+        "milan": 1.25,
+        "naples": 0.95,
+        "florence": 1.15
+      }
+    },
+    "ES": {
+      "currency": "EUR",
+      "typicalMeal": 12,
+      "updatedAt": "2026-09",
+      "cities": {
+        "madrid": 1.1,
+        "barcelona": 1.2,
+        "seville": 0.95
+      }
+    },
+    "PT": {
+      "currency": "EUR",
+      "typicalMeal": 11,
+      "updatedAt": "2026-09",
+      "cities": {
+        "lisbon": 1.2,
+        "porto": 1.05
+      }
+    },
+    "IN": {
+      "currency": "INR",
+      "typicalMeal": 350,
+      "updatedAt": "2026-09",
+      "cities": {
+        "mumbai": 1.25,
+        "delhi": 1.15,
+        "bengaluru": 1.15,
+        "bangalore": 1.15,
+        "kolkata": 0.9
+      }
+    },
+    "ID": {
+      "currency": "IDR",
+      "typicalMeal": 45000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "jakarta": 1.15,
+        "bali": 1.3,
+        "denpasar": 1.2,
+        "surabaya": 0.95
+      }
+    },
+    "MY": {
+      "currency": "MYR",
+      "typicalMeal": 16,
+      "updatedAt": "2026-09",
+      "cities": {
+        "kuala lumpur": 1.15,
+        "penang": 1.0,
+        "johor bahru": 0.95
+      }
+    },
+    "SG": {
+      "currency": "SGD",
+      "typicalMeal": 10,
+      "updatedAt": "2026-09",
+      "cities": {
+        "singapore": 1.0
+      }
+    },
+    "CN": {
+      "currency": "CNY",
+      "typicalMeal": 45,
+      "updatedAt": "2026-09",
+      "cities": {
+        "beijing": 1.2,
+        "shanghai": 1.25,
+        "shenzhen": 1.2,
+        "guangzhou": 1.05
+      }
+    },
+    "HK": {
+      "currency": "HKD",
+      "typicalMeal": 80,
+      "updatedAt": "2026-09",
+      "cities": {
+        "hong kong": 1.0
+      }
+    },
+    "TW": {
+      "currency": "TWD",
+      "typicalMeal": 170,
+      "updatedAt": "2026-09",
+      "cities": {
+        "taipei": 1.2,
+        "kaohsiung": 0.9
+      }
+    },
+    "AU": {
+      "currency": "AUD",
+      "typicalMeal": 22,
+      "updatedAt": "2026-09",
+      "cities": {
+        "sydney": 1.25,
+        "melbourne": 1.15,
+        "brisbane": 1.05
+      }
+    },
+    "CA": {
+      "currency": "CAD",
+      "typicalMeal": 20,
+      "updatedAt": "2026-09",
+      "cities": {
+        "toronto": 1.2,
+        "vancouver": 1.25,
+        "montreal": 1.05
+      }
+    },
+    "BR": {
+      "currency": "BRL",
+      "typicalMeal": 35,
+      "updatedAt": "2026-09",
+      "cities": {
+        "sao paulo": 1.2,
+        "rio de janeiro": 1.2,
+        "salvador": 0.9
+      }
+    },
+    "MX": {
+      "currency": "MXN",
+      "typicalMeal": 160,
+      "updatedAt": "2026-09",
+      "cities": {
+        "mexico city": 1.1,
+        "cancun": 1.3,
+        "guadalajara": 1.0
+      }
+    },
+    "RU": {
+      "currency": "RUB",
+      "typicalMeal": 850,
+      "updatedAt": "2026-09",
+      "cities": {
+        "moscow": 1.3,
+        "saint petersburg": 1.15
+      }
+    },
+    "AE": {
+      "currency": "AED",
+      "typicalMeal": 45,
+      "updatedAt": "2026-09",
+      "cities": {
+        "dubai": 1.35,
+        "abu dhabi": 1.2
+      }
+    },
+    "SA": {
+      "currency": "SAR",
+      "typicalMeal": 40,
+      "updatedAt": "2026-09",
+      "cities": {
+        "riyadh": 1.15,
+        "jeddah": 1.1
+      }
+    },
+    "PH": {
+      "currency": "PHP",
+      "typicalMeal": 220,
+      "updatedAt": "2026-09",
+      "cities": {
+        "manila": 1.15,
+        "cebu": 1.0
+      }
+    },
+    "TR": {
+      "currency": "TRY",
+      "typicalMeal": 420,
+      "updatedAt": "2026-09",
+      "cities": {
+        "istanbul": 1.25,
+        "ankara": 1.0
+      }
+    },
+    "NL": {
+      "currency": "EUR",
+      "typicalMeal": 16,
+      "updatedAt": "2026-09",
+      "cities": {
+        "amsterdam": 1.3,
+        "rotterdam": 1.1
+      }
+    },
+    "BE": {
+      "currency": "EUR",
+      "typicalMeal": 16,
+      "updatedAt": "2026-09",
+      "cities": {
+        "brussels": 1.2
+      }
+    },
+    "CH": {
+      "currency": "CHF",
+      "typicalMeal": 25,
+      "updatedAt": "2026-09",
+      "cities": {
+        "zurich": 1.2,
+        "geneva": 1.2
+      }
+    },
+    "SE": {
+      "currency": "SEK",
+      "typicalMeal": 150,
+      "updatedAt": "2026-09",
+      "cities": {
+        "stockholm": 1.2
+      }
+    },
+    "NO": {
+      "currency": "NOK",
+      "typicalMeal": 190,
+      "updatedAt": "2026-09",
+      "cities": {
+        "oslo": 1.2
+      }
+    },
+    "DK": {
+      "currency": "DKK",
+      "typicalMeal": 120,
+      "updatedAt": "2026-09",
+      "cities": {
+        "copenhagen": 1.25
+      }
+    },
+    "NZ": {
+      "currency": "NZD",
+      "typicalMeal": 22,
+      "updatedAt": "2026-09",
+      "cities": {
+        "auckland": 1.15,
+        "wellington": 1.1
+      }
+    }
+  }
+}

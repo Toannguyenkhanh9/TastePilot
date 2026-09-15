@@ -1,2 +1,4 @@
-export const USE_MOCK_API = true;
-export const API_BASE_URL = 'https://YOUR_REGION-YOUR_PROJECT.cloudfunctions.net';
+export const USE_MOCK_API = false;
+
+export const API_BASE_URL =
+  'https://us-central1-tastepilot-app.cloudfunctions.net';

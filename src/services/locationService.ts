@@ -19,15 +19,29 @@ async function requestPermission() {
   );
 }
 
+/**
+ * Fetch a fresh foreground position. We keep the original device coordinates all the way
+ * through restaurant search; resolving the city/country must never replace the user's GPS.
+ */
 export async function getCurrentLocation(): Promise<Coordinates> {
   const ok = await requestPermission();
   if (!ok) throw new Error('Location permission denied');
 
   return new Promise((resolve, reject) => {
     Geolocation.getCurrentPosition(
-      pos => resolve({latitude: pos.coords.latitude, longitude: pos.coords.longitude}),
+      pos => resolve({
+        latitude: pos.coords.latitude,
+        longitude: pos.coords.longitude,
+        accuracyMeters: Number.isFinite(pos.coords.accuracy) ? pos.coords.accuracy : undefined,
+      }),
       error => reject(new Error(error.message || 'Could not get current location')),
-      {enableHighAccuracy: true, timeout: 15000, maximumAge: 60000},
+      {
+        enableHighAccuracy: true,
+        timeout: 20000,
+        maximumAge: 5000,
+        forceRequestLocation: true,
+        showLocationDialog: true,
+      },
     );
   });
 }

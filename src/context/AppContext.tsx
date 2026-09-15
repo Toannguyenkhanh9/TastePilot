@@ -1,8 +1,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, {createContext, useContext, useEffect, useMemo, useState} from 'react';
 import {LocationContext, MealHistoryItem, Restaurant, UserProfile} from '../types';
+import i18n, {SUPPORTED_LANGUAGES} from '../i18n';
 
-// Keep the original storage keys so an existing FoodPilot/TastePilot install does not lose data.
 const PROFILE_KEY = '@foodpilot/profile';
 const HISTORY_KEY = '@foodpilot/history';
 const SAVED_KEY = '@foodpilot/saved';
@@ -17,6 +17,12 @@ const defaultProfile: UserProfile = {
   autoCurrency: true,
 };
 
+function localeToLanguage(locale?: string) {
+  const value = String(locale || '').toLowerCase().replace('_', '-');
+  const match = SUPPORTED_LANGUAGES.find(item => value.startsWith(item.code));
+  return match?.code || 'en';
+}
+
 type AppContextValue = {
   profile: UserProfile;
   history: MealHistoryItem[];
@@ -25,6 +31,7 @@ type AppContextValue = {
   setProfile: (profile: UserProfile) => void;
   setLocationContext: (value: LocationContext | null) => void;
   addHistory: (item: MealHistoryItem) => void;
+  updateHistoryFeedback: (id: string, feedback: MealHistoryItem['feedback']) => void;
   addSaved: (place: Restaurant) => void;
   removeSaved: (id: string) => void;
 };
@@ -54,6 +61,10 @@ export function AppProvider({children}: {children: React.ReactNode}) {
     }).catch(() => undefined);
   }, []);
 
+  useEffect(() => {
+    i18n.changeLanguage(localeToLanguage(profile.locale)).catch(() => undefined);
+  }, [profile.locale]);
+
   const setProfile = (next: UserProfile) => {
     const normalized = {...defaultProfile, ...next};
     setProfileState(normalized);
@@ -77,9 +88,22 @@ export function AppProvider({children}: {children: React.ReactNode}) {
     });
   };
 
+  const updateHistoryFeedback = (id: string, feedback: MealHistoryItem['feedback']) => {
+    setHistory(prev => {
+      const next = prev.map(item => item.id === id ? {...item, feedback} : item);
+      AsyncStorage.setItem(HISTORY_KEY, JSON.stringify(next)).catch(() => undefined);
+      return next;
+    });
+  };
+
   const addSaved = (place: Restaurant) => {
     setSaved(prev => {
-      if (prev.some(x => x.id === place.id)) return prev;
+      const existing = prev.find(x => x.id === place.id);
+      if (existing) {
+        const next = prev.map(x => x.id === place.id ? {...x, ...place} : x);
+        AsyncStorage.setItem(SAVED_KEY, JSON.stringify(next)).catch(() => undefined);
+        return next;
+      }
       const next = [place, ...prev];
       AsyncStorage.setItem(SAVED_KEY, JSON.stringify(next)).catch(() => undefined);
       return next;
@@ -102,6 +126,7 @@ export function AppProvider({children}: {children: React.ReactNode}) {
     setProfile,
     setLocationContext,
     addHistory,
+    updateHistoryFeedback,
     addSaved,
     removeSaved,
   }), [profile, history, saved, locationContext]);

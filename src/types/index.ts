@@ -1,8 +1,11 @@
 export type RecommendationMode = 'daily' | 'travel';
+export type MealType = 'breakfast' | 'lunch' | 'dinner';
+export type MealTypeSelection = 'auto' | MealType;
 
 export type Coordinates = {
   latitude: number;
   longitude: number;
+  accuracyMeters?: number;
 };
 
 export type LocationContext = {
@@ -28,6 +31,7 @@ export type UserProfile = {
 
 export type MealSuggestion = {
   id: string;
+  canonicalId?: string;
   name: string;
   cuisine: string;
   estimatedMin: number;
@@ -36,8 +40,19 @@ export type MealSuggestion = {
   imageUrl?: string;
   imagePlaceName?: string;
   representativeImage?: boolean;
+  imageSource?: 'catalog' | 'places';
+  visualEmoji?: string;
   searchKeyword: string;
   localSpecialty?: boolean;
+  imageKey?: string;
+  recommendationSource?: 'local' | 'ai';
+  familyId?: string;
+  priceTier?: 1 | 2 | 3 | 4;
+  priceEstimateSource?: 'regional_profile' | 'currency_fallback' | 'ai' | 'menu' | 'places';
+  priceConfidence?: 'low' | 'medium' | 'high';
+  regionalPriceProfileVersion?: string;
+  mealType?: MealType;
+  touristPopular?: boolean;
 };
 
 export type Restaurant = {
@@ -54,6 +69,13 @@ export type Restaurant = {
   longitude?: number;
   openNow?: boolean;
   primaryType?: string;
+
+  // Saved-place metadata. These are filled when the user saves from a meal search.
+  savedCity?: string;
+  savedCountry?: string;
+  savedCuisine?: string;
+  savedDishName?: string;
+  savedAt?: string;
 };
 
 export type RestaurantDetails = Restaurant & {
@@ -75,4 +97,9 @@ export type MealHistoryItem = {
   currency?: string;
   createdAt: string;
   feedback?: 'love' | 'ok' | 'dislike';
+
+  // Snapshot saved when the user chooses a restaurant.
+  // Old history items may not have these fields.
+  restaurantSnapshot?: Restaurant;
+  mealSnapshot?: MealSuggestion;
 };
