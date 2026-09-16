@@ -1,12 +1,27 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, {createContext, useContext, useEffect, useMemo, useState} from 'react';
-import {LocationContext, MealHistoryItem, Restaurant, UserProfile} from '../types';
+import {AppState} from 'react-native';
+import {LocationContext, MealHistoryItem, Restaurant, UserProfile, WeeklyMealPlan} from '../types';
+import {
+  DEFAULT_SMART_NOTIFICATION_SETTINGS,
+  maybeShowNearbyTravelAlert,
+  normalizeSmartNotificationSettings,
+  syncSmartMealNotifications,
+} from '../services/smartNotificationService';
 import i18n, {SUPPORTED_LANGUAGES} from '../i18n';
+import {
+  migrateProfileRecord,
+  runStorageMigrations,
+  safeJsonParse,
+} from '../services/storageMigrationService';
+import {initializePremiumBilling, refreshPremiumStatus, subscribeToPremiumChanges} from '../services/premiumService';
+import {initializeAds} from '../services/adService';
 
 const PROFILE_KEY = '@foodpilot/profile';
 const HISTORY_KEY = '@foodpilot/history';
 const SAVED_KEY = '@foodpilot/saved';
 const LOCATION_KEY = '@foodpilot/location-context';
+const WEEKLY_PLAN_KEY = '@foodpilot/weekly-plan';
 
 const defaultProfile: UserProfile = {
   currency: 'USD',
@@ -15,6 +30,9 @@ const defaultProfile: UserProfile = {
   preferences: ['Asian', 'Italian'],
   restrictions: [],
   autoCurrency: true,
+  allergies: [],
+  spicePreference: 'any',
+  smartNotifications: DEFAULT_SMART_NOTIFICATION_SETTINGS,
 };
 
 function localeToLanguage(locale?: string) {
@@ -28,12 +46,18 @@ type AppContextValue = {
   history: MealHistoryItem[];
   saved: Restaurant[];
   locationContext: LocationContext | null;
+  weeklyPlan: WeeklyMealPlan | null;
+  hydrated: boolean;
+  isPremium: boolean;
+  monetizationReady: boolean;
   setProfile: (profile: UserProfile) => void;
   setLocationContext: (value: LocationContext | null) => void;
   addHistory: (item: MealHistoryItem) => void;
   updateHistoryFeedback: (id: string, feedback: MealHistoryItem['feedback']) => void;
   addSaved: (place: Restaurant) => void;
   removeSaved: (id: string) => void;
+  setWeeklyPlan: (plan: WeeklyMealPlan | null) => void;
+  refreshPremium: () => Promise<boolean>;
 };
 
 const AppContext = createContext<AppContextValue | undefined>(undefined);
@@ -43,22 +67,54 @@ export function AppProvider({children}: {children: React.ReactNode}) {
   const [history, setHistory] = useState<MealHistoryItem[]>([]);
   const [saved, setSaved] = useState<Restaurant[]>([]);
   const [locationContext, setLocationContextState] = useState<LocationContext | null>(null);
+  const [weeklyPlan, setWeeklyPlanState] = useState<WeeklyMealPlan | null>(null);
+  const [hydrated, setHydrated] = useState(false);
+  const [isPremium, setIsPremium] = useState(true);
+  const [monetizationReady, setMonetizationReady] = useState(false);
 
   useEffect(() => {
-    Promise.all([
-      AsyncStorage.getItem(PROFILE_KEY),
-      AsyncStorage.getItem(HISTORY_KEY),
-      AsyncStorage.getItem(SAVED_KEY),
-      AsyncStorage.getItem(LOCATION_KEY),
-    ]).then(([p, h, s, l]) => {
-      if (p) {
-        const stored = JSON.parse(p) as Partial<UserProfile>;
-        setProfileState({...defaultProfile, ...stored});
+    let active = true;
+
+    (async () => {
+      try {
+        await runStorageMigrations();
+
+        const [p, h, s, l, w] = await Promise.all([
+          AsyncStorage.getItem(PROFILE_KEY),
+          AsyncStorage.getItem(HISTORY_KEY),
+          AsyncStorage.getItem(SAVED_KEY),
+          AsyncStorage.getItem(LOCATION_KEY),
+          AsyncStorage.getItem(WEEKLY_PLAN_KEY),
+        ]);
+
+        if (!active) return;
+
+        const storedProfile = safeJsonParse<Partial<UserProfile> | null>(p, null);
+        setProfileState({
+          ...migrateProfileRecord(storedProfile, defaultProfile),
+          smartNotifications: normalizeSmartNotificationSettings(
+            storedProfile?.smartNotifications,
+          ),
+        });
+
+        setHistory(safeJsonParse<MealHistoryItem[]>(h, []).slice(0, 100));
+        setSaved(safeJsonParse<Restaurant[]>(s, []).slice(0, 250));
+        setLocationContextState(
+          safeJsonParse<LocationContext | null>(l, null),
+        );
+        setWeeklyPlanState(
+          safeJsonParse<WeeklyMealPlan | null>(w, null),
+        );
+      } catch {
+        // Startup must continue even if a migration/storage read fails.
+      } finally {
+        if (active) setHydrated(true);
       }
-      if (h) setHistory(JSON.parse(h));
-      if (s) setSaved(JSON.parse(s));
-      if (l) setLocationContextState(JSON.parse(l));
-    }).catch(() => undefined);
+    })();
+
+    return () => {
+      active = false;
+    };
   }, []);
 
   useEffect(() => {
@@ -66,7 +122,11 @@ export function AppProvider({children}: {children: React.ReactNode}) {
   }, [profile.locale]);
 
   const setProfile = (next: UserProfile) => {
-    const normalized = {...defaultProfile, ...next};
+    const normalized = {
+      ...defaultProfile,
+      ...next,
+      smartNotifications: normalizeSmartNotificationSettings(next.smartNotifications),
+    };
     setProfileState(normalized);
     AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(normalized)).catch(() => undefined);
   };
@@ -118,18 +178,121 @@ export function AppProvider({children}: {children: React.ReactNode}) {
     });
   };
 
+
+  const setWeeklyPlan = (plan: WeeklyMealPlan | null) => {
+    setWeeklyPlanState(plan);
+    if (plan) AsyncStorage.setItem(WEEKLY_PLAN_KEY, JSON.stringify(plan)).catch(() => undefined);
+    else AsyncStorage.removeItem(WEEKLY_PLAN_KEY).catch(() => undefined);
+  };
+
+  const refreshPremium = async () => {
+    const status = await refreshPremiumStatus();
+    setIsPremium(status.isPremium);
+    setMonetizationReady(status.ready);
+    if (!status.isPremium) initializeAds(false).catch(() => undefined);
+    return status.isPremium;
+  };
+
+  useEffect(() => {
+    if (!hydrated) return;
+    return subscribeToPremiumChanges(value => {
+      setIsPremium(value);
+      setMonetizationReady(true);
+      if (!value) initializeAds(false).catch(() => undefined);
+    });
+  }, [hydrated]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    let active = true;
+    initializePremiumBilling()
+      .then(status => {
+        if (!active) return;
+        setIsPremium(status.isPremium);
+        setMonetizationReady(status.ready);
+        if (!status.isPremium) initializeAds(false).catch(() => undefined);
+      })
+      .catch(() => {
+        if (!active) return;
+        setIsPremium(true);
+        setMonetizationReady(true);
+      });
+    return () => { active = false; };
+  }, [hydrated]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    const timer = setTimeout(() => {
+      syncSmartMealNotifications({
+        profile,
+        history,
+        locationContext,
+      }).catch(() => undefined);
+    }, 700);
+    return () => clearTimeout(timer);
+  }, [
+    hydrated,
+    profile.locale,
+    profile.preferences,
+    profile.restrictions,
+    profile.allergies,
+    profile.spicePreference,
+    profile.smartNotifications,
+    history.length,
+    locationContext?.city,
+    locationContext?.countryCode,
+    locationContext?.resolvedAt,
+  ]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+
+    const runNearbyCheck = () => {
+      maybeShowNearbyTravelAlert({
+        profile,
+        history,
+        locationContext,
+      }).catch(() => undefined);
+    };
+
+    if (AppState.currentState === 'active') runNearbyCheck();
+
+    const subscription = AppState.addEventListener('change', state => {
+      if (state === 'active') runNearbyCheck();
+    });
+
+    return () => subscription.remove();
+  }, [
+    hydrated,
+    profile.locale,
+    profile.preferences,
+    profile.restrictions,
+    profile.allergies,
+    profile.spicePreference,
+    profile.smartNotifications,
+    history.length,
+    locationContext?.countryCode,
+    locationContext?.resolvedAt,
+  ]);
+
   const value = useMemo(() => ({
     profile,
     history,
     saved,
     locationContext,
+    weeklyPlan,
+    hydrated,
+    isPremium,
+    monetizationReady,
     setProfile,
     setLocationContext,
     addHistory,
     updateHistoryFeedback,
     addSaved,
     removeSaved,
-  }), [profile, history, saved, locationContext]);
+    setWeeklyPlan,
+    refreshPremium,
+  }), [profile, history, saved, locationContext, weeklyPlan, hydrated, isPremium, monetizationReady]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

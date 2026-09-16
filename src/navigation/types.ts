@@ -4,6 +4,9 @@ import {
   MealHistoryItem,
   MealSuggestion,
   MealType,
+  TravelGuideCategory,
+  MoodKey,
+  GroupSession,
   Restaurant,
   UserProfile,
 } from '../types';
@@ -18,12 +21,20 @@ export type MealResultsRequestContext = {
   history?: MealHistoryItem[];
   profile: UserProfile;
   mealType?: MealType;
+  travelCategory?: TravelGuideCategory;
+  mood?: MoodKey;
+  groupSession?: GroupSession;
+  groupMode?: boolean;
 };
 
 export type RootStackParamList = {
   MainTabs: undefined;
   DailyMeal: undefined;
   TravelFood: undefined;
+  GroupMode: undefined;
+  WeeklyPlanner: undefined;
+  SurpriseMe: undefined;
+  Premium: undefined;
   MealResults: {
     mode: 'daily' | 'travel';
     title: string;

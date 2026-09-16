@@ -15,6 +15,7 @@ import {useTranslation} from 'react-i18next';
 import {RootStackParamList} from '../navigation/types';
 import {useApp} from '../context/AppContext';
 import {PrimaryButton} from '../components/PrimaryButton';
+import {Chip} from '../components/Chip';
 import {LocationSummary} from '../components/LocationSummary';
 import {LocalBanner} from '../components/LocalBanner';
 import {MealTypeSelector} from '../components/MealTypeSelector';
@@ -22,16 +23,29 @@ import {BudgetControl} from '../components/BudgetControl';
 import {getCurrentLocation} from '../services/locationService';
 import {resolveCurrentLocation, resolveDestination} from '../services/placeService';
 import {getTravelRecommendations} from '../services/recommendationService';
-import {LocationContext, MealTypeSelection} from '../types';
+import {LocationContext, MealTypeSelection, TravelGuideCategory} from '../types';
 import {resolveMealType} from '../services/mealPeriodService';
 import {formatBudgetInput, parseBudgetInput} from '../utils/budgetInput';
 import {APP_LOCAL_BANNERS} from '../utils/localArt';
+import {
+  checkFeatureAccess,
+  grantRewardedFeatureUnlock,
+  markFeatureUsed,
+} from '../services/usageQuotaService';
+import {showRewardedUnlock} from '../services/adService';
+
+const travelGuideDefs: Array<{id: TravelGuideCategory; labelKey: string; hintKey: string}> = [
+  {id: 'must_try', labelKey: 'travelCatMustTry', hintKey: 'travelHintMustTry'},
+  {id: 'street_food', labelKey: 'travelCatStreetFood', hintKey: 'travelHintStreetFood'},
+  {id: 'hidden_gems', labelKey: 'travelCatHiddenGems', hintKey: 'travelHintHiddenGems'},
+  {id: 'dessert', labelKey: 'travelCatDessert', hintKey: 'travelHintDessert'},
+];
 
 type Props = NativeStackScreenProps<RootStackParamList, 'TravelFood'>;
 
 export function TravelFoodScreen({navigation}: Props) {
   const {t} = useTranslation();
-  const {profile, history, locationContext, setLocationContext} = useApp();
+  const {profile, history, locationContext, setLocationContext, isPremium} = useApp();
   const scrollRef = useRef<ScrollView>(null);
   const [destinationY, setDestinationY] = useState(0);
   const [budgetY, setBudgetY] = useState(0);
@@ -40,6 +54,7 @@ export function TravelFoodScreen({navigation}: Props) {
   const [destination, setDestination] = useState('');
   const [useCurrent, setUseCurrent] = useState(true);
   const [mealTypeSelection, setMealTypeSelection] = useState<MealTypeSelection>('auto');
+  const [travelCategory, setTravelCategory] = useState<TravelGuideCategory>('must_try');
   const [loading, setLoading] = useState(false);
   const [detecting, setDetecting] = useState(false);
   const [currentContext, setCurrentContext] = useState<LocationContext | null>(
@@ -98,7 +113,7 @@ export function TravelFoodScreen({navigation}: Props) {
     }
   };
 
-  const submit = async () => {
+  const submit = async (skipMonetizationGate = false) => {
     if (!useCurrent && !destination.trim()) {
       return Alert.alert(t('travel.enterDestinationTitle'), t('travel.enterDestinationText'));
     }
@@ -121,6 +136,33 @@ export function TravelFoodScreen({navigation}: Props) {
         return;
       }
 
+      if (!skipMonetizationGate) {
+        const access = await checkFeatureAccess('travel', isPremium);
+        if (!access.allowed) {
+          Alert.alert(
+            t('freeLimitTitle'),
+            t('freeLimitTravelText'),
+            [
+              {
+                text: t('freeLimitWatchAd'),
+                onPress: async () => {
+                  const earned = await showRewardedUnlock(isPremium);
+                  if (earned) {
+                    await grantRewardedFeatureUnlock('travel');
+                    submit(true);
+                  } else {
+                    Alert.alert(t('freeLimitAdUnavailableTitle'), t('freeLimitAdUnavailableText'));
+                  }
+                },
+              },
+              {text: t('freeLimitGoPremium'), onPress: () => navigation.navigate('Premium')},
+              {text: t('common.cancel'), style: 'cancel'},
+            ],
+          );
+          return;
+        }
+      }
+
       const destinationLabel = useCurrent ? undefined : destination.trim();
       const requestProfile = {...profile, currency};
       const suggestions = await getTravelRecommendations({
@@ -131,6 +173,7 @@ export function TravelFoodScreen({navigation}: Props) {
         profile: requestProfile,
         history,
         mealType: resolvedMealType,
+        travelCategory,
       });
 
       if (!suggestions.length) {
@@ -138,14 +181,17 @@ export function TravelFoodScreen({navigation}: Props) {
         return;
       }
 
+      await markFeatureUsed('travel', isPremium);
+
       const resolvedTitle = [resolved?.city, resolved?.country].filter(Boolean).join(', ');
+      const selectedGuide = travelGuideDefs.find(item => item.id === travelCategory) || travelGuideDefs[0];
+      const categoryLabel = t(selectedGuide.labelKey);
+      const areaLabel = resolvedTitle || destination.trim();
       navigation.navigate('MealResults', {
         mode: 'travel',
-        title: useCurrent
-          ? resolvedTitle
-            ? t('travel.mustTryIn', {area: resolvedTitle})
-            : t('travel.localMustTryFood')
-          : t('travel.tryIn', {area: resolvedTitle || destination.trim()}),
+        title: areaLabel
+          ? t('smartTravelResultsTitle', {category: categoryLabel, area: areaLabel})
+          : categoryLabel,
         suggestions,
         destination: destinationLabel,
         currency,
@@ -160,6 +206,7 @@ export function TravelFoodScreen({navigation}: Props) {
           profile: requestProfile,
           history,
           mealType: resolvedMealType,
+          travelCategory,
         },
       });
     } catch (e) {
@@ -245,6 +292,24 @@ export function TravelFoodScreen({navigation}: Props) {
           mode="travel"
         />
 
+        <View style={styles.guidePanel}>
+          <Text style={styles.guideTitle}>{t('smartTravelGuideTitle')}</Text>
+          <Text style={styles.guideText}>{t('smartTravelGuideHint')}</Text>
+          <View style={styles.guideChips}>
+            {travelGuideDefs.map(item => (
+              <Chip
+                key={item.id}
+                label={t(item.labelKey)}
+                selected={travelCategory === item.id}
+                onPress={() => setTravelCategory(item.id)}
+              />
+            ))}
+          </View>
+          <Text style={styles.guideHint}>
+            {t((travelGuideDefs.find(item => item.id === travelCategory) || travelGuideDefs[0]).hintKey)}
+          </Text>
+        </View>
+
         <View onLayout={event => setBudgetY(event.nativeEvent.layout.y)}>
           <BudgetControl
             currency={activeCurrency}
@@ -300,6 +365,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
   },
   checkButtonText: {fontSize: 13, fontWeight: '900', color: '#fff'},
+  guidePanel: {backgroundColor: '#fff8ed', borderRadius: 20, padding: 16, marginTop: 10, borderWidth: 1, borderColor: '#f0dfc7'},
+  guideTitle: {fontSize: 15, fontWeight: '900', color: '#2b2b2b'},
+  guideText: {fontSize: 12, lineHeight: 18, color: '#6b6259', marginTop: 5},
+  guideChips: {flexDirection: 'row', flexWrap: 'wrap', marginTop: 10},
+  guideHint: {fontSize: 12, lineHeight: 18, color: '#94601d', fontWeight: '700', marginTop: 4},
   panel: {backgroundColor: '#eaf3ff', borderRadius: 20, padding: 16, marginVertical: 24},
   panelTitle: {fontSize: 15, fontWeight: '800', color: '#1f3560'},
   panelText: {fontSize: 13, color: '#50668d', lineHeight: 20, marginTop: 6},

@@ -18,13 +18,20 @@ import {LocationSummary} from '../components/LocationSummary';
 import {LocalBanner} from '../components/LocalBanner';
 import {MealTypeSelector} from '../components/MealTypeSelector';
 import {BudgetControl} from '../components/BudgetControl';
+import {MoodSelector} from '../components/MoodSelector';
 import {getCurrentLocation} from '../services/locationService';
 import {resolveCurrentLocation} from '../services/placeService';
 import {getDailyRecommendations} from '../services/recommendationService';
-import {LocationContext, MealTypeSelection} from '../types';
+import {LocationContext, MealTypeSelection, MoodKey} from '../types';
 import {resolveMealType} from '../services/mealPeriodService';
 import {formatBudgetInput, parseBudgetInput} from '../utils/budgetInput';
 import {APP_LOCAL_BANNERS} from '../utils/localArt';
+import {
+  checkFeatureAccess,
+  grantRewardedFeatureUnlock,
+  markFeatureUsed,
+} from '../services/usageQuotaService';
+import {showRewardedUnlock} from '../services/adService';
 
 const optionDefs = [
   {id: 'Healthy', labelKey: 'daily.prefs.healthy'},
@@ -38,13 +45,14 @@ type Props = NativeStackScreenProps<RootStackParamList, 'DailyMeal'>;
 
 export function DailyMealScreen({navigation}: Props) {
   const {t} = useTranslation();
-  const {profile, history, locationContext, setLocationContext} = useApp();
+  const {profile, history, locationContext, setLocationContext, setProfile, isPremium} = useApp();
   const scrollRef = useRef<ScrollView>(null);
   const [budgetY, setBudgetY] = useState(0);
   const [budget, setBudget] = useState(formatBudgetInput(profile.defaultBudget, profile.locale));
   const [budgetEnabled, setBudgetEnabled] = useState(true);
   const [selected, setSelected] = useState<string[]>([]);
   const [mealTypeSelection, setMealTypeSelection] = useState<MealTypeSelection>('auto');
+  const [mood, setMood] = useState<MoodKey | undefined>(profile.recentMood);
   const [loading, setLoading] = useState(false);
   const [detecting, setDetecting] = useState(false);
   const [activeLocation, setActiveLocation] = useState<LocationContext | null>(
@@ -88,7 +96,7 @@ export function DailyMealScreen({navigation}: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const submit = async () => {
+  const submit = async (skipMonetizationGate = false) => {
     const amount = budgetEnabled ? parseBudgetInput(budget) : undefined;
     if (budgetEnabled && (!amount || amount <= 0)) {
       Alert.alert(
@@ -96,6 +104,33 @@ export function DailyMealScreen({navigation}: Props) {
         t('daily.invalidBudgetText', {currency: activeCurrency}),
       );
       return;
+    }
+
+    if (!skipMonetizationGate) {
+      const access = await checkFeatureAccess('daily', isPremium);
+      if (!access.allowed) {
+        Alert.alert(
+          t('freeLimitTitle'),
+          t('freeLimitDailyText'),
+          [
+            {
+              text: t('freeLimitWatchAd'),
+              onPress: async () => {
+                const earned = await showRewardedUnlock(isPremium);
+                if (earned) {
+                  await grantRewardedFeatureUnlock('daily');
+                  submit(true);
+                } else {
+                  Alert.alert(t('freeLimitAdUnavailableTitle'), t('freeLimitAdUnavailableText'));
+                }
+              },
+            },
+            {text: t('freeLimitGoPremium'), onPress: () => navigation.navigate('Premium')},
+            {text: t('common.cancel'), style: 'cancel'},
+          ],
+        );
+        return;
+      }
     }
 
     setLoading(true);
@@ -115,11 +150,18 @@ export function DailyMealScreen({navigation}: Props) {
         history,
         profile: requestProfile,
         mealType: resolvedMealType,
+        mood,
       });
 
       if (!suggestions.length) {
         Alert.alert(t('budgetNoMatchTitle'), t('budgetNoMatchText'));
         return;
+      }
+
+      await markFeatureUsed('daily', isPremium);
+
+      if (profile.recentMood !== mood) {
+        setProfile({...profile, recentMood: mood});
       }
 
       navigation.navigate('MealResults', {
@@ -138,6 +180,7 @@ export function DailyMealScreen({navigation}: Props) {
           history,
           profile: requestProfile,
           mealType: resolvedMealType,
+          mood,
         },
       });
     } catch (e) {
@@ -198,6 +241,8 @@ export function DailyMealScreen({navigation}: Props) {
             }
           />
         </View>
+
+        <MoodSelector value={mood} onChange={setMood} />
 
         <Text style={styles.label}>{t('daily.optionalPreferences')}</Text>
         <View style={styles.chips}>

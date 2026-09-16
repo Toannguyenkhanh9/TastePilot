@@ -14,10 +14,14 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../navigation/types';
 import {formatMoney} from '../utils/format';
 import {getDailyRecommendations, getTravelRecommendations} from '../services/recommendationService';
+import {getGroupRecommendations} from '../services/groupRecommendationService';
 import {MealSuggestion} from '../types';
 import {APP_LOCAL_BANNERS, getMealLocalArt} from '../utils/localArt';
 import {LocalBanner} from '../components/LocalBanner';
 import {FoodAssetIcon} from '../components/FoodAssetIcon';
+import {useApp} from '../context/AppContext';
+import {checkFeatureAccess, grantRewardedFeatureUnlock, markFeatureUsed, MeteredFeature} from '../services/usageQuotaService';
+import {showRewardedUnlock} from '../services/adService';
 
 function normalizeName(value: string) {
   return value.trim().toLowerCase();
@@ -29,36 +33,91 @@ function uniqueNames(values: string[]) {
 
 export function MealResultsScreen({route, navigation}: NativeStackScreenProps<RootStackParamList, 'MealResults'>) {
   const {t} = useTranslation();
+  const {isPremium} = useApp();
   const {title, mode, destination, currency, locale, locationContext, requestContext} = route.params;
   const [suggestions, setSuggestions] = useState(route.params.suggestions);
   const [dismissed, setDismissed] = useState<string[]>([]);
   const [refreshing, setRefreshing] = useState(false);
   const [swappingId, setSwappingId] = useState<string | null>(null);
 
+  const ensureMeteredAccess = async (feature: MeteredFeature) => {
+    const access = await checkFeatureAccess(feature, isPremium);
+    if (access.allowed) return true;
+
+    return new Promise<boolean>(resolve => {
+      Alert.alert(
+        t('freeLimitTitle'),
+        t(feature === 'daily' ? 'freeLimitDailyText' : 'freeLimitTravelText'),
+        [
+          {
+            text: t('freeLimitWatchAd'),
+            onPress: async () => {
+              const earned = await showRewardedUnlock(isPremium);
+              if (!earned) {
+                Alert.alert(t('freeLimitAdUnavailableTitle'), t('freeLimitAdUnavailableText'));
+                resolve(false);
+                return;
+              }
+              await grantRewardedFeatureUnlock(feature);
+              resolve(true);
+            },
+          },
+          {
+            text: t('freeLimitGoPremium'),
+            onPress: () => {
+              navigation.navigate('Premium');
+              resolve(false);
+            },
+          },
+          {text: t('common.cancel'), style: 'cancel', onPress: () => resolve(false)},
+        ],
+        {cancelable: true, onDismiss: () => resolve(false)},
+      );
+    });
+  };
+
   const fetchFreshSuggestions = async (excludeDishNames: string[]) => {
-    if (requestContext.mode === 'daily') {
-      return getDailyRecommendations({
-        budget: requestContext.budget,
-        preferences: requestContext.preferences || [],
-        location: requestContext.location,
-        locationContext: requestContext.locationContext,
-        history: requestContext.history || [],
+    if (requestContext.groupSession) {
+      return getGroupRecommendations({
+        session: requestContext.groupSession,
         profile: requestContext.profile,
-        mealType: requestContext.mealType,
+        history: requestContext.history || [],
+        locationContext: requestContext.locationContext,
         excludeDishNames,
+        limit: 5,
       });
     }
 
-    return getTravelRecommendations({
-      budget: requestContext.budget,
-      destination: requestContext.destination,
-      location: requestContext.location,
-      locationContext: requestContext.locationContext,
-      profile: requestContext.profile,
-      history: requestContext.history || [],
-      mealType: requestContext.mealType,
-      excludeDishNames,
-    });
+    const feature: MeteredFeature = requestContext.mode === 'daily' ? 'daily' : 'travel';
+    const allowed = await ensureMeteredAccess(feature);
+    if (!allowed) return [];
+
+    const fresh = requestContext.mode === 'daily'
+      ? await getDailyRecommendations({
+          budget: requestContext.budget,
+          preferences: requestContext.preferences || [],
+          location: requestContext.location,
+          locationContext: requestContext.locationContext,
+          history: requestContext.history || [],
+          profile: requestContext.profile,
+          mealType: requestContext.mealType,
+          mood: requestContext.mood,
+          excludeDishNames,
+        })
+      : await getTravelRecommendations({
+          budget: requestContext.budget,
+          destination: requestContext.destination,
+          location: requestContext.location,
+          locationContext: requestContext.locationContext,
+          profile: requestContext.profile,
+          history: requestContext.history || [],
+          mealType: requestContext.mealType,
+          travelCategory: requestContext.travelCategory,
+          excludeDishNames,
+        });
+
+    if (fresh.length) await markFeatureUsed(feature, isPremium);
+    return fresh;
   };
 
   const rerollAll = async () => {
@@ -223,6 +282,14 @@ export function MealResultsScreen({route, navigation}: NativeStackScreenProps<Ro
                 <Text style={styles.reason}>{meal.reason}</Text>
 
                 <View style={styles.quickMetaRow}>
+                  {meal.tasteMatchPercent ? (
+                    <View style={styles.matchPill}>
+                      <Text style={styles.matchPillText}>
+                        {meal.groupMatchPercent ? t('groupMatch', {percent: meal.groupMatchPercent}) : t('smartTasteMatch', {percent: meal.tasteMatchPercent})}
+                      </Text>
+                    </View>
+                  ) : null}
+
                   <View style={styles.quickMetaPill}>
                     <Text style={styles.quickMetaText}>
                       {meal.localSpecialty ? t('mealResults.localSpecialty') : t('mealResults.smartBudgetFit')}
@@ -417,6 +484,8 @@ const styles = StyleSheet.create({
     lineHeight: 23,
     color: '#555',
   },
+  matchPill: {backgroundColor: '#e9f7ee', borderRadius: 999, paddingHorizontal: 10, paddingVertical: 7, marginRight: 8, marginBottom: 8},
+  matchPillText: {fontSize: 11, fontWeight: '900', color: '#237a43'},
   quickMetaRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',

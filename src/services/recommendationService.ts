@@ -3,18 +3,69 @@ import {USE_MOCK_API} from './config';
 import {postJson} from './apiClient';
 import {restaurantsMock} from './mockData';
 import {getLocalRecommendations} from './localRecommendationService';
+import {tasteMatchForSuggestion} from './tasteProfileService';
+import {rankRestaurantsForMeal} from './restaurantRankingService';
 import {
   Coordinates,
   LocationContext,
   MealHistoryItem,
   MealSuggestion,
   MealType,
+  TravelGuideCategory,
+  MoodKey,
   Restaurant,
   UserProfile,
 } from '../types';
 
 const AI_CACHE_PREFIX = '@tastepilot/ai-reco/v2';
 const AI_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
+
+const RESTAURANT_CACHE_TTL_MS = 10 * 60 * 1000;
+const RESTAURANT_CACHE_MAX = 40;
+const restaurantCache = new Map<
+  string,
+  {createdAt: number; items: Restaurant[]}
+>();
+
+function restaurantCacheKey(
+  meal: MealSuggestion,
+  location?: Coordinates,
+  destination?: string,
+) {
+  const lat =
+    location?.latitude != null
+      ? Math.round(location.latitude * 1000) / 1000
+      : '';
+  const lng =
+    location?.longitude != null
+      ? Math.round(location.longitude * 1000) / 1000
+      : '';
+  return [
+    meal.canonicalId || meal.searchKeyword || meal.name,
+    lat,
+    lng,
+    destination || '',
+  ].join('|');
+}
+
+function getRestaurantCache(key: string) {
+  const cached = restaurantCache.get(key);
+  if (!cached) return undefined;
+  if (Date.now() - cached.createdAt > RESTAURANT_CACHE_TTL_MS) {
+    restaurantCache.delete(key);
+    return undefined;
+  }
+  return cached.items;
+}
+
+function setRestaurantCache(key: string, items: Restaurant[]) {
+  if (restaurantCache.size >= RESTAURANT_CACHE_MAX) {
+    const oldest = restaurantCache.keys().next().value;
+    if (oldest) restaurantCache.delete(oldest);
+  }
+  restaurantCache.set(key, {createdAt: Date.now(), items});
+}
+
 
 type DailyRequest = {
   budget?: number;
@@ -25,6 +76,7 @@ type DailyRequest = {
   profile: UserProfile;
   excludeDishNames?: string[];
   mealType?: MealType;
+  mood?: MoodKey;
   forceAI?: boolean;
 };
 
@@ -37,6 +89,7 @@ type TravelRequest = {
   history?: MealHistoryItem[];
   excludeDishNames?: string[];
   mealType?: MealType;
+  travelCategory?: TravelGuideCategory;
   forceAI?: boolean;
 };
 
@@ -87,8 +140,12 @@ function makeCacheKey(mode: 'daily'|'travel', input: DailyRequest | TravelReques
     budget: budgetBucket(input.budget),
     preferences: 'preferences' in input ? [...(input.preferences || [])].sort() : [],
     restrictions: [...(input.profile.restrictions || [])].sort(),
+    allergies: [...(input.profile.allergies || [])].sort(),
+    spicePreference: input.profile.spicePreference || 'any',
     destination: 'destination' in input ? input.destination || '' : '',
     mealType: input.mealType || 'lunch',
+    mood: 'mood' in input ? input.mood || '' : '',
+    travelCategory: 'travelCategory' in input ? input.travelCategory || 'must_try' : '',
   });
   return `${AI_CACHE_PREFIX}:${simpleHash(raw)}`;
 }
@@ -113,12 +170,27 @@ async function writeAICache(key: string, suggestions: MealSuggestion[]) {
   AsyncStorage.setItem(key, JSON.stringify(payload)).catch(() => undefined);
 }
 
-function markAI(items: MealSuggestion[]) {
+function markAI(
+  items: MealSuggestion[],
+  input?: DailyRequest | TravelRequest,
+) {
   return items.map(item => ({
     ...item,
     recommendationSource: 'ai' as const,
     priceEstimateSource: item.priceEstimateSource || 'ai' as const,
     priceConfidence: item.priceConfidence || 'low' as const,
+    tasteMatchPercent: input
+      ? tasteMatchForSuggestion(
+          item,
+          'history' in input ? input.history || [] : [],
+          input.profile,
+          'preferences' in input ? input.preferences || [] : [],
+        )
+      : item.tasteMatchPercent,
+    allergyFilterApplied: !!input?.profile?.allergies?.length,
+    travelCategory:
+      input && 'travelCategory' in input ? input.travelCategory : item.travelCategory,
+    mood: input && 'mood' in input ? input.mood : item.mood,
   }));
 }
 
@@ -129,7 +201,7 @@ async function fetchAI(
   const key = makeCacheKey(mode, input);
   const cached = await readAICache(key);
   if (cached?.length) {
-    const filteredCached = filterByBudgetWindow(markAI(cached), input.budget);
+    const filteredCached = filterByBudgetWindow(markAI(cached, input), input.budget);
     if (filteredCached.length) return filteredCached;
   }
 
@@ -142,7 +214,7 @@ async function fetchAI(
     input.budget,
   );
   if (suggestions.length) await writeAICache(key, suggestions);
-  return markAI(suggestions);
+  return markAI(suggestions, input);
 }
 
 function mergeLocalAndAI(local: MealSuggestion[], ai: MealSuggestion[], budget?: number, limit = 5) {
@@ -168,11 +240,13 @@ export async function getDailyRecommendations(input: DailyRequest): Promise<Meal
     history: input.history,
     profile: input.profile,
     mealType: input.mealType,
+    mood: input.mood,
     excludeDishNames: input.excludeDishNames,
     limit: 5,
   });
 
   if (!input.forceAI && local.length >= 5) return local;
+  if (!input.forceAI && (input.profile.allergies || []).length > 0) return local;
   if (USE_MOCK_API && !input.forceAI) return local;
 
   try {
@@ -193,12 +267,14 @@ export async function getTravelRecommendations(input: TravelRequest): Promise<Me
     history: input.history || [],
     profile: input.profile,
     mealType: input.mealType,
+    travelCategory: input.travelCategory,
     excludeDishNames: input.excludeDishNames,
     limit: 5,
   });
 
   const localSpecialties = local.filter(item => item.localSpecialty);
   if (!input.forceAI && local.length >= 5 && localSpecialties.length >= 5) return local;
+  if (!input.forceAI && (input.profile.allergies || []).length > 0) return local;
   if (USE_MOCK_API && !input.forceAI) return local;
 
   try {
@@ -215,8 +291,12 @@ export async function getRestaurantsForMeal(
   location?: Coordinates,
   destination?: string,
 ): Promise<Restaurant[]> {
+  const cacheKey = restaurantCacheKey(meal, location, destination);
+  const cached = getRestaurantCache(cacheKey);
+  if (cached) return cached;
+
   if (USE_MOCK_API) {
-    return restaurantsMock.map((r, i) => ({
+    const ranked = rankRestaurantsForMeal(restaurantsMock.map((r, i) => ({
       ...r,
       id: `${r.id}-${i}`,
       name: `${meal.name} · ${r.name}`,
@@ -224,15 +304,19 @@ export async function getRestaurantsForMeal(
       longitude: location?.longitude,
       openNow: i !== 2,
       primaryType: 'restaurant',
-    }));
+    })), meal);
+    setRestaurantCache(cacheKey, ranked);
+    return ranked;
   }
 
-  // Places is still used here because restaurant availability/rating/distance is live data.
-  // The expensive AI step has already been avoided by the local catalog above.
+  // Places is live data, but repeated calls for the same dish/current area are
+  // cached briefly to protect quota and make back-navigation instant.
   const data = await postJson<{restaurants: Restaurant[]}>('searchRestaurants', {
     keyword: meal.searchKeyword,
     location,
     destination,
   });
-  return data.restaurants;
+  const ranked = rankRestaurantsForMeal(data.restaurants || [], meal);
+  setRestaurantCache(cacheKey, ranked);
+  return ranked;
 }

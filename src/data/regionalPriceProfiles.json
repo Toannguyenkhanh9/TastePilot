@@ -1,5 +1,5 @@
 {
-  "version": "2026.09.15",
+  "version": "2026.09.21-750",
   "note": "Reference meal anchors for approximate local price ranges. Restaurant priceLevel/menu data should override these estimates when available.",
   "currencyFallbackTypicalMeal": {
     "VND": 70000,
@@ -29,7 +29,21 @@
     "SEK": 150,
     "NOK": 190,
     "DKK": 120,
-    "NZD": 22
+    "NZD": 22,
+    "GEL": 25,
+    "IRR": 3500000,
+    "ILS": 55,
+    "PKR": 900,
+    "BDT": 450,
+    "LKR": 1200,
+    "NPR": 500,
+    "MMK": 10000,
+    "KHR": 20000,
+    "LAK": 90000,
+    "ZAR": 150,
+    "NGN": 6000,
+    "ARS": 14000,
+    "COP": 30000
   },
   "countries": {
     "VN": {
@@ -360,6 +374,137 @@
       "cities": {
         "auckland": 1.15,
         "wellington": 1.1
+      }
+    },
+    "GE": {
+      "currency": "GEL",
+      "typicalMeal": 25,
+      "updatedAt": "2026-09",
+      "cities": {
+        "tbilisi": 1.15,
+        "batumi": 1.1
+      }
+    },
+    "IR": {
+      "currency": "IRR",
+      "typicalMeal": 3500000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "tehran": 1.2,
+        "isfahan": 1.0,
+        "shiraz": 0.95
+      }
+    },
+    "IL": {
+      "currency": "ILS",
+      "typicalMeal": 55,
+      "updatedAt": "2026-09",
+      "cities": {
+        "tel aviv": 1.3,
+        "jerusalem": 1.15,
+        "haifa": 1.0
+      }
+    },
+    "PK": {
+      "currency": "PKR",
+      "typicalMeal": 900,
+      "updatedAt": "2026-09",
+      "cities": {
+        "karachi": 1.05,
+        "lahore": 1.05,
+        "islamabad": 1.2
+      }
+    },
+    "BD": {
+      "currency": "BDT",
+      "typicalMeal": 450,
+      "updatedAt": "2026-09",
+      "cities": {
+        "dhaka": 1.15,
+        "chattogram": 1.0
+      }
+    },
+    "LK": {
+      "currency": "LKR",
+      "typicalMeal": 1200,
+      "updatedAt": "2026-09",
+      "cities": {
+        "colombo": 1.2,
+        "kandy": 1.0
+      }
+    },
+    "NP": {
+      "currency": "NPR",
+      "typicalMeal": 500,
+      "updatedAt": "2026-09",
+      "cities": {
+        "kathmandu": 1.15,
+        "pokhara": 1.05
+      }
+    },
+    "MM": {
+      "currency": "MMK",
+      "typicalMeal": 10000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "yangon": 1.15,
+        "mandalay": 1.0
+      }
+    },
+    "KH": {
+      "currency": "KHR",
+      "typicalMeal": 20000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "phnom penh": 1.15,
+        "siem reap": 1.2
+      }
+    },
+    "LA": {
+      "currency": "LAK",
+      "typicalMeal": 90000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "vientiane": 1.1,
+        "luang prabang": 1.15
+      }
+    },
+    "ZA": {
+      "currency": "ZAR",
+      "typicalMeal": 150,
+      "updatedAt": "2026-09",
+      "cities": {
+        "cape town": 1.2,
+        "johannesburg": 1.15,
+        "durban": 1.0
+      }
+    },
+    "NG": {
+      "currency": "NGN",
+      "typicalMeal": 6000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "lagos": 1.25,
+        "abuja": 1.2
+      }
+    },
+    "AR": {
+      "currency": "ARS",
+      "typicalMeal": 14000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "buenos aires": 1.2,
+        "cordoba": 1.0
+      }
+    },
+    "CO": {
+      "currency": "COP",
+      "typicalMeal": 30000,
+      "updatedAt": "2026-09",
+      "cities": {
+        "bogota": 1.15,
+        "medellin": 1.05,
+        "cartagena": 1.2
       }
     }
   }

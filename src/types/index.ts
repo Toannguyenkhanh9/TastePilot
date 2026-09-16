@@ -1,6 +1,60 @@
 export type RecommendationMode = 'daily' | 'travel';
 export type MealType = 'breakfast' | 'lunch' | 'dinner';
 export type MealTypeSelection = 'auto' | MealType;
+export type AllergyKey = 'Peanuts' | 'Shellfish' | 'Dairy' | 'Egg' | 'Sesame';
+export type SpicePreference = 'any' | 'mild' | 'medium' | 'spicy';
+export type TravelGuideCategory = 'must_try' | 'street_food' | 'hidden_gems' | 'dessert';
+export type MoodKey = 'quick' | 'healthy' | 'comfort' | 'date_night' | 'family' | 'late_night' | 'hot' | 'light';
+export type NotificationFrequency = 'daily' | 'weekdays' | 'three_per_week' | 'weekends';
+export type SmartNotificationSettings = {
+  enabled: boolean;
+  frequency: NotificationFrequency;
+  meals: MealType[];
+  breakfastTime: string;
+  lunchTime: string;
+  dinnerTime: string;
+  travelNearbyEnabled: boolean;
+  travelRadiusMeters: number;
+};
+
+
+export type GroupMember = {
+  id: string;
+  name: string;
+  budget?: number;
+  preferences: string[];
+  restrictions: string[];
+  allergies: AllergyKey[];
+  spicePreference: SpicePreference;
+};
+
+export type GroupSession = {
+  id: string;
+  name: string;
+  currency: string;
+  mealType: MealType;
+  mood?: MoodKey;
+  members: GroupMember[];
+  createdAt: string;
+};
+
+export type WeeklyPlanDay = {
+  id: string;
+  dateISO: string;
+  mealType: MealType;
+  meal: MealSuggestion;
+};
+
+export type WeeklyMealPlan = {
+  id: string;
+  createdAt: string;
+  locale: string;
+  currency: string;
+  mealType: MealType;
+  count: 5 | 7;
+  mood?: MoodKey;
+  days: WeeklyPlanDay[];
+};
 
 export type Coordinates = {
   latitude: number;
@@ -18,6 +72,7 @@ export type LocationContext = {
   formattedAddress?: string;
   source: 'current' | 'destination';
   destinationLabel?: string;
+  resolvedAt?: string;
 };
 
 export type UserProfile = {
@@ -27,6 +82,10 @@ export type UserProfile = {
   preferences: string[];
   restrictions: string[];
   autoCurrency?: boolean;
+  allergies?: AllergyKey[];
+  spicePreference?: SpicePreference;
+  recentMood?: MoodKey;
+  smartNotifications?: SmartNotificationSettings;
 };
 
 export type MealSuggestion = {
@@ -34,6 +93,8 @@ export type MealSuggestion = {
   canonicalId?: string;
   name: string;
   cuisine: string;
+  canonicalName?: string;
+  canonicalCuisine?: string;
   estimatedMin: number;
   estimatedMax: number;
   reason: string;
@@ -53,6 +114,11 @@ export type MealSuggestion = {
   regionalPriceProfileVersion?: string;
   mealType?: MealType;
   touristPopular?: boolean;
+  tasteMatchPercent?: number;
+  allergyFilterApplied?: boolean;
+  travelCategory?: TravelGuideCategory;
+  mood?: MoodKey;
+  groupMatchPercent?: number;
 };
 
 export type Restaurant = {
@@ -69,6 +135,8 @@ export type Restaurant = {
   longitude?: number;
   openNow?: boolean;
   primaryType?: string;
+  smartScore?: number;
+  smartRankReason?: string;
 
   // Saved-place metadata. These are filled when the user saves from a meal search.
   savedCity?: string;

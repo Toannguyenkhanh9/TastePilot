@@ -3,9 +3,13 @@ import {
   MealHistoryItem,
   MealSuggestion,
   MealType,
+  TravelGuideCategory,
+  MoodKey,
   UserProfile,
 } from '../types';
 import {estimateRegionalDishPrice} from './regionalPriceService';
+import {localizeCuisine, localizeDishName} from './dishLocalizationService';
+import {buildTasteProfile, LearnedTasteModel, tasteMatchForDish} from './tasteProfileService';
 
 export type LocalDish = {
   id: string;
@@ -32,9 +36,11 @@ export type LocalDish = {
   mealTypes?: MealType[];
   everydayScore?: number;
   touristScore?: number;
+  possibleAllergens?: string[];
+  travelStyles?: TravelGuideCategory[];
 };
 
-const CATALOG = require('../data/dishes1000.json') as LocalDish[];
+const CATALOG = require('../data/dishes750_global.json') as LocalDish[];
 
 const VARIANT_LABELS: Record<string, Record<string, string>> = {
   en: {classic:'Classic',chicken:'Chicken',beef:'Beef',seafood:'Seafood',vegetarian:'Vegetarian',spicy:'Spicy',deluxe:'Deluxe',signature:'Signature',tofu:'Tofu',mushroom:'Mushroom',extra_veg:'Extra vegetables',sesame:'Sesame',grilled:'Grilled',cheese:'Cheese',crispy:'Crispy',chocolate:'Chocolate',strawberry:'Strawberry',mango:'Mango',caramel:'Caramel',pistachio:'Pistachio',coconut:'Coconut'},
@@ -91,7 +97,11 @@ function normalize(value?: string) {
     .trim();
 }
 
-function hardRestrictionMatch(dish: LocalDish, restrictions: string[]) {
+function hardRestrictionMatch(
+  dish: LocalDish,
+  restrictions: string[],
+  allergies: string[] = [],
+) {
   const r = restrictions.map(normalize);
   if (r.some(x => x.includes('vegetarian') || x.includes('an chay') || x.includes('ăn chay')) && !dish.vegetarian) return false;
   if (r.some(x => x.includes('vegan') || x.includes('thuan chay') || x.includes('thuần chay')) && !dish.vegan) return false;
@@ -99,14 +109,18 @@ function hardRestrictionMatch(dish: LocalDish, restrictions: string[]) {
   if (r.some(x => x.includes('gluten')) && !dish.glutenFreeFriendly) return false;
   if (r.some(x => x.includes('no pork') || x.includes('khong thit heo') || x.includes('không thịt heo')) && dish.containsPork) return false;
   if (r.some(x => x.includes('no beef') || x.includes('khong thit bo') || x.includes('không thịt bò')) && dish.containsBeef) return false;
+
+  const possible = new Set((dish.possibleAllergens || []).map(normalize));
+  if (allergies.some(item => possible.has(normalize(item)))) return false;
   return true;
 }
 
 function displayName(dish: LocalDish, locale?: string) {
   const lang = langFromLocale(locale);
-  if (dish.variant === 'classic') return dish.baseName;
+  const localizedBase = localizeDishName(dish.id, dish.baseName, locale);
+  if (dish.variant === 'classic') return localizedBase;
   const label = VARIANT_LABELS[lang][dish.variant] || dish.variantLabel;
-  return `${dish.baseName} · ${label}`;
+  return `${localizedBase} · ${label}`;
 }
 
 function stringHash(value: string) {
@@ -122,6 +136,25 @@ function deterministicJitter(id: string, salt: string) {
   return (stringHash(`${id}|${salt}`) % 1000) / 1000;
 }
 
+
+function moodAdjustment(dish: LocalDish, mood?: MoodKey) {
+  if (!mood) return 0;
+  const name = normalize(dish.baseName);
+  const tags = (dish.tags || []).map(normalize);
+  const has = (...values: string[]) => values.some(value => name.includes(value) || tags.some(tag => tag.includes(value)));
+  switch (mood) {
+    case 'quick': return (dish.category === 'snack' ? 22 : 0) + (dish.priceBand <= 2 ? 8 : -4) + (has('sandwich','burger','taco','wrap','roll','rice','noodle','pizza','kebab','toast','dumpling') ? 18 : 0);
+    case 'healthy': return (dish.vegetarian ? 12 : 0) + (dish.category === 'veg' ? 22 : 0) + (has('salad','grilled','soup','vegetable','fish','tofu','lentil') ? 16 : 0) - (has('fried','crispy','cheese','cream') ? 12 : 0);
+    case 'comfort': return (has('soup','stew','curry','noodle','rice','pasta','ramen','pho','cheese','fried','pie') ? 24 : 0) + ((dish.everydayScore || 60) >= 75 ? 8 : 0);
+    case 'date_night': return (dish.priceBand >= 3 ? 14 : 0) + ((dish.popularity || 50) >= 82 ? 7 : 0) + (has('sushi','steak','seafood','pasta','risotto','paella','duck','lamb','grilled') ? 22 : 0);
+    case 'family': return ((dish.spicyLevel || 0) <= 1 ? 12 : -12) + ((dish.popularity || 50) >= 78 ? 12 : 0) + (dish.priceBand <= 3 ? 6 : 0) + (has('rice','noodle','pizza','chicken','dumpling','soup','pasta') ? 16 : 0);
+    case 'late_night': return (dish.category === 'snack' ? 18 : 0) + (has('noodle','ramen','burger','pizza','kebab','shawarma','taco','fried','hot dog','sandwich','rice') ? 22 : 0);
+    case 'hot': return has('soup','hot pot','ramen','pho','curry','stew','noodle','broth','tagine') ? 30 : -5;
+    case 'light': return (dish.category === 'veg' ? 20 : 0) + (dish.priceBand <= 2 ? 5 : 0) + (has('salad','soup','roll','sushi','ceviche','grilled fish','vegetable','tofu') ? 22 : 0) - (has('fried','cream','cheese','pie','burger') ? 10 : 0);
+    default: return 0;
+  }
+}
+
 function scoreDish(
   dish: LocalDish,
   mode: 'daily'|'travel',
@@ -131,6 +164,10 @@ function scoreDish(
   history: MealHistoryItem[],
   locationContext?: LocationContext,
   mealType: MealType = 'lunch',
+  travelCategory: TravelGuideCategory = 'must_try',
+  tasteModel?: LearnedTasteModel,
+  profile?: UserProfile,
+  mood?: MoodKey,
 ) {
   const country = String(locationContext?.countryCode || '').toUpperCase();
   const isLocal = !!country && dish.countryCodes.includes(country);
@@ -144,6 +181,7 @@ function scoreDish(
   });
 
   let score = dish.popularity * 0.12;
+  score += moodAdjustment(dish, mood);
 
   if (isLocal) score += mode === 'travel' ? 48 : 18;
   else if (mode === 'travel' && country) score -= 90;
@@ -159,6 +197,35 @@ function scoreDish(
     if (dish.category === 'dessert') score -= 80;
   } else {
     score += (dish.touristScore || 50) * 0.42;
+
+    const styles = dish.travelStyles || [];
+    if (travelCategory === 'must_try') {
+      score += styles.includes('must_try') ? 24 : 0;
+    } else if (travelCategory === 'street_food') {
+      score += styles.includes('street_food') ? 32 : -14;
+      if (dish.priceBand <= 2) score += 8;
+    } else if (travelCategory === 'hidden_gems') {
+      score += styles.includes('hidden_gems') ? 34 : -12;
+      if (dish.popularity > 92) score -= 8;
+    } else if (travelCategory === 'dessert') {
+      score += dish.category === 'dessert' ? 55 : -120;
+    }
+  }
+
+  if (tasteModel && profile) {
+    const match = tasteMatchForDish(
+      {
+        cuisine: dish.cuisine,
+        familyId: dish.familyId,
+        baseName: dish.baseName,
+        tags: dish.tags,
+        spicyLevel: dish.spicyLevel,
+      },
+      tasteModel,
+      profile,
+      preferences,
+    );
+    score += (match - 70) * 0.55;
   }
 
   const cuisine = normalize(dish.cuisine);
@@ -182,8 +249,8 @@ function scoreDish(
   }
 
   for (const h of recent) {
-    const hn = normalize(h.dishName);
-    const hc = normalize(h.cuisine);
+    const hn = normalize(h.mealSnapshot?.canonicalName || h.dishName);
+    const hc = normalize(h.mealSnapshot?.canonicalCuisine || h.cuisine);
     if (h.feedback === 'love') {
       if (hc && hc === cuisine) score += 6;
       if (hn.includes(normalize(dish.baseName))) score += 3;
@@ -205,6 +272,9 @@ export type LocalRecommendationInput = {
   history?: MealHistoryItem[];
   profile: UserProfile;
   mealType?: MealType;
+  travelCategory?: TravelGuideCategory;
+  mood?: MoodKey;
+  maxPerCuisine?: number;
   excludeDishNames?: string[];
   limit?: number;
 };
@@ -218,8 +288,11 @@ function isInsideBudgetWindow(estimate: {min:number; max:number}, budget?: numbe
 
 export function getLocalRecommendations(input: LocalRecommendationInput): MealSuggestion[] {
   const history = input.history || [];
-  const preferences = input.preferences || [];
+  const preferences = Array.from(new Set([...(input.profile.preferences || []), ...(input.preferences || [])]));
   const restrictions = input.profile.restrictions || [];
+  const allergies = input.profile.allergies || [];
+  const travelCategory: TravelGuideCategory = input.travelCategory || 'must_try';
+  const tasteModel = buildTasteProfile(history);
   const currency = input.profile.currency || input.locationContext?.currency || 'USD';
   const lang = langFromLocale(input.profile.locale);
   const mealType: MealType = input.mealType || 'lunch';
@@ -229,8 +302,12 @@ export function getLocalRecommendations(input: LocalRecommendationInput): MealSu
   const salt = `${input.mode}|${input.locationContext?.countryCode || ''}|${input.budget || 'none'}|${history.length}|${excluded.join('|')}|${new Date().toISOString().slice(0,13)}`;
 
   const scored = CATALOG
-    .filter(d => hardRestrictionMatch(d, restrictions))
-    .filter(d => (d.mealTypes || ['lunch','dinner']).includes(mealType))
+    .filter(d => hardRestrictionMatch(d, restrictions, allergies))
+    .filter(d =>
+      input.mode === 'travel' && travelCategory === 'dessert'
+        ? d.category === 'dessert'
+        : (d.mealTypes || ['lunch','dinner']).includes(mealType),
+    )
     .filter(d => {
       if (input.mode === 'daily') {
         return (d.everydayScore || 60) >= 48 && d.category !== 'dessert';
@@ -239,10 +316,20 @@ export function getLocalRecommendations(input: LocalRecommendationInput): MealSu
       // Travel mode is intentionally destination-first:
       // only return dishes originating from the resolved country.
       // If fewer than 5 survive, recommendationService will invoke Gemini fallback.
+      const styles = d.travelStyles || [];
+      const categoryOk =
+        travelCategory === 'must_try'
+          ? (d.touristScore || 50) >= 58
+          : travelCategory === 'street_food'
+            ? styles.includes('street_food')
+            : travelCategory === 'hidden_gems'
+              ? styles.includes('hidden_gems')
+              : d.category === 'dessert';
+
       if (country) {
-        return d.countryCodes.includes(country) && (d.touristScore || 50) >= 58;
+        return d.countryCodes.includes(country) && categoryOk;
       }
-      return (d.touristScore || 50) >= 70;
+      return categoryOk && (d.touristScore || 50) >= 55;
     })
     .filter(d => {
       const candidateName = normalize(displayName(d,input.profile.locale));
@@ -251,7 +338,7 @@ export function getLocalRecommendations(input: LocalRecommendationInput): MealSu
       return true;
     })
     .map(d => {
-      const base = scoreDish(d,input.mode,input.budget,currency,preferences,history,input.locationContext,mealType);
+      const base = scoreDish(d,input.mode,input.budget,currency,preferences,history,input.locationContext,mealType,travelCategory,tasteModel,input.profile,input.mood);
       const recentFamily = recentNames.some(x => x.includes(normalize(d.baseName)));
       return {
         dish:d,
@@ -267,12 +354,13 @@ export function getLocalRecommendations(input: LocalRecommendationInput): MealSu
   const selected: typeof scored = [];
   const usedFamilies = new Set<string>();
   const usedCuisines = new Map<string,number>();
+  const maxPerCuisine = Math.max(1, input.maxPerCuisine || 2);
 
   for (const item of scored) {
     if (selected.length >= limit) break;
     if (usedFamilies.has(item.dish.familyId)) continue;
     const cuisineCount = usedCuisines.get(item.dish.cuisine) || 0;
-    if (cuisineCount >= 2 && scored.length > limit * 2) continue;
+    if (cuisineCount >= maxPerCuisine && scored.length > limit * 2) continue;
     selected.push(item);
     usedFamilies.add(item.dish.familyId);
     usedCuisines.set(item.dish.cuisine,cuisineCount+1);
@@ -283,7 +371,9 @@ export function getLocalRecommendations(input: LocalRecommendationInput): MealSu
     canonicalId:dish.id,
     familyId:dish.familyId,
     name:displayName(dish,input.profile.locale),
-    cuisine:dish.cuisine,
+    cuisine:localizeCuisine(dish.cuisine,input.profile.locale),
+    canonicalName:dish.baseName,
+    canonicalCuisine:dish.cuisine,
     estimatedMin:estimate.min,
     estimatedMax:estimate.max,
     reason:(REASONS[lang] || REASONS.en)[isLocal ? 'local' : 'general'],
@@ -297,6 +387,10 @@ export function getLocalRecommendations(input: LocalRecommendationInput): MealSu
     regionalPriceProfileVersion:estimate.profileVersion,
     mealType,
     touristPopular:input.mode === 'travel' && isLocal && (dish.touristScore || 0) >= 70,
+    tasteMatchPercent:tasteMatchForDish({cuisine:dish.cuisine,familyId:dish.familyId,baseName:dish.baseName,tags:dish.tags,spicyLevel:dish.spicyLevel},tasteModel,input.profile,preferences),
+    allergyFilterApplied:allergies.length > 0,
+    travelCategory:input.mode === 'travel' ? travelCategory : undefined,
+    mood:input.mood,
   }));
 }
 

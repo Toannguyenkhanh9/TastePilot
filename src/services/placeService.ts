@@ -15,6 +15,7 @@ function mockContext(
     currency: fallbackCurrency,
     source,
     destinationLabel,
+    resolvedAt: new Date().toISOString(),
   };
 }
 
@@ -23,7 +24,8 @@ export async function resolveCurrentLocation(
   fallbackCurrency: string,
 ): Promise<LocationContext> {
   if (USE_MOCK_API) return mockContext(coordinates, fallbackCurrency, 'current');
-  return postJson<LocationContext>('resolveLocation', {coordinates, fallbackCurrency});
+  const resolved = await postJson<LocationContext>('resolveLocation', {coordinates, fallbackCurrency});
+  return {...resolved, coordinates, source: 'current', resolvedAt: new Date().toISOString()};
 }
 
 export async function resolveDestination(
@@ -38,7 +40,8 @@ export async function resolveDestination(
       destination,
     );
   }
-  return postJson<LocationContext>('resolveDestination', {destination, fallbackCurrency});
+  const resolved = await postJson<LocationContext>('resolveDestination', {destination, fallbackCurrency});
+  return {...resolved, source: 'destination', destinationLabel: destination, resolvedAt: new Date().toISOString()};
 }
 
 export async function getRestaurantDetails(

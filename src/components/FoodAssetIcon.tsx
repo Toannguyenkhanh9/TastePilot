@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image, ImageSourcePropType, StyleSheet, View} from 'react-native';
+import {EXACT_FOOD_ICONS} from './FoodIconRegistry';
 
 const FOOD_ICONS = {
   pho: require('../assets/food-icons/pho.png'),
@@ -215,7 +216,7 @@ const ICON_BY_KEY: Record<string, ImageSourcePropType> = {
 };
 
 
-type MealLike = { name?: string; cuisine?: string; searchKeyword?: string; imageKey?: string; };
+type MealLike = { name?: string; cuisine?: string; searchKeyword?: string; imageKey?: string; canonicalId?: string; familyId?: string; };
 type Props = { meal?: MealLike | null; size?: number; rounded?: boolean; };
 
 function normalize(value: string) { return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
@@ -329,6 +330,10 @@ const MATCHERS: Array<[ImageSourcePropType, string[]]> = [
 ];
 
 function detectIcon(meal?: MealLike | null): ImageSourcePropType {
+  const exactCandidates = [meal?.imageKey, meal?.canonicalId, meal?.familyId].filter(Boolean).map(String);
+  for (const exactKey of exactCandidates) {
+    if (EXACT_FOOD_ICONS[exactKey]) return EXACT_FOOD_ICONS[exactKey];
+  }
   if (meal?.imageKey && ICON_BY_KEY[meal.imageKey]) return ICON_BY_KEY[meal.imageKey];
   const text = normalize(`${meal?.name || ''} ${meal?.cuisine || ''} ${meal?.searchKeyword || ''}`);
   for (const [source, values] of MATCHERS) { if (hasAny(text, values)) return source; }

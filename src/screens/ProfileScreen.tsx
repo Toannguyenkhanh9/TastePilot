@@ -18,6 +18,14 @@ import {useApp} from '../context/AppContext';
 import {APP_LOCAL_BANNERS} from '../utils/localArt';
 import {LocalBanner} from '../components/LocalBanner';
 import {SUPPORTED_LANGUAGES, localeToLanguageCode} from '../i18n';
+import {TasteProfileCard} from '../components/TasteProfileCard';
+import {SmartNotificationSettingsCard} from '../components/SmartNotificationSettingsCard';
+import {
+  isValidNotificationTime,
+  normalizeSmartNotificationSettings,
+  requestSmartNotificationPermission,
+} from '../services/smartNotificationService';
+import {AllergyKey, SpicePreference} from '../types';
 
 const cuisineDefs = [
   {id: 'Asian', key: 'profile.cuisines.asian'},
@@ -26,6 +34,21 @@ const cuisineDefs = [
   {id: 'Mediterranean', key: 'profile.cuisines.mediterranean'},
   {id: 'American', key: 'profile.cuisines.american'},
   {id: 'Indian', key: 'profile.cuisines.indian'},
+];
+
+const allergyDefs: Array<{id: AllergyKey; key: string}> = [
+  {id: 'Peanuts', key: 'allergyPeanuts'},
+  {id: 'Shellfish', key: 'allergyShellfish'},
+  {id: 'Dairy', key: 'allergyDairy'},
+  {id: 'Egg', key: 'allergyEgg'},
+  {id: 'Sesame', key: 'allergySesame'},
+];
+
+const spiceDefs: Array<{id: SpicePreference; key: string}> = [
+  {id: 'any', key: 'smartSpiceAny'},
+  {id: 'mild', key: 'smartSpiceMild'},
+  {id: 'medium', key: 'smartSpiceMedium'},
+  {id: 'spicy', key: 'smartSpiceSpicy'},
 ];
 
 const restrictionDefs = [
@@ -45,6 +68,11 @@ export function ProfileScreen() {
   const [budget, setBudget] = useState(String(profile.defaultBudget));
   const [prefs, setPrefs] = useState(profile.preferences);
   const [rules, setRules] = useState(profile.restrictions);
+  const [allergies, setAllergies] = useState<AllergyKey[]>(profile.allergies || []);
+  const [spicePreference, setSpicePreference] = useState<SpicePreference>(profile.spicePreference || 'any');
+  const [smartNotifications, setSmartNotifications] = useState(() =>
+    normalizeSmartNotificationSettings(profile.smartNotifications),
+  );
 
   const selectedLanguage = useMemo(
     () => SUPPORTED_LANGUAGES.find(item => item.code === languageCode) || SUPPORTED_LANGUAGES[0],
@@ -54,10 +82,30 @@ export function ProfileScreen() {
   const toggle = (list: string[], setList: (v: string[]) => void, value: string) =>
     setList(list.includes(value) ? list.filter(x => x !== value) : [...list, value]);
 
-  const save = () => {
+  const save = async () => {
     const amount = Number(String(budget).replace(/,/g, ''));
     if (!amount || amount <= 0) {
       return Alert.alert(t('profile.invalidBudgetTitle'), t('profile.invalidBudgetText'));
+    }
+
+    if (smartNotifications.enabled) {
+      if (smartNotifications.meals.length === 0) {
+        return Alert.alert(t('smartNotifInvalidMealsTitle'), t('smartNotifInvalidMealsText'));
+      }
+      const selectedTimes = smartNotifications.meals.map(meal =>
+        meal === 'breakfast'
+          ? smartNotifications.breakfastTime
+          : meal === 'dinner'
+            ? smartNotifications.dinnerTime
+            : smartNotifications.lunchTime,
+      );
+      if (selectedTimes.some(time => !isValidNotificationTime(time))) {
+        return Alert.alert(t('smartNotifInvalidTimeTitle'), t('smartNotifInvalidTimeText'));
+      }
+      const granted = await requestSmartNotificationPermission();
+      if (!granted) {
+        return Alert.alert(t('smartNotifPermissionTitle'), t('smartNotifPermissionText'));
+      }
     }
 
     setProfile({
@@ -67,6 +115,9 @@ export function ProfileScreen() {
       defaultBudget: amount,
       preferences: prefs,
       restrictions: rules,
+      allergies,
+      spicePreference,
+      smartNotifications,
     });
     Alert.alert(t('profile.savedTitle'), t('profile.savedText'));
   };
@@ -104,6 +155,8 @@ export function ProfileScreen() {
             </View>
           </View>
 
+          <TasteProfileCard />
+
           <View style={styles.panel}>
             <Text style={styles.sectionTitle}>{t('profile.basics')}</Text>
             <Text style={styles.label}>{t('profile.currencyCode')}</Text>
@@ -133,6 +186,50 @@ export function ProfileScreen() {
               ))}
             </View>
           </View>
+
+          <View style={styles.panel}>
+            <Text style={styles.sectionTitle}>{t('smartSpiceTitle')}</Text>
+            <Text style={styles.helper}>{t('smartSpiceHint')}</Text>
+            <View style={styles.chips}>
+              {spiceDefs.map(item => (
+                <Chip
+                  key={item.id}
+                  label={t(item.key)}
+                  selected={spicePreference === item.id}
+                  onPress={() => setSpicePreference(item.id)}
+                />
+              ))}
+            </View>
+          </View>
+
+          <View style={[styles.panel, styles.allergyPanel]}>
+            <Text style={styles.sectionTitle}>{t('smartAllergyTitle')}</Text>
+            <Text style={styles.helper}>{t('smartAllergyHint')}</Text>
+            <View style={styles.chips}>
+              {allergyDefs.map(item => (
+                <Chip
+                  key={item.id}
+                  label={t(item.key)}
+                  selected={allergies.includes(item.id)}
+                  onPress={() =>
+                    setAllergies(current =>
+                      current.includes(item.id)
+                        ? current.filter(x => x !== item.id)
+                        : [...current, item.id],
+                    )
+                  }
+                />
+              ))}
+            </View>
+            <View style={styles.warningBox}>
+              <Text style={styles.warningText}>⚠️ {t('smartAllergyWarning')}</Text>
+            </View>
+          </View>
+
+          <SmartNotificationSettingsCard
+            value={smartNotifications}
+            onChange={setSmartNotifications}
+          />
 
           <View style={styles.infoCard}>
             <Text style={styles.infoTitle}>{t('profile.tipTitle')}</Text>
@@ -165,6 +262,9 @@ const styles = StyleSheet.create({
   languageChipActive: {backgroundColor: '#1d2735', borderColor: '#1d2735'},
   languageChipText: {fontSize: 12, fontWeight: '800', color: '#555'},
   languageChipTextActive: {color: '#fff'},
+  allergyPanel: {borderColor: '#f0d3c7'},
+  warningBox: {backgroundColor: '#fff5ef', borderRadius: 14, padding: 12, marginTop: 10},
+  warningText: {fontSize: 12, lineHeight: 18, color: '#8a4b36', fontWeight: '700'},
   infoCard: {backgroundColor: '#fff2df', borderRadius: 20, padding: 16, marginBottom: 20},
   infoTitle: {fontSize: 15, fontWeight: '900', color: '#171717'},
   infoText: {fontSize: 13, lineHeight: 20, color: '#666', marginTop: 6},
