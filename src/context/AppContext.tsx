@@ -8,7 +8,10 @@ import {
   normalizeSmartNotificationSettings,
   syncSmartMealNotifications,
 } from '../services/smartNotificationService';
-import i18n, {SUPPORTED_LANGUAGES} from '../i18n';
+import i18n, {
+  SUPPORTED_LANGUAGES,
+  getDeviceSupportedLanguage,
+} from '../i18n';
 import {
   migrateProfileRecord,
   runStorageMigrations,
@@ -16,6 +19,7 @@ import {
 } from '../services/storageMigrationService';
 import {initializePremiumBilling, refreshPremiumStatus, subscribeToPremiumChanges} from '../services/premiumService';
 import {initializeAds} from '../services/adService';
+import {isFreeLaunchMode} from '../config/monetizationConfig';
 
 const PROFILE_KEY = '@foodpilot/profile';
 const HISTORY_KEY = '@foodpilot/history';
@@ -69,7 +73,7 @@ export function AppProvider({children}: {children: React.ReactNode}) {
   const [locationContext, setLocationContextState] = useState<LocationContext | null>(null);
   const [weeklyPlan, setWeeklyPlanState] = useState<WeeklyMealPlan | null>(null);
   const [hydrated, setHydrated] = useState(false);
-  const [isPremium, setIsPremium] = useState(true);
+  const [isPremium, setIsPremium] = useState(isFreeLaunchMode());
   const [monetizationReady, setMonetizationReady] = useState(false);
 
   useEffect(() => {
@@ -90,12 +94,25 @@ export function AppProvider({children}: {children: React.ReactNode}) {
         if (!active) return;
 
         const storedProfile = safeJsonParse<Partial<UserProfile> | null>(p, null);
-        setProfileState({
-          ...migrateProfileRecord(storedProfile, defaultProfile),
+        const detectedLanguage = getDeviceSupportedLanguage();
+        const firstLaunchProfile: UserProfile = {
+          ...defaultProfile,
+          locale: detectedLanguage.locale,
+        };
+        const migratedProfile = {
+          ...migrateProfileRecord(storedProfile, firstLaunchProfile),
           smartNotifications: normalizeSmartNotificationSettings(
             storedProfile?.smartNotifications,
           ),
-        });
+        };
+
+        // First install follows the device language. Once the user explicitly
+        // chooses a language, the persisted profile wins on future launches.
+        if (!storedProfile) {
+          await i18n.changeLanguage(detectedLanguage.code);
+        }
+
+        setProfileState(migratedProfile);
 
         setHistory(safeJsonParse<MealHistoryItem[]>(h, []).slice(0, 100));
         setSaved(safeJsonParse<Restaurant[]>(s, []).slice(0, 250));
@@ -214,7 +231,7 @@ export function AppProvider({children}: {children: React.ReactNode}) {
       })
       .catch(() => {
         if (!active) return;
-        setIsPremium(true);
+        setIsPremium(isFreeLaunchMode());
         setMonetizationReady(true);
       });
     return () => { active = false; };

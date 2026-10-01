@@ -129,7 +129,8 @@ export async function initializePremiumBilling(): Promise<PremiumStatus> {
     return {ready: true, isPremium: true, source: 'free_launch'};
   }
   if (!platformStore()) {
-    return {ready: true, isPremium: true, source: 'store_not_supported'};
+    // In monetized mode, an unsupported store must not grant paid entitlement.
+    return {ready: true, isPremium: false, source: 'store_not_supported'};
   }
 
   try {
@@ -141,8 +142,9 @@ export async function initializePremiumBilling(): Promise<PremiumStatus> {
       source: sourceForPlatform(),
     };
   } catch {
-    // Fail open: a billing outage must never lock core food discovery.
-    return {ready: true, isPremium: true, source: 'billing_error'};
+    // Billing failures keep the user on the free tier. Core discovery remains
+    // available through the normal free-tier rules, without granting Premium.
+    return {ready: true, isPremium: false, source: 'billing_error'};
   }
 }
 

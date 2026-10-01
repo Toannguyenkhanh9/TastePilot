@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {
   ActivityIndicator,
   Alert,
+  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -46,17 +47,46 @@ export function SurpriseMeScreen({navigation}: Props) {
   const requestId = useRef(0);
 
   const [meal, setMeal] = useState<MealSuggestion | null>(null);
+  const mealRef = useRef<MealSuggestion | null>(null);
   const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [loading, setLoading] = useState(true);
   const [placesLoading, setPlacesLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [excluded, setExcluded] = useState<string[]>([]);
+  const excludedRef = useRef<{names: string[]; ids: string[]; families: string[]}>({
+    names: [],
+    ids: [],
+    families: [],
+  });
 
   useEffect(() => {
     return () => {
       mounted.current = false;
     };
   }, []);
+
+  const addMealToExcluded = (value: MealSuggestion | null | undefined) => {
+    if (!value) return;
+    const next = excludedRef.current;
+    const name = String(value.canonicalName || value.name || '').trim();
+    const id = String(value.canonicalId || '').trim();
+    const family = String(value.familyId || '').trim();
+
+    if (name && !next.names.includes(name)) next.names.push(name);
+    if (id && !next.ids.includes(id)) next.ids.push(id);
+    if (family && !next.families.includes(family)) next.families.push(family);
+
+    next.names = next.names.slice(-12);
+    next.ids = next.ids.slice(-12);
+    next.families = next.families.slice(-12);
+  };
+
+  const isSameMeal = (a: MealSuggestion | null | undefined, b: MealSuggestion | null | undefined) => {
+    if (!a || !b) return false;
+    if (a.canonicalId && b.canonicalId) return a.canonicalId === b.canonicalId;
+    if (a.familyId && b.familyId) return a.familyId === b.familyId;
+    return String(a.canonicalName || a.name).trim().toLowerCase() ===
+      String(b.canonicalName || b.name).trim().toLowerCase();
+  };
 
   const decide = useCallback(
     async (rotate = false, skipMonetizationGate = false) => {
@@ -114,6 +144,16 @@ export function SurpriseMeScreen({navigation}: Props) {
         const requestProfile = {...profile, currency};
         const mealType = getCurrentMealType();
 
+        const currentMeal = mealRef.current;
+        if (rotate) addMealToExcluded(currentMeal);
+        const exclusionSnapshot = rotate
+          ? {
+              names: [...excludedRef.current.names],
+              ids: [...excludedRef.current.ids],
+              families: [...excludedRef.current.families],
+            }
+          : {names: [] as string[], ids: [] as string[], families: [] as string[]};
+
         let suggestions = await getDailyRecommendations({
           budget:
             Number(profile.defaultBudget) > 0
@@ -126,7 +166,9 @@ export function SurpriseMeScreen({navigation}: Props) {
           profile: requestProfile,
           mealType,
           mood: profile.recentMood,
-          excludeDishNames: rotate ? excluded : [],
+          excludeDishNames: exclusionSnapshot.names,
+          excludeDishIds: exclusionSnapshot.ids,
+          excludeFamilyIds: exclusionSnapshot.families,
         });
 
         // Surprise Me should remain useful even if the saved default budget is
@@ -141,7 +183,9 @@ export function SurpriseMeScreen({navigation}: Props) {
             profile: requestProfile,
             mealType,
             mood: profile.recentMood,
-            excludeDishNames: rotate ? excluded : [],
+            excludeDishNames: exclusionSnapshot.names,
+            excludeDishIds: exclusionSnapshot.ids,
+            excludeFamilyIds: exclusionSnapshot.families,
           });
         }
 
@@ -149,16 +193,20 @@ export function SurpriseMeScreen({navigation}: Props) {
           throw new Error(t('surpriseNoMeal'));
         }
 
-        const chosen = suggestions[0];
+        const chosen = rotate
+          ? suggestions.find(candidate => !isSameMeal(candidate, currentMeal)) || suggestions[0]
+          : suggestions[0];
+
+        if (rotate && isSameMeal(chosen, currentMeal)) {
+          throw new Error('SURPRISE_REPEAT_GUARD');
+        }
 
         if (!mounted.current || currentRequest !== requestId.current) return;
 
+        mealRef.current = chosen;
         setMeal(chosen);
         await markFeatureUsed('surprise', isPremium);
-        setExcluded(current => {
-          const key = chosen.canonicalName || chosen.name;
-          return [...current, key].slice(-8);
-        });
+        addMealToExcluded(chosen);
 
         if (!resolved?.coordinates) {
           setError(t('surpriseLocationNeededForPlaces'));
@@ -191,7 +239,6 @@ export function SurpriseMeScreen({navigation}: Props) {
       }
     },
     [
-      excluded,
       history,
       locationContext,
       profile,
@@ -222,9 +269,9 @@ export function SurpriseMeScreen({navigation}: Props) {
     return (
       <View style={styles.center}>
         <View style={styles.magicBubble}>
-          <Text style={styles.magicEmoji}>✨</Text>
+          <Text style={styles.magicEmoji}>🍜</Text>
         </View>
-        <ActivityIndicator size="large" color="#3568b8" />
+        <ActivityIndicator size="large" color="#d95f38" />
         <Text style={styles.loadingTitle}>{t('surpriseThinking')}</Text>
         <Text style={styles.loadingText}>{t('surpriseThinkingText')}</Text>
       </View>
@@ -239,12 +286,15 @@ export function SurpriseMeScreen({navigation}: Props) {
 
       {meal ? (
         <View style={styles.mealCard}>
+          <View style={styles.heroAccent} />
           <View style={styles.mealTop}>
             <View style={styles.iconShell}>
-              <FoodAssetIcon meal={meal} size={82} />
+              <FoodAssetIcon meal={meal} size={126} />
             </View>
             <View style={styles.mealCopy}>
-              <Text style={styles.decisionLabel}>{t('surpriseDecision')}</Text>
+              <View style={styles.decisionBadge}>
+                <Text style={styles.decisionLabel}>✦ {t('surpriseDecision')}</Text>
+              </View>
               <Text style={styles.mealName}>{meal.name}</Text>
               <Text style={styles.cuisine}>{meal.cuisine}</Text>
             </View>
@@ -274,29 +324,38 @@ export function SurpriseMeScreen({navigation}: Props) {
           <Text style={styles.sectionTitle}>{t('surpriseThreePlaces')}</Text>
           <Text style={styles.sectionHint}>{t('surpriseRankedHint')}</Text>
         </View>
-        {placesLoading ? <ActivityIndicator color="#3568b8" /> : null}
+        {placesLoading ? <ActivityIndicator color="#d95f38" /> : null}
       </View>
 
       {restaurants.map((place, index) => (
         <Pressable
           key={place.id}
-          style={styles.placeCard}
+          style={({pressed}) => [styles.placeCard, pressed && styles.placeCardPressed]}
           onPress={() => openPlace(place)}>
-          <View style={styles.rankBubble}>
-            <Text style={styles.rankText}>{index + 1}</Text>
+          <View style={styles.placeVisual}>
+            {place.imageUrl ? (
+              <Image source={{uri: place.imageUrl}} style={styles.placeImage} resizeMode="cover" />
+            ) : (
+              <View style={styles.placeImageFallback}>
+                {meal ? <FoodAssetIcon meal={meal} size={54} /> : <Text style={styles.fallbackEmoji}>🍽️</Text>}
+              </View>
+            )}
+            <View style={styles.rankBubble}>
+              <Text style={styles.rankText}>{index + 1}</Text>
+            </View>
           </View>
           <View style={styles.placeCopy}>
             <Text style={styles.placeName}>{place.name}</Text>
-            <Text style={styles.placeAddress} numberOfLines={2}>{place.address}</Text>
+            <Text style={styles.placeAddress} numberOfLines={2}>⌖ {place.address}</Text>
             <View style={styles.placeMeta}>
               {place.smartScore != null ? (
                 <Text style={styles.smartPill}>
-                  {t('restaurantSmartMatch', {percent: place.smartScore})}
+                  🌿 {t('restaurantSmartMatch', {percent: place.smartScore})}
                 </Text>
               ) : null}
               <Text style={styles.smallMeta}>⭐ {place.rating.toFixed(1)}</Text>
               {place.distanceMeters != null ? (
-                <Text style={styles.smallMeta}>{formatDistance(place.distanceMeters)}</Text>
+                <Text style={styles.smallMeta}>⌖ {formatDistance(place.distanceMeters)}</Text>
               ) : null}
               {place.priceLevel ? (
                 <Text style={styles.smallMeta}>{formatRestaurantPriceLevel(place.priceLevel)}</Text>
@@ -308,7 +367,7 @@ export function SurpriseMeScreen({navigation}: Props) {
               ) : null}
             </View>
           </View>
-          <Text style={styles.arrow}>→</Text>
+          <Text style={styles.arrow}>›</Text>
         </Pressable>
       ))}
 
@@ -325,7 +384,7 @@ export function SurpriseMeScreen({navigation}: Props) {
         {loading ? (
           <ActivityIndicator color="#fff" />
         ) : (
-          <Text style={styles.primaryText}>✨ {t('surpriseAgain')}</Text>
+          <Text style={styles.primaryText}>↝  {t('surpriseAgain')}  ✦</Text>
         )}
       </Pressable>
 
@@ -354,49 +413,66 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 28,
-    backgroundColor: '#fbfaf8',
+    backgroundColor: '#fff9f1',
   },
   magicBubble: {
-    width: 86,
-    height: 86,
-    borderRadius: 30,
-    backgroundColor: '#fff1df',
+    width: 92,
+    height: 92,
+    borderRadius: 32,
+    backgroundColor: '#ffead9',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 24,
   },
   magicEmoji: {fontSize: 42},
-  loadingTitle: {fontSize: 22, fontWeight: '900', color: '#171717', marginTop: 18},
-  loadingText: {fontSize: 13, lineHeight: 20, color: '#777', textAlign: 'center', marginTop: 8},
-  container: {padding: 20, paddingBottom: 60, backgroundColor: '#fbfaf8', flexGrow: 1},
-  kicker: {fontSize: 12, fontWeight: '900', letterSpacing: 1.3, color: '#a86821'},
-  title: {fontSize: 34, lineHeight: 40, fontWeight: '900', color: '#171717', marginTop: 7},
-  subtitle: {fontSize: 14, lineHeight: 21, color: '#666', marginTop: 8},
+  loadingTitle: {fontSize: 22, fontWeight: '900', color: '#251c17', marginTop: 18},
+  loadingText: {fontSize: 13, lineHeight: 20, color: '#7d6f66', textAlign: 'center', marginTop: 8},
+  container: {padding: 18, paddingBottom: 60, backgroundColor: '#fff9f1', flexGrow: 1},
+  kicker: {fontSize: 12, fontWeight: '900', letterSpacing: 1.4, color: '#c5522f'},
+  title: {fontSize: 36, lineHeight: 42, fontWeight: '900', color: '#201713', marginTop: 7},
+  subtitle: {fontSize: 14, lineHeight: 21, color: '#73665e', marginTop: 7, maxWidth: 520},
   mealCard: {
-    marginTop: 18,
-    backgroundColor: '#fff',
-    borderRadius: 26,
-    padding: 18,
+    marginTop: 20,
+    backgroundColor: '#fffdf9',
+    borderRadius: 28,
+    padding: 16,
     borderWidth: 1,
-    borderColor: '#eadfce',
+    borderColor: '#f1dccb',
+    overflow: 'hidden',
+    shadowColor: '#9d593d',
+    shadowOpacity: 0.09,
+    shadowRadius: 18,
+    shadowOffset: {width: 0, height: 8},
+    elevation: 3,
+  },
+  heroAccent: {
+    position: 'absolute',
+    width: 160,
+    height: 160,
+    borderRadius: 80,
+    backgroundColor: '#fff0dc',
+    left: -54,
+    top: -48,
   },
   mealTop: {flexDirection: 'row', alignItems: 'center'},
   iconShell: {
-    width: 106,
-    height: 106,
-    borderRadius: 28,
-    backgroundColor: '#fff5e5',
+    width: 150,
+    height: 150,
+    borderRadius: 34,
+    backgroundColor: '#ffead2',
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'hidden',
   },
   mealCopy: {flex: 1, paddingLeft: 16},
-  decisionLabel: {fontSize: 11, fontWeight: '900', letterSpacing: 1, color: '#a86821'},
-  mealName: {fontSize: 27, lineHeight: 32, fontWeight: '900', color: '#171717', marginTop: 5},
-  cuisine: {fontSize: 13, fontWeight: '800', color: '#777', marginTop: 5},
-  metaRow: {flexDirection: 'row', flexWrap: 'wrap', marginTop: 14},
+  decisionBadge: {alignSelf: 'flex-start', borderRadius: 999, backgroundColor: '#ffead8', paddingHorizontal: 9, paddingVertical: 6},
+  decisionLabel: {fontSize: 10, fontWeight: '900', letterSpacing: 0.7, color: '#bd4f2d'},
+  mealName: {fontSize: 28, lineHeight: 32, fontWeight: '900', color: '#211713', marginTop: 9},
+  cuisine: {fontSize: 13, fontWeight: '700', color: '#7a6c63', marginTop: 6},
+  metaRow: {flexDirection: 'row', flexWrap: 'wrap', marginTop: 15},
   matchPill: {
-    backgroundColor: '#e8f6ec',
-    color: '#237a43',
+    backgroundColor: '#e8f4df',
+    color: '#367a43',
     fontSize: 11,
     fontWeight: '900',
     paddingHorizontal: 10,
@@ -407,8 +483,8 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   metaPill: {
-    backgroundColor: '#f5f2ee',
-    color: '#6a5c4e',
+    backgroundColor: '#f6efe7',
+    color: '#755b47',
     fontSize: 11,
     fontWeight: '900',
     paddingHorizontal: 10,
@@ -417,39 +493,53 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     marginBottom: 6,
   },
-  contextLine: {fontSize: 11, lineHeight: 17, color: '#866445', fontWeight: '700', marginTop: 4},
-  sectionHeader: {flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 22},
-  sectionTitle: {fontSize: 17, fontWeight: '900', color: '#222'},
-  sectionHint: {fontSize: 12, color: '#777', marginTop: 4},
+  contextLine: {fontSize: 11, lineHeight: 17, color: '#9c684c', fontWeight: '700', marginTop: 4},
+  sectionHeader: {flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 26},
+  sectionTitle: {fontSize: 19, fontWeight: '900', color: '#281d18'},
+  sectionHint: {fontSize: 12, lineHeight: 18, color: '#81746b', marginTop: 4, paddingRight: 18},
   placeCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
-    borderRadius: 20,
-    padding: 14,
-    marginTop: 11,
+    backgroundColor: '#fffdf9',
+    borderRadius: 22,
+    padding: 10,
+    marginTop: 12,
     borderWidth: 1,
-    borderColor: '#e7e0d8',
+    borderColor: '#eee0d5',
+    shadowColor: '#7f4b34',
+    shadowOpacity: 0.06,
+    shadowRadius: 10,
+    shadowOffset: {width: 0, height: 5},
+    elevation: 2,
   },
+  placeCardPressed: {transform: [{scale: 0.99}], opacity: 0.92},
+  placeVisual: {width: 84, height: 84, borderRadius: 18, marginRight: 12},
+  placeImage: {width: 84, height: 84, borderRadius: 18, backgroundColor: '#f8eadc'},
+  placeImageFallback: {width: 84, height: 84, borderRadius: 18, backgroundColor: '#fff0df', alignItems: 'center', justifyContent: 'center', overflow: 'hidden'},
+  fallbackEmoji: {fontSize: 30},
   rankBubble: {
-    width: 36,
-    height: 36,
-    borderRadius: 13,
-    backgroundColor: '#eef4ff',
+    position: 'absolute',
+    left: -5,
+    top: -5,
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: '#d95f38',
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 12,
+    borderWidth: 2,
+    borderColor: '#fffdf9',
   },
-  rankText: {fontSize: 14, fontWeight: '900', color: '#3568b8'},
+  rankText: {fontSize: 13, fontWeight: '900', color: '#fff'},
   placeCopy: {flex: 1},
-  placeName: {fontSize: 15, fontWeight: '900', color: '#222'},
-  placeAddress: {fontSize: 11, lineHeight: 16, color: '#777', marginTop: 4},
+  placeName: {fontSize: 15, lineHeight: 19, fontWeight: '900', color: '#291d18'},
+  placeAddress: {fontSize: 11, lineHeight: 16, color: '#84766e', marginTop: 4},
   placeMeta: {flexDirection: 'row', flexWrap: 'wrap', marginTop: 8},
   smartPill: {
     fontSize: 10,
     fontWeight: '900',
-    color: '#237a43',
-    backgroundColor: '#e8f6ec',
+    color: '#327442',
+    backgroundColor: '#e8f4df',
     borderRadius: 999,
     paddingHorizontal: 8,
     paddingVertical: 5,
@@ -460,8 +550,8 @@ const styles = StyleSheet.create({
   smallMeta: {
     fontSize: 10,
     fontWeight: '800',
-    color: '#555',
-    backgroundColor: '#f4f4f4',
+    color: '#665b54',
+    backgroundColor: '#f5f0eb',
     borderRadius: 999,
     paddingHorizontal: 8,
     paddingVertical: 5,
@@ -469,31 +559,36 @@ const styles = StyleSheet.create({
     marginRight: 5,
     marginBottom: 4,
   },
-  open: {color: '#237a43', backgroundColor: '#eaf8ee'},
+  open: {color: '#327442', backgroundColor: '#e7f5e7'},
   closed: {color: '#9c4141', backgroundColor: '#fdeeee'},
-  arrow: {fontSize: 22, fontWeight: '900', color: '#aaa', marginLeft: 8},
+  arrow: {fontSize: 31, lineHeight: 34, fontWeight: '500', color: '#b47b64', marginLeft: 5, marginRight: 2},
   errorCard: {backgroundColor: '#fff3ee', borderRadius: 16, padding: 13, marginTop: 12},
   errorText: {fontSize: 12, lineHeight: 18, color: '#8a4b36', fontWeight: '700'},
   primaryButton: {
-    minHeight: 54,
-    borderRadius: 18,
-    backgroundColor: '#3568b8',
+    minHeight: 58,
+    borderRadius: 20,
+    backgroundColor: '#d95f38',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
+    marginTop: 22,
+    shadowColor: '#b84125',
+    shadowOpacity: 0.22,
+    shadowRadius: 12,
+    shadowOffset: {width: 0, height: 6},
+    elevation: 4,
   },
-  primaryText: {fontSize: 15, fontWeight: '900', color: '#fff'},
+  primaryText: {fontSize: 16, fontWeight: '900', color: '#fff'},
   secondaryButton: {
-    minHeight: 48,
-    borderRadius: 16,
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: '#b9cbe7',
+    minHeight: 52,
+    borderRadius: 18,
+    backgroundColor: '#fffaf5',
+    borderWidth: 1.5,
+    borderColor: '#e09578',
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
   },
-  secondaryText: {fontSize: 13, fontWeight: '900', color: '#3568b8'},
+  secondaryText: {fontSize: 13, fontWeight: '900', color: '#c55331'},
   pressed: {opacity: 0.82},
-  footnote: {fontSize: 11, lineHeight: 17, color: '#888', textAlign: 'center', marginTop: 14},
+  footnote: {fontSize: 11, lineHeight: 17, color: '#8d8078', textAlign: 'center', marginTop: 14},
 });

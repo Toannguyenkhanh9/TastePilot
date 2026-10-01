@@ -1,6 +1,6 @@
 {
-  "version": "2026.09.21-750",
-  "note": "Reference meal anchors for approximate local price ranges. Restaurant priceLevel/menu data should override these estimates when available.",
+  "version": "2026.09.18-1500",
+  "note": "Approximate local meal anchors for TastePilot Stage 9.3.3. Restaurant price data should override estimates when available.",
   "currencyFallbackTypicalMeal": {
     "VND": 70000,
     "JPY": 1400,
@@ -43,7 +43,17 @@
     "ZAR": 150,
     "NGN": 6000,
     "ARS": 14000,
-    "COP": 30000
+    "COP": 30000,
+    "PLN": 40,
+    "UAH": 350,
+    "RON": 45,
+    "HUF": 4500,
+    "CZK": 280,
+    "EGP": 300,
+    "JOD": 6,
+    "IQD": 12000,
+    "SYP": 100000,
+    "CLP": 12000
   },
   "countries": {
     "VN": {
@@ -338,10 +348,7 @@
       "currency": "CHF",
       "typicalMeal": 25,
       "updatedAt": "2026-09",
-      "cities": {
-        "zurich": 1.2,
-        "geneva": 1.2
-      }
+      "cities": {}
     },
     "SE": {
       "currency": "SEK",
@@ -353,19 +360,15 @@
     },
     "NO": {
       "currency": "NOK",
-      "typicalMeal": 190,
+      "typicalMeal": 200,
       "updatedAt": "2026-09",
-      "cities": {
-        "oslo": 1.2
-      }
+      "cities": {}
     },
     "DK": {
       "currency": "DKK",
-      "typicalMeal": 120,
+      "typicalMeal": 125,
       "updatedAt": "2026-09",
-      "cities": {
-        "copenhagen": 1.25
-      }
+      "cities": {}
     },
     "NZ": {
       "currency": "NZD",
@@ -506,6 +509,78 @@
         "medellin": 1.05,
         "cartagena": 1.2
       }
+    },
+    "PL": {
+      "currency": "PLN",
+      "typicalMeal": 40,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "UA": {
+      "currency": "UAH",
+      "typicalMeal": 350,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "RO": {
+      "currency": "RON",
+      "typicalMeal": 45,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "HU": {
+      "currency": "HUF",
+      "typicalMeal": 4500,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "CZ": {
+      "currency": "CZK",
+      "typicalMeal": 280,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "AT": {
+      "currency": "EUR",
+      "typicalMeal": 16,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "FI": {
+      "currency": "EUR",
+      "typicalMeal": 15,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "EG": {
+      "currency": "EGP",
+      "typicalMeal": 300,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "JO": {
+      "currency": "JOD",
+      "typicalMeal": 6,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "IQ": {
+      "currency": "IQD",
+      "typicalMeal": 12000,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "SY": {
+      "currency": "SYP",
+      "typicalMeal": 100000,
+      "updatedAt": "2026-09",
+      "cities": {}
+    },
+    "CL": {
+      "currency": "CLP",
+      "typicalMeal": 12000,
+      "updatedAt": "2026-09",
+      "cities": {}
     }
   }
 }

@@ -37,6 +37,15 @@ export function localizeCuisine(canonicalCuisine: string, locale?: string) {
   return CUISINES[lang]?.[canonicalCuisine] || canonicalCuisine;
 }
 
+
+export function getDishNameAliases(dishId: string | undefined) {
+  if (!dishId) return [];
+  const values = Object.values(DISH_NAMES)
+    .map(table => table?.[dishId])
+    .filter((value): value is string => !!value);
+  return Array.from(new Set(values));
+}
+
 export function canonicalDishName(
   dishId: string | undefined,
   fallback: string,

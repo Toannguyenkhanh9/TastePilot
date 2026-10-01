@@ -146,12 +146,25 @@ export type Restaurant = {
   savedAt?: string;
 };
 
+export type RestaurantReview = {
+  id: string;
+  authorName: string;
+  authorUri?: string;
+  authorPhotoUri?: string;
+  rating: number;
+  text: string;
+  relativeTime?: string;
+  publishedAt?: string;
+  languageCode?: string;
+};
+
 export type RestaurantDetails = Restaurant & {
   phone?: string;
   internationalPhone?: string;
   websiteUri?: string;
   openingHours?: string[];
   editorialSummary?: string;
+  userReviews?: RestaurantReview[];
 };
 
 export type MealHistoryItem = {

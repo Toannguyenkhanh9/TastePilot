@@ -268,8 +268,8 @@ export function DailyMealScreen({navigation}: Props) {
 }
 
 const styles = StyleSheet.create({
-  flex: {flex: 1, backgroundColor: '#fbfaf8'},
-  container: {padding: 20, paddingBottom: 120, backgroundColor: '#fbfaf8', flexGrow: 1},
+  flex: {flex: 1, backgroundColor: '#fff9f1'},
+  container: {padding: 20, paddingBottom: 120, backgroundColor: '#fff9f1', flexGrow: 1},
   budgetBlock: {marginTop: 2},
   label: {fontSize: 14, fontWeight: '800', color: '#303030', marginTop: 10, marginBottom: 10},
   input: {
@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#171717',
   },
-  currencyHint: {fontSize: 12, lineHeight: 18, color: '#6c7890', marginTop: 8},
+  currencyHint: {fontSize: 12, lineHeight: 18, color: '#7d6c62', marginTop: 8},
   chips: {flexDirection: 'row', flexWrap: 'wrap', marginBottom: 14},
   infoCard: {backgroundColor: '#fff2df', borderRadius: 20, padding: 16, marginBottom: 24},
   infoTitle: {fontSize: 15, fontWeight: '800', color: '#171717'},

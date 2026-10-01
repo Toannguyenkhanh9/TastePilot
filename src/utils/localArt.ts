@@ -25,6 +25,14 @@ export type LocalFoodArt = {
   labelKey: FoodLabelKey;
 };
 
+
+export const BRANDING_ASSETS = {
+  onboardingWelcome: FOOD_BACKGROUND,
+  onboardingPreferences: DAILY_HERO,
+  onboardingBudget: FOOD_BACKGROUND,
+  onboardingLocation: TRAVEL_HERO,
+} as const;
+
 export const APP_LOCAL_BANNERS = {
   home: FOOD_BACKGROUND,
   daily: DAILY_HERO,

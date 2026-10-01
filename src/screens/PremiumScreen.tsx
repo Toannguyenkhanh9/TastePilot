@@ -110,7 +110,7 @@ export function PremiumScreen({navigation}: Props) {
         </View>
       ) : null}
 
-      {loading ? <ActivityIndicator style={styles.loader} size="large" color="#3568b8" /> : null}
+      {loading ? <ActivityIndicator style={styles.loader} size="large" color="#d95f38" /> : null}
 
       {!loading && !isPremium && packages.map(pkg => (
         <Pressable
@@ -145,7 +145,7 @@ export function PremiumScreen({navigation}: Props) {
 }
 
 const styles = StyleSheet.create({
-  container:{padding:22,paddingBottom:60,backgroundColor:'#fbfaf8',flexGrow:1},
+  container:{padding:22,paddingBottom:60,backgroundColor:'#fff9f1',flexGrow:1},
   eyebrow:{fontSize:12,fontWeight:'900',color:'#8a6949',letterSpacing:1.3},
   title:{fontSize:34,lineHeight:40,fontWeight:'900',color:'#171717',marginTop:8},
   subtitle:{fontSize:14,lineHeight:21,color:'#666',marginTop:8},
@@ -155,11 +155,11 @@ const styles = StyleSheet.create({
   activeTitle:{fontSize:16,fontWeight:'900',color:'#237a43'},
   activeText:{fontSize:13,lineHeight:19,color:'#3d6e4e',marginTop:5},
   loader:{marginTop:26},
-  packageCard:{minHeight:76,flexDirection:'row',alignItems:'center',backgroundColor:'#fff',borderRadius:20,padding:16,borderWidth:1,borderColor:'#d9e3f1',marginTop:12},
+  packageCard:{minHeight:76,flexDirection:'row',alignItems:'center',backgroundColor:'#fff',borderRadius:20,padding:16,borderWidth:1,borderColor:'#efd8ca',marginTop:12},
   packageCopy:{flex:1,paddingRight:12},packageTitle:{fontSize:16,fontWeight:'900',color:'#222'},packageMeta:{fontSize:11,color:'#777',marginTop:5},
-  price:{fontSize:16,fontWeight:'900',color:'#3568b8'},
-  restoreButton:{minHeight:48,borderRadius:16,borderWidth:1,borderColor:'#b9cbe7',alignItems:'center',justifyContent:'center',marginTop:16},
-  restoreText:{fontSize:13,fontWeight:'900',color:'#3568b8'},
+  price:{fontSize:16,fontWeight:'900',color:'#d95f38'},
+  restoreButton:{minHeight:48,borderRadius:16,borderWidth:1,borderColor:'#e7a58e',alignItems:'center',justifyContent:'center',marginTop:16},
+  restoreText:{fontSize:13,fontWeight:'900',color:'#d95f38'},
   warningCard:{backgroundColor:'#fff3ee',borderRadius:18,padding:15,marginTop:16},warningTitle:{fontSize:14,fontWeight:'900',color:'#8a4b36'},warningText:{fontSize:12,lineHeight:18,color:'#8a5d4b',marginTop:5},
   legal:{fontSize:10,lineHeight:16,color:'#999',textAlign:'center',marginTop:18},
   launchCard:{backgroundColor:'#eef7ee',borderRadius:26,padding:24,marginTop:22,alignItems:'center'},launchEmoji:{fontSize:48},launchCardTitle:{fontSize:19,fontWeight:'900',color:'#237a43',marginTop:12,textAlign:'center'},launchCardText:{fontSize:13,lineHeight:20,color:'#4d7459',marginTop:8,textAlign:'center'},

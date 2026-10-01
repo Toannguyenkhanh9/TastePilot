@@ -12,7 +12,7 @@ import {
 } from '../types';
 import {getLocalRecommendations, LocalDish} from './localRecommendationService';
 
-const CATALOG = require('../data/dishes750_global.json') as LocalDish[];
+const CATALOG = require('../data/dishes1500_global.json') as LocalDish[];
 const CATALOG_BY_ID = new Map(CATALOG.map(item => [item.id, item]));
 
 type GroupRecommendationInput = {

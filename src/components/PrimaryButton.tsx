@@ -31,16 +31,16 @@ export function PrimaryButton({title, onPress, loading, disabled, variant = 'dar
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#171717',
+    backgroundColor: '#d95f38',
     minHeight: 56,
     borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 18,
   },
-  light: {backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#e4e4e4'},
-  accent: {backgroundColor: '#2457a7'},
+  light: {backgroundColor: '#fffdf9', borderWidth: 1, borderColor: '#efd8ca'},
+  accent: {backgroundColor: '#d95f38'},
   dim: {opacity: 0.6},
   text: {color: '#fff', fontSize: 16, fontWeight: '800'},
-  lightText: {color: '#171717'},
+  lightText: {color: '#7f3f2c'},
 });

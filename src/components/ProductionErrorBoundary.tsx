@@ -56,7 +56,7 @@ export class ProductionErrorBoundary extends React.Component<Props, State> {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#fbfaf8',
+    backgroundColor: '#fff9f1',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 22,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   card: {
     width: '100%',
     maxWidth: 460,
-    backgroundColor: '#fff',
+    backgroundColor: '#fffdf9',
     borderRadius: 26,
     borderWidth: 1,
     borderColor: '#eadfce',
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     minWidth: 150,
     paddingHorizontal: 20,
     borderRadius: 16,
-    backgroundColor: '#3568b8',
+    backgroundColor: '#d95f38',
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 20,

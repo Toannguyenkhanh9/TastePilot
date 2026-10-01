@@ -105,9 +105,9 @@ export function LanguageSettingsScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: {flex: 1, backgroundColor: '#f7f1e9'},
-  bgImage: {opacity: 0.18},
-  overlay: {...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(250,247,243,0.90)'},
+  screen: {flex: 1, backgroundColor: '#fff9f1'},
+  bgImage: {opacity: 0.28},
+  overlay: {...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(255,248,238,0.82)'},
   customHeader: {
     height: 58,
     flexDirection: 'row',
@@ -128,12 +128,12 @@ const styles = StyleSheet.create({
   listCard: {backgroundColor: 'rgba(255,255,255,0.96)', borderRadius: 22, borderWidth: 1, borderColor: '#eadfce', overflow: 'hidden'},
   row: {minHeight: 68, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16},
   rowBorder: {borderBottomWidth: 1, borderBottomColor: '#eee8e0'},
-  rowActive: {backgroundColor: '#f5f8ff'},
+  rowActive: {backgroundColor: '#fff3ed'},
   rowDisabled: {opacity: 0.7},
   rowCopy: {flex: 1},
   languageName: {fontSize: 16, fontWeight: '800', color: '#222'},
-  languageNameActive: {color: '#325ea8'},
+  languageNameActive: {color: '#c5522f'},
   localeText: {fontSize: 12, color: '#8a8a8a', marginTop: 4},
   check: {fontSize: 24, color: '#b0a69a'},
-  checkActive: {fontSize: 20, fontWeight: '900', color: '#325ea8'},
+  checkActive: {fontSize: 20, fontWeight: '900', color: '#c5522f'},
 });

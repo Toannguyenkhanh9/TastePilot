@@ -17,7 +17,7 @@ import {PrimaryButton} from '../components/PrimaryButton';
 import {useApp} from '../context/AppContext';
 import {APP_LOCAL_BANNERS} from '../utils/localArt';
 import {LocalBanner} from '../components/LocalBanner';
-import {SUPPORTED_LANGUAGES, localeToLanguageCode} from '../i18n';
+import i18n, {SUPPORTED_LANGUAGES, localeToLanguageCode} from '../i18n';
 import {TasteProfileCard} from '../components/TasteProfileCard';
 import {SmartNotificationSettingsCard} from '../components/SmartNotificationSettingsCard';
 import {
@@ -79,6 +79,22 @@ export function ProfileScreen() {
     [languageCode],
   );
 
+  const changeLanguage = (code: typeof SUPPORTED_LANGUAGES[number]['code']) => {
+    const language =
+      SUPPORTED_LANGUAGES.find(item => item.code === code) ||
+      SUPPORTED_LANGUAGES[0];
+
+    setLanguageCode(language.code);
+    void i18n.changeLanguage(language.code);
+
+    // Language is independent from the rest of the editable profile form:
+    // persist it immediately instead of waiting for the Save button.
+    setProfile({
+      ...profile,
+      locale: language.locale,
+    });
+  };
+
   const toggle = (list: string[], setList: (v: string[]) => void, value: string) =>
     setList(list.includes(value) ? list.filter(x => x !== value) : [...list, value]);
 
@@ -131,7 +147,7 @@ export function ProfileScreen() {
         keyboardVerticalOffset={84}>
         <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
           <LocalBanner
-            imageSource={APP_LOCAL_BANNERS.home}
+            imageSource={APP_LOCAL_BANNERS.daily}
             eyebrow={t('profile.heroEyebrow')}
             title={t('profile.heroTitle')}
             subtitle={t('profile.heroSubtitle')}
@@ -146,7 +162,7 @@ export function ProfileScreen() {
                 <Pressable
                   key={item.code}
                   style={[styles.languageChip, languageCode === item.code && styles.languageChipActive]}
-                  onPress={() => setLanguageCode(item.code)}>
+                  onPress={() => changeLanguage(item.code)}>
                   <Text style={[styles.languageChipText, languageCode === item.code && styles.languageChipTextActive]}>
                     {item.nativeName}
                   </Text>
@@ -244,9 +260,9 @@ export function ProfileScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: {flex: 1, backgroundColor: '#f7f1e9'},
-  bgImage: {opacity: 0.18},
-  overlay: {...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(250,247,243,0.88)'},
+  screen: {flex: 1, backgroundColor: '#fff9f1'},
+  bgImage: {opacity: 0.28},
+  overlay: {...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(255,248,238,0.80)'},
   flex: {flex: 1},
   container: {padding: 20, paddingBottom: 40},
   panel: {backgroundColor: 'rgba(255,255,255,0.96)', borderRadius: 22, padding: 16, borderWidth: 1, borderColor: '#eadfce', marginBottom: 14},
@@ -259,7 +275,7 @@ const styles = StyleSheet.create({
   chips: {flexDirection: 'row', flexWrap: 'wrap', marginTop: 12},
   languageGrid: {flexDirection: 'row', flexWrap: 'wrap', marginTop: 12},
   languageChip: {paddingHorizontal: 12, paddingVertical: 10, borderRadius: 999, backgroundColor: '#f2f2f2', marginRight: 8, marginBottom: 8, borderWidth: 1, borderColor: 'transparent'},
-  languageChipActive: {backgroundColor: '#1d2735', borderColor: '#1d2735'},
+  languageChipActive: {backgroundColor: '#d95f38', borderColor: '#d95f38'},
   languageChipText: {fontSize: 12, fontWeight: '800', color: '#555'},
   languageChipTextActive: {color: '#fff'},
   allergyPanel: {borderColor: '#f0d3c7'},

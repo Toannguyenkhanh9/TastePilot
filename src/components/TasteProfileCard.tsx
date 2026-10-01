@@ -7,9 +7,10 @@ import {localizeCuisine} from '../services/dishLocalizationService';
 
 type Props = {
   compact?: boolean;
+  appearance?: 'default' | 'home';
 };
 
-export function TasteProfileCard({compact = false}: Props) {
+export function TasteProfileCard({compact = false, appearance = 'default'}: Props) {
   const {t} = useTranslation();
   const {history, profile} = useApp();
   const learned = useMemo(() => buildTasteProfile(history), [history]);
@@ -18,13 +19,13 @@ export function TasteProfileCard({compact = false}: Props) {
     .join(' · ');
 
   return (
-    <View style={[styles.card, compact && styles.cardCompact]}>
+    <View style={[styles.card, compact && styles.cardCompact, appearance === 'home' && styles.cardHome]}>
       <View style={styles.headerRow}>
-        <View style={styles.iconBubble}>
+        <View style={[styles.iconBubble, appearance === 'home' && styles.iconBubbleHome]}>
           <Text style={styles.icon}>🧠</Text>
         </View>
         <View style={styles.headerCopy}>
-          <Text style={styles.title}>{t('smartTasteTitle')}</Text>
+          <Text style={[styles.title, appearance === 'home' && styles.titleHome]}>{t('smartTasteTitle')}</Text>
           <Text style={styles.subtitle}>{t('smartTasteSubtitle')}</Text>
         </View>
         {learned.historyCount > 0 ? (
@@ -46,7 +47,7 @@ export function TasteProfileCard({compact = false}: Props) {
       </Text>
 
       {topCuisines ? (
-        <Text style={styles.topLine}>
+        <Text style={[styles.topLine, appearance === 'home' && styles.topLineHome]}>
           {t('smartTasteTopCuisines', {cuisines: topCuisines})}
         </Text>
       ) : null}
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     borderRadius: 22,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#dfe7f4',
+    borderColor: '#efd9cc',
     marginTop: 14,
     marginBottom: 14,
   },
@@ -68,6 +69,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginBottom: 0,
   },
+  cardHome: {backgroundColor: '#fff8f2', borderColor: '#f1d7c7', shadowColor: '#b86645', shadowOpacity: 0.06, shadowRadius: 10, shadowOffset: {width: 0, height: 5}, elevation: 2},
   headerRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -76,14 +78,16 @@ const styles = StyleSheet.create({
     width: 42,
     height: 42,
     borderRadius: 14,
-    backgroundColor: '#eef4ff',
+    backgroundColor: '#ffe9df',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 11,
   },
+  iconBubbleHome: {backgroundColor: '#ffe4d8'},
   icon: {fontSize: 21},
   headerCopy: {flex: 1},
   title: {fontSize: 15, fontWeight: '900', color: '#171717'},
+  titleHome: {color: '#382018'},
   subtitle: {fontSize: 12, lineHeight: 17, color: '#667085', marginTop: 2},
   confidencePill: {
     paddingHorizontal: 10,
@@ -93,5 +97,6 @@ const styles = StyleSheet.create({
   },
   confidenceText: {fontSize: 12, fontWeight: '900', color: '#237a43'},
   status: {fontSize: 13, lineHeight: 20, color: '#4f5662', marginTop: 12},
-  topLine: {fontSize: 12, lineHeight: 18, fontWeight: '800', color: '#325ea8', marginTop: 7},
+  topLine: {fontSize: 12, lineHeight: 18, fontWeight: '800', color: '#c5522f', marginTop: 7},
+  topLineHome: {color: '#c45231'},
 });

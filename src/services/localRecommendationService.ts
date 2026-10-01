@@ -40,7 +40,7 @@ export type LocalDish = {
   travelStyles?: TravelGuideCategory[];
 };
 
-const CATALOG = require('../data/dishes750_global.json') as LocalDish[];
+const CATALOG = require('../data/dishes1500_global.json') as LocalDish[];
 
 const VARIANT_LABELS: Record<string, Record<string, string>> = {
   en: {classic:'Classic',chicken:'Chicken',beef:'Beef',seafood:'Seafood',vegetarian:'Vegetarian',spicy:'Spicy',deluxe:'Deluxe',signature:'Signature',tofu:'Tofu',mushroom:'Mushroom',extra_veg:'Extra vegetables',sesame:'Sesame',grilled:'Grilled',cheese:'Cheese',crispy:'Crispy',chocolate:'Chocolate',strawberry:'Strawberry',mango:'Mango',caramel:'Caramel',pistachio:'Pistachio',coconut:'Coconut'},
@@ -276,6 +276,8 @@ export type LocalRecommendationInput = {
   mood?: MoodKey;
   maxPerCuisine?: number;
   excludeDishNames?: string[];
+  excludeDishIds?: string[];
+  excludeFamilyIds?: string[];
   limit?: number;
 };
 
@@ -298,8 +300,10 @@ export function getLocalRecommendations(input: LocalRecommendationInput): MealSu
   const mealType: MealType = input.mealType || 'lunch';
   const country = String(input.locationContext?.countryCode || '').toUpperCase();
   const excluded = (input.excludeDishNames || []).map(normalize);
+  const excludedIds = new Set((input.excludeDishIds || []).map(x => String(x || '').trim()).filter(Boolean));
+  const excludedFamilies = new Set((input.excludeFamilyIds || []).map(x => String(x || '').trim()).filter(Boolean));
   const recentNames = history.slice(0,8).map(x => normalize(x.dishName));
-  const salt = `${input.mode}|${input.locationContext?.countryCode || ''}|${input.budget || 'none'}|${history.length}|${excluded.join('|')}|${new Date().toISOString().slice(0,13)}`;
+  const salt = `${input.mode}|${input.locationContext?.countryCode || ''}|${input.budget || 'none'}|${history.length}|${excluded.join('|')}|${[...excludedIds].join('|')}|${[...excludedFamilies].join('|')}|${new Date().toISOString().slice(0,13)}`;
 
   const scored = CATALOG
     .filter(d => hardRestrictionMatch(d, restrictions, allergies))
@@ -332,6 +336,7 @@ export function getLocalRecommendations(input: LocalRecommendationInput): MealSu
       return categoryOk && (d.touristScore || 50) >= 55;
     })
     .filter(d => {
+      if (excludedIds.has(d.id) || excludedFamilies.has(d.familyId)) return false;
       const candidateName = normalize(displayName(d,input.profile.locale));
       const base = normalize(d.baseName);
       if (excluded.some(x => x && (candidateName === x || x.includes(base) || candidateName.includes(x)))) return false;

@@ -133,9 +133,9 @@ export function SavedScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: {flex: 1, backgroundColor: '#f7f1e9'},
-  bgImage: {opacity: 0.18},
-  overlay: {...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(250,247,243,0.88)'},
+  screen: {flex: 1, backgroundColor: '#fff9f1'},
+  bgImage: {opacity: 0.28},
+  overlay: {...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(255,248,238,0.80)'},
   container: {padding: 20, paddingBottom: 40, flexGrow: 1},
   segment: {flexDirection: 'row', backgroundColor: 'rgba(241,241,241,0.92)', borderRadius: 18, padding: 4, marginBottom: 16},
   segmentItem: {flex: 1, paddingVertical: 12, borderRadius: 14, alignItems: 'center'},
@@ -162,6 +162,6 @@ const styles = StyleSheet.create({
   actions: {flexDirection: 'row', marginTop: 6},
   secondaryButton: {flex: 1, minHeight: 46, borderRadius: 14, backgroundColor: '#f2f2f2', alignItems: 'center', justifyContent: 'center', marginRight: 10},
   secondaryText: {fontSize: 13, fontWeight: '900', color: '#444'},
-  primaryButton: {flex: 1, minHeight: 46, borderRadius: 14, backgroundColor: '#1d2735', alignItems: 'center', justifyContent: 'center'},
+  primaryButton: {flex: 1, minHeight: 46, borderRadius: 14, backgroundColor: '#d95f38', alignItems: 'center', justifyContent: 'center'},
   primaryText: {fontSize: 13, fontWeight: '900', color: '#fff'},
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image, ImageSourcePropType, StyleSheet, View} from 'react-native';
 import {EXACT_FOOD_ICONS} from './FoodIconRegistry';
+import {findCatalogDishForMeal} from '../services/foodSearchService';
 
 const FOOD_ICONS = {
   pho: require('../assets/food-icons/pho.png'),
@@ -330,10 +331,21 @@ const MATCHERS: Array<[ImageSourcePropType, string[]]> = [
 ];
 
 function detectIcon(meal?: MealLike | null): ImageSourcePropType {
-  const exactCandidates = [meal?.imageKey, meal?.canonicalId, meal?.familyId].filter(Boolean).map(String);
+  // Prefer stable catalog identity over an incoming imageKey. AI/cached suggestions
+  // can carry stale image keys, while canonicalId and the bundled catalog remain
+  // authoritative. This fixes cases such as Bún Riêu resolving to a salad image.
+  const matchedDish = findCatalogDishForMeal(meal as any);
+  const exactCandidates = [
+    meal?.canonicalId,
+    matchedDish?.id,
+    matchedDish?.imageKey,
+    meal?.imageKey,
+    meal?.familyId,
+  ].filter(Boolean).map(String);
   for (const exactKey of exactCandidates) {
     if (EXACT_FOOD_ICONS[exactKey]) return EXACT_FOOD_ICONS[exactKey];
   }
+  if (matchedDish?.imageKey && ICON_BY_KEY[matchedDish.imageKey]) return ICON_BY_KEY[matchedDish.imageKey];
   if (meal?.imageKey && ICON_BY_KEY[meal.imageKey]) return ICON_BY_KEY[meal.imageKey];
   const text = normalize(`${meal?.name || ''} ${meal?.cuisine || ''} ${meal?.searchKeyword || ''}`);
   for (const [source, values] of MATCHERS) { if (hasAny(text, values)) return source; }

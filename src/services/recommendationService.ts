@@ -5,6 +5,7 @@ import {restaurantsMock} from './mockData';
 import {getLocalRecommendations} from './localRecommendationService';
 import {tasteMatchForSuggestion} from './tasteProfileService';
 import {rankRestaurantsForMeal} from './restaurantRankingService';
+import {enrichMealWithCatalogIdentity} from './foodSearchService';
 import {
   Coordinates,
   LocationContext,
@@ -75,6 +76,8 @@ type DailyRequest = {
   history: MealHistoryItem[];
   profile: UserProfile;
   excludeDishNames?: string[];
+  excludeDishIds?: string[];
+  excludeFamilyIds?: string[];
   mealType?: MealType;
   mood?: MoodKey;
   forceAI?: boolean;
@@ -88,6 +91,8 @@ type TravelRequest = {
   profile: UserProfile;
   history?: MealHistoryItem[];
   excludeDishNames?: string[];
+  excludeDishIds?: string[];
+  excludeFamilyIds?: string[];
   mealType?: MealType;
   travelCategory?: TravelGuideCategory;
   forceAI?: boolean;
@@ -125,6 +130,31 @@ function simpleHash(value: string) {
   return (h >>> 0).toString(36);
 }
 
+
+function normalizeIdentity(value?: string) {
+  return String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+}
+
+function filterExcludedSuggestions(
+  items: MealSuggestion[],
+  input: DailyRequest | TravelRequest,
+) {
+  const names = (input.excludeDishNames || []).map(normalizeIdentity).filter(Boolean);
+  const ids = new Set((input.excludeDishIds || []).map(x => String(x || '').trim()).filter(Boolean));
+  const families = new Set((input.excludeFamilyIds || []).map(x => String(x || '').trim()).filter(Boolean));
+
+  return items.filter(item => {
+    const canonicalId = String(item.canonicalId || '').trim();
+    const familyId = String(item.familyId || '').trim();
+    if (canonicalId && ids.has(canonicalId)) return false;
+    if (familyId && families.has(familyId)) return false;
+
+    const itemNames = [item.canonicalName, item.name].map(normalizeIdentity).filter(Boolean);
+    return !names.some(excluded =>
+      itemNames.some(name => name === excluded || name.includes(excluded) || excluded.includes(name)),
+    );
+  });
+}
 function budgetBucket(value?: number) {
   if (!value || value <= 0) return 'none';
   const magnitude = Math.pow(10, Math.max(0, Math.floor(Math.log10(value)) - 1));
@@ -174,24 +204,30 @@ function markAI(
   items: MealSuggestion[],
   input?: DailyRequest | TravelRequest,
 ) {
-  return items.map(item => ({
-    ...item,
-    recommendationSource: 'ai' as const,
-    priceEstimateSource: item.priceEstimateSource || 'ai' as const,
-    priceConfidence: item.priceConfidence || 'low' as const,
-    tasteMatchPercent: input
-      ? tasteMatchForSuggestion(
-          item,
-          'history' in input ? input.history || [] : [],
-          input.profile,
-          'preferences' in input ? input.preferences || [] : [],
-        )
-      : item.tasteMatchPercent,
-    allergyFilterApplied: !!input?.profile?.allergies?.length,
-    travelCategory:
-      input && 'travelCategory' in input ? input.travelCategory : item.travelCategory,
-    mood: input && 'mood' in input ? input.mood : item.mood,
-  }));
+  return items.map(rawItem => {
+    // If Gemini names a dish that already exists in the bundled catalog, restore
+    // its canonical identity before the UI sees it. This keeps exact food icons,
+    // localized display names and Google Places search keywords in sync.
+    const item = enrichMealWithCatalogIdentity(rawItem, input?.profile?.locale);
+    return {
+      ...item,
+      recommendationSource: 'ai' as const,
+      priceEstimateSource: item.priceEstimateSource || 'ai' as const,
+      priceConfidence: item.priceConfidence || 'low' as const,
+      tasteMatchPercent: input
+        ? tasteMatchForSuggestion(
+            item,
+            'history' in input ? input.history || [] : [],
+            input.profile,
+            'preferences' in input ? input.preferences || [] : [],
+          )
+        : item.tasteMatchPercent,
+      allergyFilterApplied: !!input?.profile?.allergies?.length,
+      travelCategory:
+        input && 'travelCategory' in input ? input.travelCategory : item.travelCategory,
+      mood: input && 'mood' in input ? input.mood : item.mood,
+    };
+  });
 }
 
 async function fetchAI(
@@ -201,7 +237,7 @@ async function fetchAI(
   const key = makeCacheKey(mode, input);
   const cached = await readAICache(key);
   if (cached?.length) {
-    const filteredCached = filterByBudgetWindow(markAI(cached, input), input.budget);
+    const filteredCached = filterByBudgetWindow(filterExcludedSuggestions(markAI(cached, input), input), input.budget);
     if (filteredCached.length) return filteredCached;
   }
 
@@ -214,7 +250,7 @@ async function fetchAI(
     input.budget,
   );
   if (suggestions.length) await writeAICache(key, suggestions);
-  return markAI(suggestions, input);
+  return filterExcludedSuggestions(markAI(suggestions, input), input);
 }
 
 function mergeLocalAndAI(local: MealSuggestion[], ai: MealSuggestion[], budget?: number, limit = 5) {
@@ -225,7 +261,7 @@ function mergeLocalAndAI(local: MealSuggestion[], ai: MealSuggestion[], budget?:
 
 /**
  * Local-first recommendation strategy:
- * 1) Rank the bundled 1,000-dish catalog locally.
+ * 1) Rank the bundled 1,050-dish catalog locally.
  * 2) If 5 good local results exist, return immediately: zero Gemini call.
  * 3) Only fall back to Gemini when the local catalog cannot satisfy restrictions,
  *    or when forceAI=true is explicitly requested.
@@ -242,6 +278,8 @@ export async function getDailyRecommendations(input: DailyRequest): Promise<Meal
     mealType: input.mealType,
     mood: input.mood,
     excludeDishNames: input.excludeDishNames,
+    excludeDishIds: input.excludeDishIds,
+    excludeFamilyIds: input.excludeFamilyIds,
     limit: 5,
   });
 
@@ -251,7 +289,7 @@ export async function getDailyRecommendations(input: DailyRequest): Promise<Meal
 
   try {
     const ai = await fetchAI('daily', input);
-    return mergeLocalAndAI(local, ai, input.budget, 5);
+    return filterExcludedSuggestions(mergeLocalAndAI(local, ai, input.budget, 5), input);
   } catch (error) {
     if (local.length) return local;
     throw error;
@@ -269,6 +307,8 @@ export async function getTravelRecommendations(input: TravelRequest): Promise<Me
     mealType: input.mealType,
     travelCategory: input.travelCategory,
     excludeDishNames: input.excludeDishNames,
+    excludeDishIds: input.excludeDishIds,
+    excludeFamilyIds: input.excludeFamilyIds,
     limit: 5,
   });
 
@@ -279,7 +319,7 @@ export async function getTravelRecommendations(input: TravelRequest): Promise<Me
 
   try {
     const ai = await fetchAI('travel', input);
-    return mergeLocalAndAI(local, ai, input.budget, 5);
+    return filterExcludedSuggestions(mergeLocalAndAI(local, ai, input.budget, 5), input);
   } catch (error) {
     if (local.length) return local;
     throw error;

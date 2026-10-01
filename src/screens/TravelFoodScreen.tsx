@@ -335,8 +335,8 @@ export function TravelFoodScreen({navigation}: Props) {
 }
 
 const styles = StyleSheet.create({
-  flex: {flex: 1, backgroundColor: '#fbfaf8'},
-  container: {padding: 20, paddingBottom: 120, backgroundColor: '#fbfaf8', flexGrow: 1},
+  flex: {flex: 1, backgroundColor: '#fff9f1'},
+  container: {padding: 20, paddingBottom: 120, backgroundColor: '#fff9f1', flexGrow: 1},
   segment: {flexDirection: 'row', backgroundColor: '#f2f2f2', borderRadius: 18, padding: 4, marginTop: 2},
   segmentItem: {flex: 1, paddingVertical: 12, borderRadius: 14, alignItems: 'center'},
   segmentActive: {backgroundColor: '#fff'},
@@ -359,7 +359,7 @@ const styles = StyleSheet.create({
     height: 58,
     minWidth: 78,
     borderRadius: 18,
-    backgroundColor: '#1d2735',
+    backgroundColor: '#d95f38',
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 14,
@@ -370,7 +370,7 @@ const styles = StyleSheet.create({
   guideText: {fontSize: 12, lineHeight: 18, color: '#6b6259', marginTop: 5},
   guideChips: {flexDirection: 'row', flexWrap: 'wrap', marginTop: 10},
   guideHint: {fontSize: 12, lineHeight: 18, color: '#94601d', fontWeight: '700', marginTop: 4},
-  panel: {backgroundColor: '#eaf3ff', borderRadius: 20, padding: 16, marginVertical: 24},
-  panelTitle: {fontSize: 15, fontWeight: '800', color: '#1f3560'},
-  panelText: {fontSize: 13, color: '#50668d', lineHeight: 20, marginTop: 6},
+  panel: {backgroundColor: '#eef5df', borderRadius: 20, padding: 16, marginVertical: 24},
+  panelTitle: {fontSize: 15, fontWeight: '800', color: '#52663a'},
+  panelText: {fontSize: 13, color: '#697b55', lineHeight: 20, marginTop: 6},
 });

@@ -19,16 +19,23 @@ import {RestaurantDetailScreen} from '../screens/RestaurantDetailScreen';
 import {GroupModeScreen} from '../screens/GroupModeScreen';
 import {WeeklyPlannerScreen} from '../screens/WeeklyPlannerScreen';
 import {SurpriseMeScreen} from '../screens/SurpriseMeScreen';
+import {FoodSearchScreen} from '../screens/FoodSearchScreen';
 import {PremiumScreen} from '../screens/PremiumScreen';
-import {MainTabParamList, RootStackParamList} from './types';
+import {SplashScreen} from '../screens/SplashScreen';
+import OnboardingScreen from '../screens/OnboardingScreen';
+import type {MainTabParamList, RootStackParamList} from './types';
 import {ProductionErrorBoundary} from '../components/ProductionErrorBoundary';
 import {MonetizationBanner} from '../components/MonetizationBanner';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<MainTabParamList>();
 
-function TabIcon({emoji}: {emoji: string}) {
-  return <Text style={{fontSize: 18}}>{emoji}</Text>;
+function TabIcon({emoji, focused}: {emoji: string; focused: boolean}) {
+  return (
+    <View style={{width: 32, height: 28, borderRadius: 11, alignItems: 'center', justifyContent: 'center', backgroundColor: focused ? '#ffe6da' : 'transparent'}}>
+      <Text style={{fontSize: 18}}>{emoji}</Text>
+    </View>
+  );
 }
 
 function TastePilotTabBar(props: BottomTabBarProps) {
@@ -49,27 +56,35 @@ function MainTabs() {
       screenOptions={{
         headerShown: false,
         tabBarLabelStyle: {fontSize: 11, fontWeight: '700'},
-        tabBarStyle: {height: 62, paddingBottom: 7, paddingTop: 6},
+        tabBarActiveTintColor: '#d95f38',
+        tabBarInactiveTintColor: '#8b817b',
+        tabBarStyle: {
+          height: 64,
+          paddingBottom: 7,
+          paddingTop: 6,
+          backgroundColor: '#fffdf9',
+          borderTopColor: '#efded1',
+        },
       }}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
-        options={{tabBarLabel: t('tabs.home'), tabBarIcon: () => <TabIcon emoji="🏠" />}}
+        options={{tabBarLabel: t('tabs.home'), tabBarIcon: ({focused}) => <TabIcon emoji="🏠" focused={focused} />}}
       />
       <Tab.Screen
         name="Saved"
         component={SavedScreen}
-        options={{tabBarLabel: t('tabs.saved'), tabBarIcon: () => <TabIcon emoji="❤️" />}}
+        options={{tabBarLabel: t('tabs.saved'), tabBarIcon: ({focused}) => <TabIcon emoji="❤️" focused={focused} />}}
       />
       <Tab.Screen
         name="History"
         component={HistoryScreen}
-        options={{tabBarLabel: t('tabs.history'), tabBarIcon: () => <TabIcon emoji="🕘" />}}
+        options={{tabBarLabel: t('tabs.history'), tabBarIcon: ({focused}) => <TabIcon emoji="🕘" focused={focused} />}}
       />
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
-        options={{tabBarLabel: t('tabs.profile'), tabBarIcon: () => <TabIcon emoji="⚙️" />}}
+        options={{tabBarLabel: t('tabs.profile'), tabBarIcon: ({focused}) => <TabIcon emoji="⚙️" focused={focused} />}}
       />
     </Tab.Navigator>
   );
@@ -83,13 +98,34 @@ export function RootNavigator() {
       title={t('productionErrorTitle')}
       message={t('productionErrorMessage')}
       retry={t('productionErrorRetry')}>
-      <Stack.Navigator screenOptions={{headerBackTitle: t('common.back'), headerShadowVisible: false}}>
+      <Stack.Navigator
+        initialRouteName="Splash"
+        screenOptions={{
+          headerBackTitle: t('common.back'),
+          headerShadowVisible: false,
+          headerStyle: {backgroundColor: '#fff9f1'},
+          headerTintColor: '#35231c',
+          headerTitleStyle: {fontWeight: '800'},
+          contentStyle: {backgroundColor: '#fff9f1'},
+        }}>
+      <Stack.Screen name="Splash" component={SplashScreen} options={{headerShown: false, animation: "none"}} />
+      <Stack.Screen name="Onboarding" component={OnboardingScreen} options={{headerShown: false, animation: "fade"}} />
       <Stack.Screen name="MainTabs" component={MainTabs} options={{headerShown: false}} />
       <Stack.Screen name="DailyMeal" component={DailyMealScreen} options={{title: t('screens.dailyMeal')}} />
       <Stack.Screen name="TravelFood" component={TravelFoodScreen} options={{title: t('screens.travelFood')}} />
       <Stack.Screen name="GroupMode" component={GroupModeScreen} options={{title: t('groupTitle')}} />
       <Stack.Screen name="WeeklyPlanner" component={WeeklyPlannerScreen} options={{title: t('plannerTitle')}} />
-      <Stack.Screen name="SurpriseMe" component={SurpriseMeScreen} options={{title: t('surpriseTitle')}} />
+      <Stack.Screen
+        name="SurpriseMe"
+        component={SurpriseMeScreen}
+        options={{
+          title: t('surpriseTitle'),
+          headerStyle: {backgroundColor: '#fff9f1'},
+          headerTintColor: '#281d18',
+          headerTitleStyle: {fontWeight: '800'},
+        }}
+      />
+      <Stack.Screen name="FoodSearch" component={FoodSearchScreen} options={{title: t('foodSearch.title')}} />
       <Stack.Screen name="Premium" component={PremiumScreen} options={{title: t('premiumTitle')}} />
       <Stack.Screen name="MealResults" component={MealResultsScreen} options={{title: t('screens.suggestions')}} />
       <Stack.Screen name="Restaurants" component={RestaurantsScreen} options={{title: t('screens.nearbyPlaces')}} />
@@ -98,3 +134,5 @@ export function RootNavigator() {
     </ProductionErrorBoundary>
   );
 }
+
+export default RootNavigator;

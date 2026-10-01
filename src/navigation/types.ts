@@ -1,4 +1,4 @@
-import {
+import type {
   Coordinates,
   LocationContext,
   MealHistoryItem,
@@ -28,12 +28,15 @@ export type MealResultsRequestContext = {
 };
 
 export type RootStackParamList = {
+  Splash: undefined;
+  Onboarding: undefined;
   MainTabs: undefined;
   DailyMeal: undefined;
   TravelFood: undefined;
   GroupMode: undefined;
   WeeklyPlanner: undefined;
   SurpriseMe: undefined;
+  FoodSearch: undefined;
   Premium: undefined;
   MealResults: {
     mode: 'daily' | 'travel';

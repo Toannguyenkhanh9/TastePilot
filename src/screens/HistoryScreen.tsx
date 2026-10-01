@@ -232,7 +232,7 @@ export function HistoryScreen() {
                   </Pressable>
                 ) : null}
                 <Pressable
-                  style={[styles.primaryAction, {backgroundColor: art?.accent || '#1d2735'}]}
+                  style={[styles.primaryAction, {backgroundColor: art?.accent || '#d95f38'}]}
                   onPress={() => selected && openDirections(selected)}>
                   <Text style={styles.primaryActionText}>{t('common.directions')}</Text>
                 </Pressable>
@@ -246,13 +246,13 @@ export function HistoryScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: {flex: 1, backgroundColor: '#f7f1e9'},
-  bgImage: {opacity: 0.18},
-  overlay: {...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(250,247,243,0.88)'},
+  screen: {flex: 1, backgroundColor: '#fff9f1'},
+  bgImage: {opacity: 0.28},
+  overlay: {...StyleSheet.absoluteFillObject, backgroundColor: 'rgba(255,248,238,0.80)'},
   container: {padding: 20, paddingBottom: 42, flexGrow: 1},
-  feedbackInfo: {backgroundColor: '#eef5ff', borderRadius: 20, padding: 16, marginBottom: 16},
-  feedbackInfoTitle: {fontSize: 14, fontWeight: '900', color: '#294f88'},
-  feedbackInfoText: {fontSize: 13, lineHeight: 20, color: '#55719a', marginTop: 6},
+  feedbackInfo: {backgroundColor: '#fff0e7', borderRadius: 20, padding: 16, marginBottom: 16},
+  feedbackInfoTitle: {fontSize: 14, fontWeight: '900', color: '#8a4d32'},
+  feedbackInfoText: {fontSize: 13, lineHeight: 20, color: '#8a6958', marginTop: 6},
   emptyCard: {backgroundColor: 'rgba(255,255,255,0.96)', borderWidth: 1, borderColor: '#eadfce', borderRadius: 22, padding: 20},
   emptyTitle: {fontSize: 18, fontWeight: '900', color: '#171717'},
   emptyText: {marginTop: 8, fontSize: 14, lineHeight: 21, color: '#666'},
@@ -264,14 +264,14 @@ const styles = StyleSheet.create({
   titleRow: {flexDirection: 'row', alignItems: 'center'},
   name: {fontSize: 17, fontWeight: '900', color: '#222', flex: 1, paddingRight: 8},
   modePill: {fontSize: 10, fontWeight: '900', paddingHorizontal: 10, paddingVertical: 6, borderRadius: 999, overflow: 'hidden'},
-  modeDaily: {backgroundColor: '#eef5ff', color: '#3568b8'},
+  modeDaily: {backgroundColor: '#fff0e7', color: '#d95f38'},
   modeTravel: {backgroundColor: '#fff2df', color: '#9a6a2a'},
   meta: {fontSize: 14, color: '#666', marginTop: 4},
   placeMeta: {fontSize: 12, color: '#5f6672', marginTop: 5},
-  area: {fontSize: 12, color: '#5d6d80', marginTop: 5},
+  area: {fontSize: 12, color: '#7d6c62', marginTop: 5},
   date: {fontSize: 12, color: '#999', marginTop: 5},
   chevron: {fontSize: 30, color: '#a28f7b', marginLeft: 8},
-  viewDetails: {fontSize: 12, fontWeight: '900', color: '#325ea8', marginTop: 10, marginLeft: 86},
+  viewDetails: {fontSize: 12, fontWeight: '900', color: '#c5522f', marginTop: 10, marginLeft: 86},
   feedbackRow: {borderTopWidth: 1, borderTopColor: '#eee8e0', marginTop: 12, paddingTop: 12},
   feedbackLabel: {fontSize: 12, fontWeight: '800', color: '#68625b'},
   feedbackButtons: {flexDirection: 'row', marginTop: 9},
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
   dislikeActive: {backgroundColor: '#fdecec', borderColor: '#f1c4c4'},
   dislikeActiveText: {color: '#9a3434'},
   modalBackdrop: {flex: 1, backgroundColor: 'rgba(0,0,0,0.38)', justifyContent: 'flex-end'},
-  modalSheet: {maxHeight: '88%', backgroundColor: '#fbfaf8', borderTopLeftRadius: 30, borderTopRightRadius: 30, overflow: 'hidden'},
+  modalSheet: {maxHeight: '88%', backgroundColor: '#fff9f1', borderTopLeftRadius: 30, borderTopRightRadius: 30, overflow: 'hidden'},
   modalHandle: {width: 46, height: 5, borderRadius: 3, backgroundColor: '#d5cec5', alignSelf: 'center', marginTop: 10},
   modalContent: {padding: 20, paddingBottom: 32},
   modalHeroRow: {flexDirection: 'row', alignItems: 'center'},
