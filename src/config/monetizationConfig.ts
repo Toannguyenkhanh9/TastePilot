@@ -15,7 +15,7 @@ export type MonetizationMode = 'free_launch' | 'monetized';
  * - free users get 1 Surprise Me, 1 Daily Meal and 1 Travel Food use per local day
  * - each later use can be unlocked one-at-a-time with a completed rewarded ad
  */
-export const MONETIZATION_MODE: MonetizationMode = 'free_launch';
+export const MONETIZATION_MODE: MonetizationMode = 'monetized';
 
 export const MONETIZATION_CONFIG = {
   iap: {
@@ -43,11 +43,11 @@ export const MONETIZATION_CONFIG = {
     enabledWhenMonetized: true,
     banner: {
       ios: 'REPLACE_WITH_ADMOB_IOS_BANNER_UNIT_ID',
-      android: 'REPLACE_WITH_ADMOB_ANDROID_BANNER_UNIT_ID',
+      android: 'ca-app-pub-6025850831913874/9874966452',
     },
     rewarded: {
       ios: 'REPLACE_WITH_ADMOB_IOS_REWARDED_UNIT_ID',
-      android: 'REPLACE_WITH_ADMOB_ANDROID_REWARDED_UNIT_ID',
+      android: 'ca-app-pub-6025850831913874/7180606077',
     },
   },
 } as const;

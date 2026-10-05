@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: Signflinger
-SHA-256-Digest-Manifest: oLWoXZoDBDVQYX03M+VhpYw7fbJ5xIBV3CDAZMX+RRM=
+SHA-256-Digest-Manifest: b7r11VCgvBqlVec/ObmOHk1Q93PCiF5T/h3pT1I/zwU=
 
 Name: BUNDLE-METADATA/com.android.tools.build.debugsymbols/arm64-v8a/l
  ibNitroIap.so.sym
@@ -171,7 +171,7 @@ Name: BUNDLE-METADATA/com.android.tools.build.libraries/dependencies.p
 SHA-256-Digest: ogaFPjpVkzz/LPJpCHOqz5MRSrvgwYIetT0pZEFhtrw=
 
 Name: BUNDLE-METADATA/com.android.tools.build.profiles/baseline.prof
-SHA-256-Digest: TDAnFDOlHXSdGsK0I14EZ8Al4DogLD3NKZwy/BVFCqY=
+SHA-256-Digest: Zd6LaKC+R1zkiYiYzJr5huy++RZkjg/jVC0PY/I14FY=
 
 Name: BUNDLE-METADATA/com.android.tools.build.profiles/baseline.profm
 SHA-256-Digest: wv1ZYeLAddzz3UDpSkMBO4+/+k8mcrBK1FLlp1U9P0k=
@@ -186,19 +186,19 @@ Name: base/assets.pb
 SHA-256-Digest: XPK7EKaE34ClI7bcroNUBLkWGdQ/Srcq8x1xzK1iMLM=
 
 Name: base/assets/index.android.bundle
-SHA-256-Digest: Bh2sswoYxXlSunxrIBYeDooQbcWcsOrZ57oRyIk9LDQ=
+SHA-256-Digest: wf5x/O8DIiYuWM6sq65yulgLVvoBRYtiP36ZS3PkO5A=
 
 Name: base/dex/classes.dex
-SHA-256-Digest: wNJeUpZ+Mz6y+1cV2sMu+pJ8kyoX3hvpKlOSlq0hP3M=
+SHA-256-Digest: J1Fm/wU0BSqLEhei+BWsYxCpdWYwdzURxsDZh569I5U=
 
 Name: base/dex/classes2.dex
-SHA-256-Digest: mBh02PbaXX/bmfUDsjirVHpFVP5wip9M8Mj+0IkTXj0=
+SHA-256-Digest: yPFq1iiFX+jXBVEkBLX5MZ+tkkwGV7K8u6ClWCd99QA=
 
 Name: base/dex/classes3.dex
-SHA-256-Digest: AZXbFyAkvxcHRbqN1ow4fDAhBp4nb+REXJxVbPeGtxs=
+SHA-256-Digest: BAOG20STmJOOckbPilaMeRC4tojICKBjSLRJWa6+Ges=
 
 Name: base/dex/classes4.dex
-SHA-256-Digest: 2IiShY5cIIRAq5YOMIuC4+3y+D8usXQjPD2WJ3pi1sA=
+SHA-256-Digest: YeLs5tPjQPFO8PPuHbdX6sOXjkFg0MzorsLaiPiP838=
 
 Name: base/lib/arm64-v8a/libNitroIap.so
 SHA-256-Digest: qXtWkhGloTXdB+2h8n4WUy1yssMYlpu47rmRpOvRcuc=
@@ -393,7 +393,7 @@ Name: base/lib/x86_64/librnscreens.so
 SHA-256-Digest: 510IUG11M6xt9yUYD0Lu2kYIivcK6NWBy49iGcI0iYo=
 
 Name: base/manifest/AndroidManifest.xml
-SHA-256-Digest: xHlswygUS6VgW6NZl4AARjOSVT3UAyOc9Q3coUV64+0=
+SHA-256-Digest: q6jvO9JQfkoDOU89AKI4YagD6n64iy5+swuB7+FEZdI=
 
 Name: base/native.pb
 SHA-256-Digest: grFvYWfrkWJ1VtBdLaG/RxcVsAekJ7jfUyqzGSXzfMc=
@@ -1908,7 +1908,7 @@ SHA-256-Digest: RdwAT/zXVRLabcyk3wq2EjQoOqQpoDiRFEfHeG83RFM=
 
 Name: base/res/drawable-mdpi-v4/src_assets_backgrounds_food_soft_backg
  round.png
-SHA-256-Digest: DdQCyuGnvwDU8QbK6M0xe+mrqhdabN2+61mWUKYF7Dk=
+SHA-256-Digest: 08HRmnrUICqszasxNvY88pdVgyS3wy/G5PcTEJhTnXA=
 
 Name: base/res/drawable-mdpi-v4/src_assets_backgrounds_hero_daily_mult
  ilang_clean.png
@@ -1921,8 +1921,264 @@ SHA-256-Digest: mMe6oc/GnMe0iW3ns8HklFgwMJ4lwYQrLARMcPSBf5Y=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_adobo.png
 SHA-256-Digest: z9U6N/X5lAcrFrZssgbUNx7WsTnTAd+xgNx4IuPh8R8=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_balaleet.png
+SHA-256-Digest: eQusYHftruRZiH0Cp/Zv/bBdRCqiV7S1HYL8E2k8rNc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_camel_burger.p
+ ng
+SHA-256-Digest: BOASy9YfJeAbmL8fPjpjOBCEzibYXRlCqLe8gwyS/+U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_chebab_pancake
+ s.png
+SHA-256-Digest: 3MCV2XLn7TG7W6Ix5AE1chok7GbkJlknw9c1bpVVyZg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_chicken_machbo
+ os.png
+SHA-256-Digest: dePPurTwgihgqNKs9p4YPuZbQNarLMJb1PzGXxS4l/o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_date_khabeesa.
+ png
+SHA-256-Digest: VMlf0wJm7Ne3Ibgy7FOWzvuWT885qMJmKC6jobscAGw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_emirati_grille
+ d_hamour.png
+SHA-256-Digest: 4lwv4tc0+JHe6hcMWLFECzVFImLTO8Fr/l3JPNysIu0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_emirati_lamb_s
+ aloona.png
+SHA-256-Digest: CuDXuxBkiAsWGUzlRU3B3ibmPlLl/ToSm6QHyR8iPdc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_emirati_ouzi.p
+ ng
+SHA-256-Digest: Md7Eh45dgkG7NF6wKkuHDa3D0SOcQevu+VejAocj9I4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_emirati_saloon
+ a.png
+SHA-256-Digest: gecpeCXt/T2rVdRuPc+Ec7AR8ZRpQDU9QMjFR+vSVSQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_fish_machboos.
+ png
+SHA-256-Digest: pu7nzycrW9Py2z0jnZpwIjCrD7B4UaWdsBgbksAuNCU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_harees.png
+SHA-256-Digest: HS+AKTwU+KYFG6Ug5HZLcjSP9g6kuBibwiTTiinF28M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_jasheed.png
+SHA-256-Digest: 6+kwDiGapF/qXAAV2lryz0Ei4ZsAsS7NBe5tGAFdeNE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_khameer_bread.
+ png
+SHA-256-Digest: KbihX76KyxkS5SJoirW7XKK+75U2TSmQ4DvjZUOlu8U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_khuzi.png
+SHA-256-Digest: 4p4RDjhyrIYe6+MRwEBynac2u9ImVtvjht8KJojfKhY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_luqaimat.png
+SHA-256-Digest: aS3OmU78WlJOVFOohrrPJXTLgJZKcTWx022YruE6zws=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_machboos.png
+SHA-256-Digest: kEEhePHMvV4vVgILLL96jq+Mqx+QmCgJmSd62ZVSXqc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_madrouba.png
+SHA-256-Digest: WDFVIbr4FyYqSJLPz+ey+0ayoZaefpJMU9JObpE8ZQ4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_regag_bread.pn
+ g
+SHA-256-Digest: MIJFmtX3T85hbm7YEh8EcSrdhXkUlRiw/cljQtwGbbg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_samak_mashwi.p
+ ng
+SHA-256-Digest: VzogMj0Wn8JFpnfLo2WNLJJLFYObvlN56GqLF14ikGA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ae_thareed.png
+SHA-256-Digest: taBtp7fkAsFMOw48ZqIMqN4BpD4fdfv8JF+NTNqshkM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_alfajores.png
+SHA-256-Digest: EINb4ikdsGd2WnnigRQ+x6dLWlLfF0+xuW0vh7uypNM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_argentinian_em
+ panadas.png
+SHA-256-Digest: 5HvZYMxstMlcMKcuRe+lsjHhbr7BuV34UKXoDG1w+d8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_argentinian_pa
+ rrillada.png
+SHA-256-Digest: Mp+2qkMTMyIqP3V9A7aHgXnuNBLtHpbN/CTi5fOzC7E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_asado.png
+SHA-256-Digest: HyQ4uJoh1E8vuPA9EuEUqyB0B7t/ikJM+bo9kUAlwMU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_carbonada_crio
+ lla.png
+SHA-256-Digest: 2IGuz3NV6URahNSnoxUUv8dgVfhCe9BVUjtTMqv7aEY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_chocotorta.png
+SHA-256-Digest: CGH/dlI2TeR7BVE/hdR3giuNGK4zvXR264jsQH9GM3A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_choripan.png
+SHA-256-Digest: F2uQ5eEOopDxEbkvs99xPMXvs0YUV6PamIqY2HMQWBM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_dulce_de_leche
+ _pancakes.png
+SHA-256-Digest: I1Wr5rYK891Y8hq9zgbeFuVzUsh3306HoANa1IDxLjc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_flan_con_dulce
+ _de_leche.png
+SHA-256-Digest: R2g2wpnLW/lH+xCAzCmjJlsHVsCHtu3k+rmwSljEgwU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_fugazzeta.png
+SHA-256-Digest: CCcO3coVrzQbPh4mNr3ysuHW4C0dYYwNymGuN0ymygs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_humita.png
+SHA-256-Digest: L+JlbxrUMNxhYfhpBDVY9emS64CwhKyePRHH0NTzAAY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_locro.png
+SHA-256-Digest: Esr9q01hwonOnhjX9BANKiIr5EfdraLAeacXljO5YsI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_lomito_sandwic
+ h.png
+SHA-256-Digest: lXeqADd6vmElpmfVbEX2iPjP8AgF7uHQnSfw5cxXBoc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_matambre.png
+SHA-256-Digest: n/jTCK8/fqhLwO+4BI/QFQbFq9NQWAZXNM0q2dRfeSM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_milanesa_napol
+ itana.png
+SHA-256-Digest: /RXMClnd4ALMav/Kgwq49TJVcXDQiFxNVXtfoETQQ/E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_pastel_de_papa
+ .png
+SHA-256-Digest: ZEmin7bPa1MpZpQOluuUccLfeh2EtlcChJctKl7NJ54=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_provoleta.png
+SHA-256-Digest: V4WJkmQn0EXGKYslpGuCzEQxEzTXgL23nU/goO1hL+c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_revuelto_grama
+ jo.png
+SHA-256-Digest: CHxZYwS9WJLA+cQZzs873Zip7R35qPzNwMzE39uBfr0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_sandwich_de_mi
+ ga.png
+SHA-256-Digest: Y6qKI05m9LnuyS/uDdms6BTNiYSLib8YrOLuD0xthWw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ar_vitel_tone.png
+SHA-256-Digest: BuxHlfzH0x3R/VS/D80qfbxfDQVoC9URcux1+C1IdEo=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_arepa.png
 SHA-256-Digest: UYqQCxceno6qbWp5wPbE2cT9dZSQ2Aq3yWI7h+vck7g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_apfelstrudel.p
+ ng
+SHA-256-Digest: ghuJxGnrET8OD7nVKuu/GGOQH3HvRuJEAjBp3DCqKdc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_backhendl.png
+SHA-256-Digest: kovUZLrDLuW3RDZvQkKks83AR91r+sLHN1FSXh9mgKI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_frittatensuppe
+ .png
+SHA-256-Digest: 8OdefkKTQC84+k/lxdVzO+pffbNhtrNo0kZm2MfSAl0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_kaiserschmarrn
+ .png
+SHA-256-Digest: PH0/AG1PuZ+4cMVqb80e2AjpAPst7/WPDUjw3j/bv+4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_kasespatzle_au
+ strian_style.png
+SHA-256-Digest: hBExxqh6+XHBHMR7Cyz04RW2kguju5INdYYkLRtWLD8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_marillenknodel
+ .png
+SHA-256-Digest: 7bsJLEdAn3l1YlFkitKSCHvQZzTrzogrH5/Dk8cRAqg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_sachertorte.pn
+ g
+SHA-256-Digest: kSzuylWKgOnZVYfxtUSgSxazmcnzWO6vOCKaQclDLIs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_tafelspitz.png
+SHA-256-Digest: rCZ6B/DplaHqZqZZtm4KtrilVbgpatAZ4/Xt4VSxEXE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_tiroler_grostl
+ .png
+SHA-256-Digest: 9tleLQoBIJ5ZnNKoKXDgVEltiaoFCb7D7mGButuQW7I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_at_wiener_schnitz
+ el.png
+SHA-256-Digest: vHX382dKrVdnMFO6vSAcG2T+ONlZsy1I3gyPZK51Xs4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_anzac_biscuits
+ .png
+SHA-256-Digest: cV+CSUOD+Ym9b+BOSI6YHFN/pcD8fFrE/AMtcNjI/p0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_aussie_chicken
+ _schnitzel.png
+SHA-256-Digest: 1f5jpv6edCMQ4VahD+5Ul7QETulmM/UUVMF+lDwO2Zc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_australian_fis
+ h_and_chips.png
+SHA-256-Digest: xx0XeXSpqaJxU1v+gf5/TCD1OdPC2NupO16E/KJKENk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_australian_mea
+ t_pie.png
+SHA-256-Digest: Y8UYkx122VDnhei8yfn9fxR4zuTtni6PlvhhYrBXT20=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_avocado_toast.
+ png
+SHA-256-Digest: ELh1bTBWebIE1en6+a7kBOejMwisYjjAPEquCtokTRM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_barramundi.png
+SHA-256-Digest: CTMjTytVZOyG/l+YjMuKOjzux3JYblFKxKUAh3VUjZo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_beetroot_beef_
+ burger.png
+SHA-256-Digest: xA2xpLbeKFO52UDyzezEaozg9AXqHGL+f6/J787xcN4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_chicken_parmig
+ iana.png
+SHA-256-Digest: JlyX5q6Y9kJbKpSJJW+U7EzqMBzaR6liQGch4q1oJPQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_chiko_roll.png
+SHA-256-Digest: x3QRRv/8gwwvlo948rRZ4/PcFItbv0uyK9H58uZ3KhE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_damper_bread.p
+ ng
+SHA-256-Digest: nnJtatK6Bg+bvchEk5zobZ2MnqxVDPhCck9hbTgQOfA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_fairy_bread.pn
+ g
+SHA-256-Digest: C0l5AUYiwz1YySy8v0YOY4amQp/1nf3RlAscAgus5Bs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_lamington.png
+SHA-256-Digest: 0b9ZHZAfVmoWqzezn8UHtDdmDQNKNBwvbDr0AHwTzhs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_moreton_bay_bu
+ g_roll.png
+SHA-256-Digest: Ozyl7TyXFPAhJeSBnj0ApMpKn9iLTUqbMr0lsQ63JCY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_pavlova.png
+SHA-256-Digest: nHgCXrjpv7IypobfNPHuYj0z3TvgVa7zB8xHhNh5GyE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_pie_floater.pn
+ g
+SHA-256-Digest: UH3M2Iger9C80KlnYZAhZK0EvhxA+JLHVzUPb4MM8ws=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_potato_scallop
+ s.png
+SHA-256-Digest: jLKISZh7d1Y8tgbN9nZdYZRrxdlCaHOc1c4sdHVzl3A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_salt_and_peppe
+ r_calamari.png
+SHA-256-Digest: 0SkdCDxDc0Q/UESLH/jQ9vpQlQ3Jeyy99/TOFPtHyDA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_sausage_sizzle
+ .png
+SHA-256-Digest: qgCoNzb1m/kNc9mjNDyZq+VNFWWuvx24c7WarPTd1Zw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_vanilla_slice.
+ png
+SHA-256-Digest: BtV8pci4aEvMqD7JpAKVx9E3N2C7N8FI3wgFrlo8/kI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_au_vegemite_toast
+ .png
+SHA-256-Digest: 4bQlsaJDshbCPNqG8T0d8G5o4Wo/hn/ObrUlv4mnTYY=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_baklava.png
 SHA-256-Digest: 5Dwcd5LpViaj9p8lCSce+ltIojMCiXib4nIQ0ShBgZ0=
@@ -1932,6 +2188,159 @@ SHA-256-Digest: y7XlG5aKZFF5zJTUOAewEv1UGpuK7gOlKRZ2uRACypk=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_banh_xeo.png
 SHA-256-Digest: R8g+kQmvBQkGm0qs6qBBc3IWlyFzkOjYU5POF3/a8oc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_bangladeshi_ha
+ leem.png
+SHA-256-Digest: HGUxXwHiMbempzCSknAunpSehy0qOe2Hc4HBrHq7G3c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_bangladeshi_sh
+ ingara.png
+SHA-256-Digest: oFQ9zhOqhDYDCnbR4wPAAzkuau3ogFPgRqAmy7HIv8Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_beef_kala_bhun
+ a.png
+SHA-256-Digest: kk0bl1/4qoDZF4sVpngRvBRO2m0Z9hfg+LerEVEEN2M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_beef_tehari.pn
+ g
+SHA-256-Digest: F+mcD4qUnHR/EMLz8NWTIa76Eq6R4uixXR7XXi9tKdo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_bhapa_pitha.pn
+ g
+SHA-256-Digest: ldfmKS97n9RsQBRGosQM6Ed9okSS+qVwT9ggPunRJxQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_bhuna_khichuri
+ .png
+SHA-256-Digest: EKV+5x33H5Z5ZHxcbDnVBvm7swVaz3xxWiukoNWmR0U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_chicken_rezala
+ .png
+SHA-256-Digest: fW/Q1wWRZLHz2JTJJxLh0ACTKow3xPJldba3rRbvxyc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_chingri_malai_
+ curry.png
+SHA-256-Digest: 19adRbxol+N+LmD7lfJIxhS9+3hG7HxKEmjqTVisPdw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_chitol_muitha.
+ png
+SHA-256-Digest: JdvLjJ3z9eL1tyWvRx2oq7FSwqniMwqS6aCe2YMqYTs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_chotpoti.png
+SHA-256-Digest: mV5GW0+06VYEnjC7ZXRHZpi6HZ1cI7inFIYpE98uuiM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_dal_bhorta.png
+SHA-256-Digest: 7w/Dooy6z5HnDyncnQKM+pSgIcAOKimT/AFPwMdcLm8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_fuchka.png
+SHA-256-Digest: KrkAr7j4qbT9X1b4y2f2+WYVlH7DXU/yXUxVV4zSPs8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_hilsa_curry.pn
+ g
+SHA-256-Digest: ZQcStq20zuC8ZvvccHxmHCJ6F+bbCdpd+sQJrHdE6ls=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_kacchi_biryani
+ .png
+SHA-256-Digest: ImmLni1u7rcni5b3il9ui15i3AFb1new1ON/kDj9ct0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_mezban_beef.pn
+ g
+SHA-256-Digest: kouj4RIy07A2XxdrCtISqCJjOZQP6BDlbwlpPY5GNfs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_mishti_doi.png
+SHA-256-Digest: 4jo3mj6DKx5SzVXuI7HL6fVvvTD9gCZr7B9Zygau8yA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_morog_polao.pn
+ g
+SHA-256-Digest: CdcFAH09ggumoNmpdTUt1ys05iEsRKonyomptjMgONM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_mutton_rezala.
+ png
+SHA-256-Digest: oJfiwiDxwgpWhcS2kJLsDf0jzT0hE0LZt2N8T1OGla4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_panta_ilish.pn
+ g
+SHA-256-Digest: 0kxgvzrhCc333HOsyHjoqz9WHyxycPPxePPVkMhX6lo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bd_shorshe_ilish.
+ png
+SHA-256-Digest: n1dHzQlWUQ8RcK7jOuaqQVDdI4o4lPa88ggu2kmKmFY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_belgian_croque
+ _monsieur.png
+SHA-256-Digest: fp05gUkj4L4Na21Fwa1Ssz+tgv4Hkm/MK4KPc9gJIL8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_belgian_fries.
+ png
+SHA-256-Digest: nhBm/FDEbacfcJopoOVCxVubHDa0V0IKsV9zBAiVzxM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_belgian_vol_au
+ _vent.png
+SHA-256-Digest: MQqyFXYd0U2js8EZSCzHhh24HGYxkpk5GO1+fXP8Fq4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_belgian_waffle
+ s.png
+SHA-256-Digest: qzEYi5hP/aC3d7g9a878Iq5Ow0o1vi4iqJilOYVBLRQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_boulet_liegeoi
+ s.png
+SHA-256-Digest: 4yDe95gMussHpiuiR0fBX0T+omR5HiI0+cseHpffC3U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_brussels_waffl
+ e.png
+SHA-256-Digest: km7nCdCqrlwkvUAUH95coH4jSaGGVo2rtla/1roQXMM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_carbonnade_fla
+ mande.png
+SHA-256-Digest: Az2iGv0Vp0HdSWkHss7hRdrE286hrD/B6f5/OcYjetM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_cuberdon.png
+SHA-256-Digest: rads2glue+4z6b70LcBXcfldjY++ne/bhJzJoc8Q8Kw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_filet_americai
+ n.png
+SHA-256-Digest: Ac5pa8wT2N7E3verw0+/jyM4oVsEIwCPeHTx9J6j6nc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_liege_waffle.p
+ ng
+SHA-256-Digest: NC/0JrRLkIvhrN/Csxf1WjkwBYwhCfLbKIyXOa+3W2w=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_mattentaart.pn
+ g
+SHA-256-Digest: A+pD3oypWMneBrev7K9tZ5Oe/YJNLhEvC9QokMc6p/Q=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_mitraillette.p
+ ng
+SHA-256-Digest: 3lBcbawBohisyJnrr/+Tst7X0vgtYY/iMx0reIq9+8o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_moules_frites.
+ png
+SHA-256-Digest: A784D+6MPaF9HuflDpVGrZZnrm16+lfsY98M4eQGVPs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_paling_in_het_
+ groen.png
+SHA-256-Digest: HS5JXi9iAh0O9QXIKHeLbluK8byVyj7IZW5IR/g4Fls=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_shrimp_croquet
+ tes.png
+SHA-256-Digest: FN/9gA2UXtW7osoSYo8//MpwlNhjs5fhj1C0uRk54c8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_speculoos_chee
+ secake.png
+SHA-256-Digest: +soB9bNv291R8tmX4p0pxQgdz36Lbnih1enkWw7MCY4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_speculoos_mous
+ se.png
+SHA-256-Digest: QafgiPUm72N4tpT91rAAtrmu8c/El+M6IrGf5TOENm8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_stoemp.png
+SHA-256-Digest: nIjM2IhVWpFaKg32VWH7tdzYhUFDWfvtrxNNjByqT04=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_tomate_crevett
+ e.png
+SHA-256-Digest: rOKgN9zi3RwIRjXJ3q8yUDkGNUr8M95mzURsNr7PuUA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_be_waterzooi.png
+SHA-256-Digest: N1+6Qjdms4QkCpxnh9fpwTU/OtiupxgtJZqX/oHSIoo=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bibimbap.png
 SHA-256-Digest: b37buX4+yodgV3ivMqQlDDxs8uNZ6FwvucxkgZdnP7c=
@@ -2008,6 +2417,44 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_br_virado_a_pauli
  sta.png
 SHA-256-Digest: CbJ1me3+8X3OK7UfVWVdv0Wg4rtjm2lw6vmccSxxy1A=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_barreado.png
+SHA-256-Digest: QK2gFzSarA5sPWoK84Opm/KTgs8aCw8ldW0s61irUjU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_bauru_sandwic
+ h.png
+SHA-256-Digest: Ldn9lFMV2oZBUOHxHWKeI9MvNtlIkXZHg4FmqIcBENg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_bolinho_de_ba
+ calhau.png
+SHA-256-Digest: mUcz5G+OVDnxdP1EwoG2FknH2nWlS4shQFIIO5uyqmI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_brigadeiro.pn
+ g
+SHA-256-Digest: Ie5CQvy7r/d+tYXUWSztPDpU2A5D2QoI/bqfFj010HI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_caldo_verde_b
+ rasileiro.png
+SHA-256-Digest: m1WPVXT7xMd8rST6p8lSasR64emc3AGtJAcHXbFSUbU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_canja_de_gali
+ nha.png
+SHA-256-Digest: di85kZyoHXVko7ox2Q3dHPSSIAIMoWUcr5LHS/uD/Ek=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_cuscuz_paulis
+ ta.png
+SHA-256-Digest: taY40EBt0az0ZPYySe04fnhQiXQURE4tuxNdQ/cXglE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_farofa_tropei
+ ra.png
+SHA-256-Digest: ugw5uyhSIVp1vedFA6ejiDLyYYK29TS0TorAWQd1OL4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_picadinho.png
+SHA-256-Digest: YsJXUbxwVPcHm1dkTV8pvaPSWde3Z2Ru59II8xBlu8c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_brx_vaca_atolada.
+ png
+SHA-256-Digest: LTnsUwesQSMHakFPO+gm+yXc4uKsiciuWufYZawZA/o=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_bulgogi.png
 SHA-256-Digest: JgYSsB6tZ5/yQ5kNiv7f57JBTCiPGUnFcrAKCT2OcAc=
 
@@ -2021,8 +2468,122 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_butter_chicken.pn
  g
 SHA-256-Digest: uzsFv++kJBB/ly2LSyjyiIfhV+yLhLVs8rGy8/0iLG4=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_beavertails.pn
+ g
+SHA-256-Digest: 2I8BmzqDakLDVYh99sXwQyA1I2nD8lkvAUXPhCMLO1s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_butter_tarts.p
+ ng
+SHA-256-Digest: TCukPDQJg1eGWSadrHeLZ7KrrFVMts371vsBdEYYvh0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_canadian_lobst
+ er_roll.png
+SHA-256-Digest: s8azAZGto4H6tJKgadOiag1KK9pZeFndNJpeH/nN+qQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_canadian_pouti
+ ne.png
+SHA-256-Digest: 33KlRVvG0g+bpkSX5xMt86P9riRmlWDG5k/KXau2wrg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_canadian_split
+ _pea_soup.png
+SHA-256-Digest: seiX9LGiK1l1Wcp7kQZKc/hhQ08rrRkvOiwYJmUF11M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_cretons_toast.
+ png
+SHA-256-Digest: JRte9+EXF5TrJkT9h2lCrLEuOsM3Rrh1bvewVB4S4+o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_donair_pizza.p
+ ng
+SHA-256-Digest: REpm3HQtAa0de1sHmpkfWCZD8ZGC4UVSo16D0s+7y/k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_halifax_donair
+ .png
+SHA-256-Digest: CA3soKKAr0o0SC/sQE+Nl8wDftObuY5bKnSOdpegXSQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_jiggs_dinner.p
+ ng
+SHA-256-Digest: ebFSisJv3H5om7mtdMmJPIG++t0/fR8vI8RV6gkcgng=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_maple_glazed_d
+ onut.png
+SHA-256-Digest: A/V3KnUGbZ3jsZsYBXX7aefVZDFjs6MAB3n3l1J7/DU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_maple_salmon.p
+ ng
+SHA-256-Digest: MXajkxUGjKm69FNxc1z8VAZ76aHtySJsO9w2htFv+pg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_montreal_smoke
+ d_meat.png
+SHA-256-Digest: 0zFYUHrRzzKCfaF5/JmUISgYYZRH+fw8mJkmE0n9mRU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_montreal_style
+ _bagel.png
+SHA-256-Digest: csK7gCOID9KE34ZIn0rr/LAYZE+o+I4HeDKoCOxnOek=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_nanaimo_bars.p
+ ng
+SHA-256-Digest: JfJFezYQTp0h7aKmsHkVIC7lrSrIOSJ3Rk/Zw8WMDuI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_peameal_bacon_
+ sandwich.png
+SHA-256-Digest: JsKYj61aFlrT4aKspV9E+QboRvC/ZC8miAhFGkAZ64g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_pouding_chomeu
+ r.png
+SHA-256-Digest: bVopqcOsDoNj+ImuhsLfsJbO94rElPx6Vt6z9+w72+4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_rappie_pie.png
+SHA-256-Digest: vPKMtWOiSnWG7RzfesquticdeIpCQJqWLCo8/ruwdo0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_saskatoon_berr
+ y_pie.png
+SHA-256-Digest: sMxXmfPo/PMxAtMXYEEaMlIbRB8Yl+jYtPL9EZkCsXE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_smoked_salmon_
+ bagel.png
+SHA-256-Digest: 6+325F0WUqlgWTsWL7p1mHzM+/LdCudSKwlI7NtJWug=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ca_tourtiere.png
+SHA-256-Digest: UR16DY7UcRNGq454FkQliN7nE+blSlbd/kRHkB6LoXo=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ceviche.png
 SHA-256-Digest: voa0Wfiiv1Q5MDW4c+G9wZTeSQk8O4hTrTRWv4eAfbs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_alplermagronen
+ .png
+SHA-256-Digest: ttZqTtX49DB5ivpF6g6CDF6tOKvan8nNs5OcPGOFQ9Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_basler_mehlsup
+ pe.png
+SHA-256-Digest: mwfIl0/FdJ0ZkTlpLbYUMnxnMz8YWsBM+kcNQ8T/E+k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_birchermuesli.
+ png
+SHA-256-Digest: kbAEn6cY0Gwhq6tLVYXlZSuzuhyftxRC6WWqMOGJO0Q=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_cheese_fondue.
+ png
+SHA-256-Digest: g4ywGzrwfbJK93j4iq8YA03A9DIUZvYuz4i3LdhF+9w=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_malakoff.png
+SHA-256-Digest: 8SxlK9YQknvPD+Bnbo4hGLsaDmFwXLiMrDnGvp7rufg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_nusstorte.png
+SHA-256-Digest: Yhwgkfc5F7yGpcyMUqluy0Io9Ln3dZ4cyER7DB75heE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_raclette.png
+SHA-256-Digest: njoUm2daBpSDdztjZB26AnCAaJlsVb99odM9FZ9jV9c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_rosti.png
+SHA-256-Digest: pSKlzhbhtWMIrij14g1zWKaIVx6UnRcioueVQuID6+I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_swiss_cordon_b
+ leu.png
+SHA-256-Digest: 9YEzOnHAu0FxjywD6eGlXoinJRymeAnxWcwQeBn7WVs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ch_zurich_geschne
+ tzeltes.png
+SHA-256-Digest: 5ApQXpiJCwiRjMdrcvGAHGgNalvveDjfSOf4+K2hSs8=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_chana_masala.png
 SHA-256-Digest: tsTjPqdnTnGt2ZNWXKnMkQtWKEwSpDqxvLjx4fpJpA4=
@@ -2038,6 +2599,45 @@ SHA-256-Digest: 7qsa61g7XRRW58Cx+lDC8ihikZSrUPSmaOEYvhpaQUM=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_churros.png
 SHA-256-Digest: /nbBq50FTTxdk+2Q1J/+ZnSen7REpyYB8iHB//DEFZc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_cazuela_chilen
+ a.png
+SHA-256-Digest: vDp3IhmA0nHH2i1ZUhog/EdvQEC7fyzq2pzOAy27ygo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_chilean_empana
+ da_de_pino.png
+SHA-256-Digest: PCsrd1RjhUU8+ZxNKMMbt2VK3oxhJhP0hOQqV37A91U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_chorrillana.pn
+ g
+SHA-256-Digest: QmJOG8aZ/DPmC1MLf3XPgEt3j8/VAfPr2IIv5Fpv+Q8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_completo_itali
+ ano.png
+SHA-256-Digest: EiheriRCtzJ0qbYWnsGiCuZgknFHX9gcqD+iH2tf1Uw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_curanto.png
+SHA-256-Digest: 14q4juxEL2OQqybtGpska9IrhJ/rEmEq3bhlmXeSU9E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_humitas_chilen
+ as.png
+SHA-256-Digest: es5lQ7goAreiy3TWTHQBrQpKzm4cJtoih3TcdFmr3Ww=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_leche_asada.pn
+ g
+SHA-256-Digest: DM/Vb7hjfUpSeSCVl82vOWaYdd/AC1uxwY0coCDee3I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_machas_a_la_pa
+ rmesana.png
+SHA-256-Digest: Z9QZaiFd6SgivrNIsoz+tEp0okxVFIpK1qR8AnC8MoQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_pastel_de_choc
+ lo.png
+SHA-256-Digest: +u0xzfgBFMp0Rx68RiBGSA80aMsSignIdj2uzeiewxA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cl_porotos_con_ri
+ endas.png
+SHA-256-Digest: SBMDEQWoTrHxbvhST0RQ/OrjRzVikwGVbp6AqAKIfrg=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_club_sandwich.png
 SHA-256-Digest: qm3t+ctoyVu6IdviDAX7TfGntW5OdbJHcSYK2iMumcM=
@@ -2115,6 +2715,120 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cn_xiaolongbao.pn
  g
 SHA-256-Digest: vhS0ejilacyoPp4CIk17LsAEkqfDb32xniOjRQwyMKI=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_ants_climbing
+ _a_tree.png
+SHA-256-Digest: LmGJDtx7B5mAFIWLSF8BO7Esv48csDGht53GCDEQEzE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_beggar_chicke
+ n.png
+SHA-256-Digest: b6KUEav5utIoPeODK7xap1QCsDi4zPic0s0ssDjbDz4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_biang_biang_n
+ oodles.png
+SHA-256-Digest: hsWeUBVYyUA0P4N90MzdXoRtQgIVFrRtaw3DYg8EQl0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_dongpo_pork.p
+ ng
+SHA-256-Digest: mWFG3y4/Z6469H4c7CExOfpb/erPZZAgdpbnGYkryUc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_jianbing.png
+SHA-256-Digest: F9u6gdmgCnClN2R5l/9A3A5shaFuU5taoMVOmQ20xAc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_lion_head_mea
+ tballs.png
+SHA-256-Digest: FuecKu9MwNqvFO3Oi9Mo0T3pY6MClXBZjprq6fvGBfw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_roujiamo.png
+SHA-256-Digest: u5Gg3hMwSTbr3cVuxNYQeSz4a/J5VspEDS2Jms3EXX8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_tea_smoked_du
+ ck.png
+SHA-256-Digest: U8tEpctN8RdAc015bEzP2zFdMCz1mFfgGcw4vvaIlHY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_west_lake_bee
+ f_soup.png
+SHA-256-Digest: v2HBHx+AZKoNp2K19m0GobJ/PtNPRPxqU/m6GS8zw8E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cnx_zhajiangmian.
+ png
+SHA-256-Digest: tGv9npBijmTyTZHf1XWDoZ4LLHJwUC7vwR1LvlA20jQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_ajiaco.png
+SHA-256-Digest: wosW2fyYwt423FDPEkpuKf3fIxhFss1G3RFC+pC98hM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_arepa_de_chocl
+ o.png
+SHA-256-Digest: 4ctf+Wrh6WALGDiT8jnAD3CziYGOYVsHWRD2vzBDz4c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_arepa_de_huevo
+ .png
+SHA-256-Digest: moOvwG2PpCImEZHtp1i5hE/nt1rEVyC6GMmqLx3uv80=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_arroz_con_poll
+ o_colombiano.png
+SHA-256-Digest: 5v72yDXPY+vo2MHEDFrpM2TsxdeOEc6+7S7tNTvAFDs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_bandeja_paisa.
+ png
+SHA-256-Digest: Yqp6T5KrTPYbwhaJ8s93IwQHtOOEo549ii6mbpk+Oas=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_calentado_colo
+ mbiano.png
+SHA-256-Digest: CZ4m3rU4cFRIw+zGpaRKXCJlSEPCydrm5hQHfNURN3k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_cazuela_de_mar
+ iscos.png
+SHA-256-Digest: aecVCp2k0eqv1ltLsShL90PxKmyOlPbrXmrIVpxj3xQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_changua.png
+SHA-256-Digest: XeeQiwYpn1wtvjwfm2pV6XtcJvQSt+qH4p5i9QQvxas=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_cocadas_colomb
+ ianas.png
+SHA-256-Digest: 16cTj5rFYwcs7kykePOxS7ak4vTClByg07XXE6hnWQk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_colombian_arep
+ as.png
+SHA-256-Digest: 5ykPxcyEvTdluQFIakBZC9N+rcXlv4p9TWf9W+qs494=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_colombian_bunu
+ elos.png
+SHA-256-Digest: DCi4GGQQGHGK6nMqX4bo9JTOHfLJ2ODWWh1QPa5ppJM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_colombian_empa
+ nadas.png
+SHA-256-Digest: qH8pjz/X9ncakd1Y9s36si20kEtq3Hjbkk+oxjBTxjY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_colombian_sanc
+ ocho.png
+SHA-256-Digest: qm1Yn6EUmC1bYcNh9zOE5mLOwgm6OM1GC11eRxLC8E0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_fritanga_colom
+ biana.png
+SHA-256-Digest: oE5Iid3lI/0Rtvkr/FW7a9Ren/Go5dTiE8K2xIE+BN4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_lechona.png
+SHA-256-Digest: 0FRam237d7a+q4fA7cktxsv/Rxu2iigOjaODipKs/Rg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_mondongo_colom
+ biano.png
+SHA-256-Digest: D3tzki1TsuncP7pE1iqoPWVmt7EIq6twt8t6OlsIBMQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_pandebono.png
+SHA-256-Digest: p0BO+NG0oQPIzjKR3km3x7o+8Cy9R+LjoS7tGJVDDtg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_patacon_con_ho
+ gao.png
+SHA-256-Digest: OxwNQkocqtfjJYot9TV1Gqs3ZrIDacEqVGp6FgWzqGY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_sobrebarriga.p
+ ng
+SHA-256-Digest: fbIDzIJhDulQvY2KwF7Na4BtneoxffW840SFFYT3WxU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_co_tamal_tolimens
+ e.png
+SHA-256-Digest: ZL124tT/u3eHcHrvp2GYdNntiocwyl2AjqDt9W0M/hI=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_com_tam.png
 SHA-256-Digest: qnou4OY0EsvrhmjPBivmHK/hvKnne47zygVYZioCkCc=
 
@@ -2126,6 +2840,39 @@ SHA-256-Digest: 8oxKjGgFOmG8bSAS/FsoUf3mB85f0jTGP+7m2JNqe7M=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_curry_rice.png
 SHA-256-Digest: tETR08dbyzmEeLVUumVL87mDfvmYxasLDqT7UjaGJII=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_bramboraky.png
+SHA-256-Digest: YNoTpSPZRgR/nrL1bcKLvMxO55wcce8oxsiFS4+4xtU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_chlebicky.png
+SHA-256-Digest: lXoAMsptRpiex3y5u3hILrtQyrSltF5VT34NFORMh1o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_gulas_czech_st
+ yle.png
+SHA-256-Digest: bfudLAGOmvhn3JA2pHjEldfPv5tJc0c+0yFcZ8sddck=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_knedliky.png
+SHA-256-Digest: wJ4YULArGsmeHocMlRPjn0mT7QBvEv0w72sLfRLghSs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_kolace.png
+SHA-256-Digest: 2mOweeusIF+hzQ+CR0DXZ4shHNkUxWgWC+CcTny9ERM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_kulajda.png
+SHA-256-Digest: PESGq6oqg4ZZhc4lRpqb736lAtpYU0HIKpZh3MBaDPA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_smazeny_syr.pn
+ g
+SHA-256-Digest: wCV5PR21W13ErHoSLklAMMZbq917OI7BZDzPYNMWmTE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_svickova.png
+SHA-256-Digest: yH5Oz4pgWczRTePeSyeQRPlXXpUop86oA6gEi7O8IOM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_trdelnik.png
+SHA-256-Digest: 7s5GODAKUSFxSjTSaLuYT9R8i8pGcmc8mcCkt77w5dE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_cz_vepro_knedlo_z
+ elo.png
+SHA-256-Digest: D4Uli0IB88sRXOsq1xbihzB0ylxGWqhc5TClljDGmx4=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dal.png
 SHA-256-Digest: 1AyTPp6pMx+WgNblwOncJZbll652t5TN4v3XgeR/EZs=
@@ -2206,8 +2953,82 @@ SHA-256-Digest: /n5pOPtAMalY99I4zm5uXiwDWRlBo4hkMP9jCC0I8FI=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dessert.png
 SHA-256-Digest: ZryAJUITeMvIfFwm7cmEBTv8gFSOkZWuD07y5rCRgt8=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_eintopf.png
+SHA-256-Digest: mz2vvQ8l3l8BkIihKjLp9HVeRey/LwmGqbqRsh73cLE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_grunkohl_mit_
+ pinkel.png
+SHA-256-Digest: 5+cgmy4NfDsTHNQrF7l8Wgq5uoJqDZ9h9iti4IaDExg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_himmel_und_er
+ de.png
+SHA-256-Digest: mOsXvtbH5KMe9aWWQqKfFS9Pxxb0NPSm4j2j2si2bXA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_konigsberger_
+ klopse.png
+SHA-256-Digest: RFWEUHM8fxpgRBaSiflptgQuGtbq65ZXIS+n1OMTwn0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_matjes_hausfr
+ auenart.png
+SHA-256-Digest: CWsGc9PCCZ2yejC0y5dbzvKIZqRYeYm8mBK1g1mtKMA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_mettbrotchen.
+ png
+SHA-256-Digest: U+1s0YW+oYfOLUzljDs+9kJejvHNhS6DOwmHJ005Pqg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_schwarzwalder
+ _kirschtorte.png
+SHA-256-Digest: SDOn5IPwVi+aF7RvjSalo++2uGnN/o6pVR6k2DD6ZbI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_senfeier.png
+SHA-256-Digest: jAu4DG8XYos7NyDJ59+lAyf51oouHRBBBIjAgU+MySk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_spatzle_with_
+ gravy.png
+SHA-256-Digest: aKjuel9U/HkYMvdkGxQJa09ZIKO5jbRI4EDpI9MhR68=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dex_zwiebelkuchen
+ .png
+SHA-256-Digest: UKPwAu9s9pBpG5ylnuMH0bsL/iiylFGDx5l8JhNGgEI=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dim_sum.png
 SHA-256-Digest: F+GVpn7q1pa8J3lLwXuPFcrzdCzvJuI0SYSnLwR9k/k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_aebleskiver.pn
+ g
+SHA-256-Digest: 0ufhy+ke7/e4prsLT+Tt5gLWDyh3JifEkJ754odbJzs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_biksemad.png
+SHA-256-Digest: qm+af0b9iHbuVP1VXBWAmU55hMXSQLTvxKtgW6eyV+g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_fiskefrikadell
+ er.png
+SHA-256-Digest: q/5FIy2ovnj9vp4T+1PMtULptZDmu28gqdtp0qLqIxo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_flaeskesteg.pn
+ g
+SHA-256-Digest: z4OM7kdVJSKhko/Ysys1Hw5z0SMR216aN31ONkDMCS0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_frikadeller_da
+ nish_meatballs.png
+SHA-256-Digest: X89ICg5YWH3Y+lpv2sQxIsSK2F9pUX9WtkkHokPUo8s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_risalamande.pn
+ g
+SHA-256-Digest: gaczBtGg71Ly7USq9ALiH+txj4ZUqKHX3EU01zPwWds=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_rod_polse.png
+SHA-256-Digest: P3xmneO+iKhAn7zJb2+mnR+zhQj4cNIrZlivG53tO4A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_smorrebrod.png
+SHA-256-Digest: pPDwB8laIDGIdmx6vd5ZEZNUUr5Y6aKWxH4AjbSjDSY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_stegt_flaesk_m
+ ed_persillesovs.png
+SHA-256-Digest: aTekoZMVBFXUC9XNpdz8ZxgTuCtEqyCfeFGp19QXI6k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dk_wienerbrod.png
+SHA-256-Digest: 8Fa2M+nGY49h74nn3rvqRz2VZTyokOlFXDbLGUnttOw=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_donut.png
 SHA-256-Digest: QMdgw1nrp4EElZ2/yjJQvNwEspr3E/RmbKb+C5NVFkM=
@@ -2217,6 +3038,41 @@ SHA-256-Digest: E5ThlkzWOMOqSf6MRTXA8kpY9T3HDzDgdOJfnZz4SrI=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_dumplings.png
 SHA-256-Digest: W0ucwlBmdPT4GYf3CRQS2cbKz/kGQLDVw07GZMbEzrg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_alexandrian_li
+ ver.png
+SHA-256-Digest: I+N2eA3QMNa0054q4GTPd1FMTwXjnQ3oNPJbBWpAY4Q=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_basbousa.png
+SHA-256-Digest: MFtSZ0r2MnO1gCB3d/QL0oJEIGfPhzznqcKYPm0M2Io=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_fatta_egyptian
+ _style.png
+SHA-256-Digest: mBGoQrdPxqXy1eFB9DzqcI+Vo2dKNsaIoy/3WLIQqRU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_ful_medames_eg
+ yptian_style.png
+SHA-256-Digest: ISSOnif1ipd7J1o+g5SF9BRsZwK2toybc29m+XV7jcQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_hamam_mahshi.p
+ ng
+SHA-256-Digest: ryjaS5UOLeE0npY4F+rrZR8CAI7ZWR3FloEkNw5+j8A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_hawawshi.png
+SHA-256-Digest: xhTYhSwGySHxChZZx0ZXcBPUUkFGxebnr/rHqpR/PnM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_koshari.png
+SHA-256-Digest: i93TsoUojAqSYpq/YXzjc/agYzYnMBBZMZS03xruYnM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_molokhia.png
+SHA-256-Digest: N/6/UE8fayzqFN1f5RGLbM4QKUy0Sg97TZs57M3f97o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_roz_bel_laban.
+ png
+SHA-256-Digest: MwVwHuVSUcbuNMYI8BWWlGOGYBEuN2N4kATM0lrAdyU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_eg_taameya.png
+SHA-256-Digest: bn/OtpBdJrCfd2prp2PXnpp5XW2XzA0TgiI0Afaz6hI=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_empanada.png
 SHA-256-Digest: jMGjiwSqQlt4F9W5LfTKOBkGETjCYebqC+U03p7cn+Y=
@@ -2294,11 +3150,57 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_es_tortilla_espan
  ola.png
 SHA-256-Digest: e62VVg488ZScDXgLtMoCGZoC812yEy7ZfI1d04GABdQ=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_arroz_a_banda
+ .png
+SHA-256-Digest: RRDCV07TyhoDM/956ioPAxXssV6/7fA5ZsjU0QDj+MQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_bacalao_al_pi
+ l_pil.png
+SHA-256-Digest: YFUP/Z89UTXkYaVIVXOP78Hf86q7QYPCWF3R0rrZNt4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_callos_a_la_m
+ adrilena.png
+SHA-256-Digest: l/33AJW1c4Tlgim8IeovS1W2YzTDiIXpcAuPTC/Qh/M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_cocido_madril
+ eno.png
+SHA-256-Digest: Q5tLe1RgxD0XC/seaRV/bF0UtwT1txgoS2xUDHFxwPY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_conejo_al_aji
+ llo.png
+SHA-256-Digest: uYGpyB1Nc9OixD7h8Fhl3UiJCnoIYEGlx6yuwaFlEnc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_escalivada.pn
+ g
+SHA-256-Digest: Yjo5wNysJYVb0POxR3d6i/FlDFrq6KHo+d5MtTZHRWc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_gambas_a_la_p
+ lancha.png
+SHA-256-Digest: 4saNybd/oe7DMAbNbwVY8al5TqHb40+P2CtlGGhsYGs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_migas.png
+SHA-256-Digest: ck5UPuIW4j/Pa+I5U7IhgxHSg52ehl/QxytFu19SVCk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_paella_negra.
+ png
+SHA-256-Digest: 3a1HC5IgUPkPPzsWGlTJg77cugMsWDL36EOnD+Q8PgI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_esx_tarta_de_sant
+ iago.png
+SHA-256-Digest: yAQwfY+NewfeIlSst44D0qFO1ZYja05jY4OVkwxQCO4=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_alicha_wat.png
 SHA-256-Digest: u4Ex2RPo1gF8Ko2QjtGzFXNphyzN9SkHEmfgxe2imj8=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_asa_tibs.png
+SHA-256-Digest: uAEPV/YjrWKedydDOiH5AIwDumEjxCU2O0DjhiP6MRc=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_atkilt_wat.png
 SHA-256-Digest: fBFAhSVfaozis/nqyt4XZVlki9l8IxGWWJuWQIAPIjY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_ayib_cheese.pn
+ g
+SHA-256-Digest: +Sz5KghLHRHBTvGpgcsy1s27Fpt4jwgGgfBfR4xoE+Q=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_beyaynetu.png
 SHA-256-Digest: l4oeycElijuzfC3sazQBCfcNfzRxZxxxyJ6CFUTI/wg=
@@ -2310,11 +3212,21 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_chicken_tibs.p
  ng
 SHA-256-Digest: tsMBRoxWkhK7qSGjiZQA8u8n9Dd8sA1VN7hHRmE6T8E=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_dabo_kolo.png
+SHA-256-Digest: 24NpgpP8agdo+EYhi7mqZhKPOXm7w3GOz3aSOLRlSow=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_dinich_wat.png
+SHA-256-Digest: vzDoJ/J7x2cJP5SydbEVom/119DwBI/x+gq3/Gr32ak=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_doro_wat.png
 SHA-256-Digest: pJBOBYNW6bJlfWesW8CC6BjV1F8kNQll7EJMNBDq7CE=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_dulet.png
 SHA-256-Digest: pgpv8Agz4PJnWMDa6lS2R26e1Ydfg2pKzSmTx5Zc2EQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_ethiopian_coff
+ ee_buna.png
+SHA-256-Digest: V0W841sy9Jgj2ORlRU8rJZ5aU9USxgfDFX7Id/ddBys=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_firfir.png
 SHA-256-Digest: BkV8ZI6tBB54OAzNAh9uVDVYPgXb/x5uaQFkUwTMc2s=
@@ -2323,8 +3235,15 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_ful_medames.pn
  g
 SHA-256-Digest: OK2zNEFp/5xT6TVLYZc48WwZa4tIs8qO/VwFuNeL8Nw=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_genfo.png
+SHA-256-Digest: yVmwFbX44+fEcnpc7hNsWlBTOHiqt1C3WVWyM+AiUYE=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_gomen.png
 SHA-256-Digest: YWAVfSKxxEFayP2VnsT194Is5XfxZLa/0IECUQGdDBs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_gored_gored.pn
+ g
+SHA-256-Digest: YYFmD/85e2czIm6ikAkEe1NnTQqlfNBEb2W19jsdJiU=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_injera_with_be
  ef.png
@@ -2352,8 +3271,20 @@ SHA-256-Digest: 7Xy//LKZ7OqV1Y8jjxwrJOGqkDpSbwipy6v57WpnSrU=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_shiro.png
 SHA-256-Digest: 4hHwJtMKkbqdSdQp+SiLmgu/aQfK1p2x+ByZLWRkqkM=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_shiro_firfir.p
+ ng
+SHA-256-Digest: iMHVYx6mqVR/FRsLc9znpTwYb2VG5YvlbAC2znxdEUk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_telba_fitfit.p
+ ng
+SHA-256-Digest: Ffm7xPbJqZn6NkkiUU3wfTQjEH99Zo535+wXj4J8U3A=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_tibs.png
 SHA-256-Digest: vCeU8l7z7PRu9CUug4v7CqekwcgKlHvZnkTEDEPuDbU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_timatim_salad.
+ png
+SHA-256-Digest: wJjEKAsVhPEoQIBjBi3Ezqwn9OjEh/98W+RaGB+9e+A=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_et_vegetarian_com
  bo.png
@@ -2364,6 +3295,44 @@ SHA-256-Digest: 89cuU7EZnIECb8LiqK5Zpo/gEoZfEuwmjagq6qtlYC0=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_feijoada.png
 SHA-256-Digest: s8zOA1pOK9zGg8IUM7K55+7rTa/YUNPdOQabNu9JpbA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_hernekeitto.pn
+ g
+SHA-256-Digest: drpVEBwmToog9xJQ9qcv29cTp673OW3ohnkYYe+p0TQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_kalakukko.png
+SHA-256-Digest: 4KvxUKSYHwtiih9UgkalHp0beHMzAytX/F3aMt4k1dE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_karjalanpiirak
+ ka.png
+SHA-256-Digest: xxmVCz9k9EHAkbs7U3hYh1SUe8qARGVsNk0006yyPg8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_korvapuusti.pn
+ g
+SHA-256-Digest: mssbWHfT4Rpbq676QbJCtVh2uDO+Haxn19b9C/gDVjY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_leipajuusto.pn
+ g
+SHA-256-Digest: nXrlRlUASnEpbF7XXHVkmALXo96a9P8xFNV4116zfpc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_lihapullat_fin
+ nish_meatballs.png
+SHA-256-Digest: PiqyX/6rX5firxLTfExCnChSDhzx+59L3dXaehwUl7g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_lohikeitto.png
+SHA-256-Digest: qNT4Unx51joAivNY6J1kCgH7yBM59WdwW2QT9R7iS9s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_makaronilaatik
+ ko.png
+SHA-256-Digest: O1nhoCwDfLZJpMvIDnrHR8xBkiNKf6Fb/haZkIphlck=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_mustikkapiirak
+ ka.png
+SHA-256-Digest: 6aKok4QHGaDGtxuvRbdEkj427mb2S/Ay5jTC/nROlZI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fi_poronkaristys.
+ png
+SHA-256-Digest: XDBBHrgqCJbcWMhT4HQAaZcLE3EBsQweTkg5Ye4GH68=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fish_and_chips.pn
  g
@@ -2453,12 +3422,55 @@ SHA-256-Digest: KaMVdxO9+ei4AhTz91MBGse8sWXIZ+5QPwc2/+LQywo=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_fried_rice.png
 SHA-256-Digest: RKl2OgQyY0kAWKA9KY6isKW24VNPLFh3/ZcFYb+Gt0k=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_blanquette_de
+ _veau.png
+SHA-256-Digest: hOpzWN/gYPijZtzyI9XOiDYSPEk/kS6JJUsXl+x/DDQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_brandade_de_m
+ orue.png
+SHA-256-Digest: tLD1VEYH07TFoYEIva4Km87nLxKZeqlJJAW5/5MS45s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_gratin_dauphi
+ nois.png
+SHA-256-Digest: 9WYntXcBTX8bT8hROASQ+yVPG1gGUTzB9AatMlhOfxE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_moules_marini
+ ere.png
+SHA-256-Digest: 2gk8k/wLqIHHKYUoYNOoXz2Wynz0zUuXtuzH+sTnBoc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_pain_perdu.pn
+ g
+SHA-256-Digest: NxxiWciKEMW1vHZA39gpi/UhBKQ66gYjOSno0HgXycE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_pissaladiere.
+ png
+SHA-256-Digest: u+GUE3KpsuH82PxFeAxkrXQcP1HVmhYCbnbiuczW6Ck=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_pot_au_feu.pn
+ g
+SHA-256-Digest: QbhOCpUTcSmXWRxq9VXE9rnCYuiFLE0CrYHYUOS/DsM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_salade_lyonna
+ ise.png
+SHA-256-Digest: LPzTb4YXZAdDA8f+TQRJLLZpVqnvQk7Rznyn5riOZmU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_socca.png
+SHA-256-Digest: kwyZ3YNPlqWYS9WIWE2TSI5xrWLOYf2CwgACKUEucWY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_frx_tartiflette.p
+ ng
+SHA-256-Digest: e8GGHfXvO57uJjgU/9a5bUZlYshB+i6u5Qy1xEVP5EQ=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gazpacho.png
 SHA-256-Digest: xxJswGbghUmj0ZkAQEMBILDHFySmTux5k2xdX8Pc/G0=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_bacon_sandwich
  .png
 SHA-256-Digest: +KkSzXxMvs+USqLNF+5MxAUklBdNRL356APjXczP69s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_bakewell_tart.
+ png
+SHA-256-Digest: Au1hoJFxwotDPmtuxfGJYT0qf2gVC9upTnSLK/6Ti7Q=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_bangers_and_ma
  sh.png
@@ -2467,6 +3479,14 @@ SHA-256-Digest: c2r1ToQ3icAbTXG2qCV2qVwj/8GCmJWedo47cAmQEis=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_beef_wellingto
  n.png
 SHA-256-Digest: RAkuLGkLdM/506sukIN4U7Irfooi2xo5gZig+gcgShQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_black_pudding_
+ with_eggs.png
+SHA-256-Digest: D0HT0UQpbjqc1fXuXv9WDJfY6OybRsfF13UwDRLDnb8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_bubble_and_squ
+ eak.png
+SHA-256-Digest: L17fEFc1HdtQRiXl1I3+bvQS+M5T/Cd3diUYa7KJ0Lo=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_chicken_tikka_
  masala.png
@@ -2479,6 +3499,10 @@ SHA-256-Digest: RMyvlOM/47XJji1OsfXuplbGl0HPTSv7Hp0D0C0e/CY=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_cottage_pie.pn
  g
 SHA-256-Digest: /nBWpNnUZDRR0OcTXXFpL1dLdjtnbnmiiCfrFr1qee8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_cullen_skink.p
+ ng
+SHA-256-Digest: XidngVPmdC5kkQAMJbtrDIUJTLf9fgpnaiD4zhxqjAE=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_eton_mess.png
 SHA-256-Digest: zp0mv9C0rrAdVFkuEEbZrQugryQzqV0F/DPyaxsq61w=
@@ -2498,6 +3522,10 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_jacket_potato.
  png
 SHA-256-Digest: oAiQXfnW2jWzbaTFLsAXoQs1l5DsWZjd2NN1JSeh1Aw=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_jam_roly_poly.
+ png
+SHA-256-Digest: MD0nyXiiIDS4gSn7DwZg1nsF07U7mbHMimkjLRjyDJA=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_lancashire_hot
  pot.png
 SHA-256-Digest: GPou2yvsp6qi27wBUGY4W3sJi42PoKWHeD95Cy+X3Zg=
@@ -2505,6 +3533,9 @@ SHA-256-Digest: GPou2yvsp6qi27wBUGY4W3sJi42PoKWHeD95Cy+X3Zg=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_ploughman_s_lu
  nch.png
 SHA-256-Digest: 0FINKPggEr5cj7C9SQtCK1QEg2zUkL+XUeYrGSYTqPE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_pork_pie.png
+SHA-256-Digest: wkXJEXy6rxoYdLNG7DGFERbeCOkkveAKPzP2yPfUndg=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_sausage_roll.p
  ng
@@ -2521,6 +3552,14 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_steak_and_ale_
  pie.png
 SHA-256-Digest: +BRYJmHumNIZ7b8fHApAE7QZTtako6a/dyvA2dejVhM=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_steak_and_kidn
+ ey_pie.png
+SHA-256-Digest: hY7UlN8RabCtobdd0oAkf9iYSmZ4Vy42LCbMnQhCbDI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_sticky_toffee_
+ pudding.png
+SHA-256-Digest: NW+cRL/SnItF7S894uSWK/AE+up5WZ63xJ+0NoiZ6Ek=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_sunday_roast.p
  ng
 SHA-256-Digest: LY0Bn9+mOTjl6cvaYUAsMT2p6DVuU19KeuxGzihwaLM=
@@ -2529,9 +3568,480 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_toad_in_the_ho
  le.png
 SHA-256-Digest: 3FkwRQuAkK1S+kaNZezh8flbD/yWzXvRndLvVC4uJxQ=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_treacle_tart.p
+ ng
+SHA-256-Digest: nJOZ5FSRYCtrWnpHRf/I19iLyj1qZ+5wg8fHajH31aE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_welsh_cawl.png
+SHA-256-Digest: vXAhH4aIBrJnoeCOcz7riNo8qYO2ZCvk4eJzJIfRIuo=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gb_welsh_rarebit.
  png
 SHA-256-Digest: O+zLA6ENXsV8hPUxbQFDTDMhS3PIP5ypc74SFl4rfhE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_badrijani_nigv
+ zit.png
+SHA-256-Digest: C18Tmmi7CY7oBCY6wT9MrvLGSvFszwOKrAiavsyw0mg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_chakapuli.png
+SHA-256-Digest: jPRaLc6WvUKAc93HohcHM8czlxxI/XBU0weSriI8p2o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_chakhokhbili.p
+ ng
+SHA-256-Digest: jW7NgrnT/psj2JB+bmSF3Z86OaYF8Ek9SYaX9VSb/5Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_chikhirtma.png
+SHA-256-Digest: SjIzg6P4fn718KkV8NIO3GUh+si7A2ivm+4Ddl3g1ro=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_churchkhela.pn
+ g
+SHA-256-Digest: 9ZyG2aUukOEAOMTXV4rfnVfQiEAI6EPThIs9IHrnoz4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_elarji.png
+SHA-256-Digest: tdD6Rbf1IsbbW13srMLUIdrnCK507NXnyqhU6u3JC3s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_gebzhalia.png
+SHA-256-Digest: D8jmAdLMMd5gF0G8Ps+kLQLzG0MxtHzA7mTkHnSWtnY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_khachapuri.png
+SHA-256-Digest: uqzXTtM/Au6zMlhrNWtta9/M0u/TKlsJ7U73nvDi6hU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_kharcho.png
+SHA-256-Digest: v1PwR+wfosJbEDtasy/bf1JmwA54evsafqZ1O4VrVKE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_khinkali.png
+SHA-256-Digest: K3mCR97WY2bpoO0qJUuRS0LmDzuJz87pA3i0Ue4e3VU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_kubdari.png
+SHA-256-Digest: 22YxLEyFK0lYcitNdkF4m5q3aaDfe34ZnHXMOKqnGcs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_kupati.png
+SHA-256-Digest: w0x0OEOF43e9zTSkAN2uqEOvsU2en17TaylTs8u9/Rw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_lobiani.png
+SHA-256-Digest: 3Jh7LgSlRTHRaXt07R5AAavF5odXtw+ZC7PwbC6+5gY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_lobio.png
+SHA-256-Digest: cFvxk+fgiJuNN97YL6fvxWEwuRDEayU9/i+Gk6JOWfY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_mtsvadi.png
+SHA-256-Digest: KIok0RnGeqHVTSLA/WIMqaJ2gmRt2ZA1eEFQfy3xRB4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_ojakhuri.png
+SHA-256-Digest: dURTsslGiGbjXa+xXJYdf6ZGeR9g/8AIVfATlSlDKGQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_pkhali.png
+SHA-256-Digest: 2eisKchVVetuSTKw3SmHeFzdqpR/Tzr07emTxmhiABo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_satsivi.png
+SHA-256-Digest: B2warUJP6sDxelawmj2j5SXXdg/+Hhtjwt6vZepxW5A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_shkmeruli.png
+SHA-256-Digest: msYry4810hgekxJ3RySsC+C/+I171T/J5SLtHE9+8KA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ge_tolma_georgian
+ _style.png
+SHA-256-Digest: T1ryY4Xhegahy/BQtRwMrUYFyc8o1tEWMSTxLhrkwPQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_001_crispy_kib
+ beh.png
+SHA-256-Digest: chmx8dgLP5mudKfADEXVBg/Cxcqw+6DDMSYcatsSt60=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_002_zaatar_fla
+ tbread.png
+SHA-256-Digest: xerfDbgctdymXgDLslFpXytFupKm3gf+vSuQci0ivwo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_003_beef_kofta
+ _skewers.png
+SHA-256-Digest: H3F4resqYbC71x12gj7hL29Dj+tncGG5WjnnhHGEygE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_004_chicken_ke
+ bab_skewers.png
+SHA-256-Digest: LWXvxZUS0B044q9RdcrNgFkMl5HamSnsElafA6ihezI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_005_spiced_bee
+ f_noodles.png
+SHA-256-Digest: QG9CL0cQSf6JOEGWaW9oF+FttZjkXjdgQEWYtXoiHVQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_006_classic_hu
+ mmus_plate.png
+SHA-256-Digest: sTpknvijjgojdqoB+87rG01duPss47efmyMpkvBoGTA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_007_stuffed_gr
+ ape_leaves.png
+SHA-256-Digest: QC2BZiaFGQGI37DMJZILwYc3kVFAcgdisLEdn8+eK7o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_008_cheese_que
+ sadilla.png
+SHA-256-Digest: +MWnaEBdLJgC2VmpAfZ/zpG6ssiwwoPvdF9Wc5hDj0g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_009_spinach_qu
+ esadilla.png
+SHA-256-Digest: eSJKG7qElqVlDDX3O67R3a03yKMpZDWwnVjzgZT/ehE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_010_red_lentil
+ _soup.png
+SHA-256-Digest: bVcktub7aSKQm+y3++j3PSPUKkkpP5x+cp5+eLjtILU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_011_chicken_ch
+ ow_mein.png
+SHA-256-Digest: 869kvkjSCDByGgPrIAKFYb7usfCQ9jHtj7UljtQH1hc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_012_beef_chow_
+ mein.png
+SHA-256-Digest: OLMb1USDIIvyzBdAzAokN4OSZ/Z8PVpNMIvPMtv3Am0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_013_mixed_gril
+ l_skewers.png
+SHA-256-Digest: 51frgql3vHxbQ9Ko2TODnUnRooc17l5zOvhIP9pS0m4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_014_roast_chic
+ ken_pilaf.png
+SHA-256-Digest: ohbOe/JpY+A7T0uFYO9KDC61AxL6hawJ50z0kUVCmtU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_015_stuffed_me
+ at_flatbread.png
+SHA-256-Digest: pfteCGEiffppp7Ue9vGTuZhsfdiBfrU/nCKR5zOPRpQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_016_grilled_st
+ eak_slices.png
+SHA-256-Digest: xs/wOWE3tkLXEJcrvTwUe0be44CYSr5dAXgO9AiUPGI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_017_potato_cro
+ quettes.png
+SHA-256-Digest: br+SE5TTru/S0/0awnOVo6moKmtWqmnbhJtCoEiidnI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_018_creamy_chi
+ cken_curry.png
+SHA-256-Digest: pVAtIHmhzIx3lCS6+SaT1FeoUH8n71o73KPCbjaHYO8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_019_baked_chee
+ se_bites.png
+SHA-256-Digest: UQ5SLtKpeu/ZKUGt+EgH2pL2U3fsM3B74LgN4x8NUzA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_020_herb_bread
+ _bites.png
+SHA-256-Digest: 7a4aIxpA/Ckno5DnS9W/PHRmiesvnsjaANAaQhmsFz0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_021_spicy_shri
+ mp_bowl.png
+SHA-256-Digest: 6QlHrXWeRwPRWB6VdX7Pxt/uGYByHyffcKlTjpwtO9A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_022_braised_to
+ fu_bowl.png
+SHA-256-Digest: 3nDFLCqupRiiI0HzNVidHdwNFpRN5JLZZ9e3VrqMOII=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_023_beef_udon_
+ stir_fry.png
+SHA-256-Digest: D2rsZJOqvoxuv5WeSy77AuBqWZotcoyEKAF3ZERqwW4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_024_baked_past
+ a_casserole.png
+SHA-256-Digest: W5wyez0lg3mHw1pwpVP2HfGi1bEDWl2CHjtAWZL9kac=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_025_golden_chi
+ cken_rice.png
+SHA-256-Digest: VSrCxz5dscgDEkIeCtPu5Q2GfHaOgHto8NoLp62uJmI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_026_herb_chick
+ en_rice.png
+SHA-256-Digest: e4u0QeZAssqPDFeRLxcmYrJPjrkkoTNCWBEJNoVvrm4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_027_coconut_sh
+ rimp_curry.png
+SHA-256-Digest: gkvbSk+cH9DMApLeAZppudEI3MH8WxXLP2Ai0K4jyqE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_028_creamy_pra
+ wn_curry.png
+SHA-256-Digest: kwIl4l9ihrcEJJNwVVJ4JvkH6m5JCXwc0wfX9D8Z7Wg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_029_beef_bibim
+ bap_bowl.png
+SHA-256-Digest: pLRhGjzEs02qhwfEblnjZBAScYe7RHIxM1HEzq+M2hw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_030_pepper_ste
+ ak_plate.png
+SHA-256-Digest: H84UHPjtkrCQKeM0EbIYINoxKziEo+lp0SeHsaWcqlU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_031_savory_mea
+ t_pie.png
+SHA-256-Digest: Nw5AKRa5+txLpMJALHghTqOP/uXreDpsRsnp25r9ZT8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_032_loaded_hot
+ _dog.png
+SHA-256-Digest: Spvcr3JV2u8WSHJCxqRIarg9EEU78GGe4Cw19DUTuVM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_033_steak_rice
+ _plate.png
+SHA-256-Digest: Wmop/wKdsSUB12NsxS2tvDNZDGa0xmkT1x4yRAThgOc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_034_egg_white_
+ breakfast_plate.png
+SHA-256-Digest: Kwu+by0A5IjC5niT7ztYKkk829OG2NToumsO/rLyty0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_035_grilled_ve
+ getable_bowl.png
+SHA-256-Digest: 4FBeuvuMWCUtX0HAJFzJLHuR0gDeAT0tvT1VV0zfZKc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_036_egg_noodle
+ _soup.png
+SHA-256-Digest: tWEXDcewB3teP0V3qPUg1BohmWRXA/kttVMfdMQddlM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_037_beef_satay
+ _skewers.png
+SHA-256-Digest: kljJasdDKwwA5hKqorv4xLVOsjw6WOMmgMHYJ4HIwNU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_038_shrimp_avo
+ cado_salad.png
+SHA-256-Digest: 2JH8uPrtVddnLqqhAKE7c7shnwtR4O7EUaU83aSpKEk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_039_chicken_be
+ an_rice.png
+SHA-256-Digest: diyJeK9Lhwl/CEHXpDo8xWZO5VpG4JAtGHSAacBBFUw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_040_roast_chic
+ ken_dinner.png
+SHA-256-Digest: EoA0M6PWjdYYrt1CwA6KjkRJbcH7Yw2iZYyTK2zXBxU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_041_rice_egg_s
+ killet.png
+SHA-256-Digest: aXcu6RJWUVf248BDJ9D5+TMKNVABtioFrcSFQFSpK2U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_042_herb_potat
+ o_rice.png
+SHA-256-Digest: 8vtQ02V7e0rlWs8BBZ8Ei9CRxvi0CYrJ2POf/DO9j50=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_043_stuffed_po
+ tato_bites.png
+SHA-256-Digest: DXOtIjxbibZt4EiDVtXR/QqQsKHT2i7LZf4gZqeJ1/E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_044_tomato_pra
+ wn_curry.png
+SHA-256-Digest: LQ7y/+2+Ykgduj9GdOse+6OX7d+fns3X7lan4KAv8G8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_045_braised_ch
+ icken_stew.png
+SHA-256-Digest: Ys1x7Regd1VrCC5X1B40eNLkP6ZDmRxUt4EEsmTe1rI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_046_beef_peppe
+ r_noodles.png
+SHA-256-Digest: RfVVdX+thiJoROKfcKDv7LJQlRmAub/txCLWyE94qGk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_047_citrus_shr
+ imp_salad.png
+SHA-256-Digest: RbA66FnALq5YPXOHc5Dlkc+ipMC6AsxH90MJc21vZcc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_048_stuffed_be
+ ll_pepper.png
+SHA-256-Digest: +g1y8M1YRjXp3FeAQ6q3KF6od0uLKybsQuByQTDtd98=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_049_seafood_pa
+ sta_bowl.png
+SHA-256-Digest: bRBykLJJ+ZvQ3xfpDJTBLu+g3+YiffivAZEY1VuEo+w=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_050_tropical_y
+ ogurt_cup.png
+SHA-256-Digest: aG6ej6AWmwfua1E8AUBqBC+WE+poPGh1OqMjRVhokcI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_051_roast_beef
+ _sandwich.png
+SHA-256-Digest: AmVQttbMzGHq4o0AXhr5/acdTp1ThitywUVjEDHi42c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_052_golden_pot
+ ato_curry.png
+SHA-256-Digest: V5zp5j8kOTIedgqCnDz9H/pPTuwCAZu62ZCd1hL/JDk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_053_chicken_ve
+ getable_stew.png
+SHA-256-Digest: SXUowH0mE2PGvxv/z+mOJXA1xHkrkuCRYaAULp4ooI0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_054_charred_ch
+ icken_plate.png
+SHA-256-Digest: aYkbkXlfib2i22dWdJPthRGzWbNoFK9BcMNVk03EjJ0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_055_braised_be
+ ef_cubes.png
+SHA-256-Digest: lIysDpXheenUpDir5dEsVICAO5J8nCK9CWz3pZxoOQQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_056_clear_beef
+ _soup.png
+SHA-256-Digest: /LG3rplO0OBiiRyciNnfebmMGB2WvAmdeTlAaFbGB/M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_057_braised_po
+ rk_bowl.png
+SHA-256-Digest: ho1qCkmAZGfSKXktmKW7U7Gs8IpVVTxR5py3Sv4J0SE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_058_crispy_por
+ k_belly.png
+SHA-256-Digest: qpmxqRDH2XDpO9CrcDF1ROve6SvhM/ZQH+G31ZDF63o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_059_vegetable_
+ lo_mein.png
+SHA-256-Digest: 0vmbjJPt2x+K17Cyr1++XlwGkjqbl3CCMNhNUIYprsw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_060_shrimp_ric
+ e_noodles.png
+SHA-256-Digest: 3cVFcUCWPjs5ZuJ/1eHgvQz0O/3ji2DoV1YC78F/kUg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_061_spicy_minc
+ ed_beef_rice.png
+SHA-256-Digest: PgQRlZ0O4ck/yDsqFr112AyeDN9VwcgCd4YkKciVpXU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_062_crispy_spr
+ ing_rolls.png
+SHA-256-Digest: 795eCj0v4jfsXyplO2sZkqM8/GFolowbgHImFC3CqtU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_063_beef_egg_r
+ ice.png
+SHA-256-Digest: Xsny9t+S96BYPqrwX2ZkdILPCzKYVwnfHtsBiP9Hhgg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_064_sausage_eg
+ g_rice.png
+SHA-256-Digest: /ltAKnxfE8XV7oGGE9JN6n4UnHyNaXnEQmo+RxV7LAw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_065_spicy_saus
+ age_rice.png
+SHA-256-Digest: KtnF9F4WsRMiLObwiGRI45aByGhy1/J81AfSA7VWFRA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_066_creamy_chi
+ cken_soup.png
+SHA-256-Digest: sH0r6GAym1kQqybABTN6DeaOJ0fEllKP1oh4HbDFwhE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_067_beef_bone_
+ broth.png
+SHA-256-Digest: Hs/SwgPT76/9HIF/eIKUtERfMRkRqu1CmoUttGos4DU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_068_chicken_me
+ atball_soup.png
+SHA-256-Digest: Hn1KpKjln0ut36qzprO2ova8i7+ICUcc1NUmzzjIV+U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_069_chicken_no
+ odle_soup.png
+SHA-256-Digest: IYhLmzN0jecfloyH1Q63325QXJ3P9Xp4TC/XNLn7FYc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_070_seaweed_so
+ up.png
+SHA-256-Digest: RdRKM+C9KBqVRzMvFVQvzHUGGZNKZAlJ5dmYtE0sFsc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_071_black_bean
+ _beef_stew.png
+SHA-256-Digest: D4Awn5kvjsvfijJMaHT5QHIZi7MGd47OO6/2sCiVRCw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_072_grilled_ci
+ trus_chicken.png
+SHA-256-Digest: c1a1LrymqnX3svgNYEuPN9BqZDC5ACzL7pfYxeB9oBw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_073_creamy_mus
+ hroom_dumplings.png
+SHA-256-Digest: HJhhO0aG1hst/roIZQtCgK12MuFvFTNxppJ3HqJEt50=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_074_herb_steam
+ ed_dumplings.png
+SHA-256-Digest: CWT61omKmualSffVlfHFcYIT4QwcG2WJjXEdj51lQi8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_075_beetroot_s
+ oup.png
+SHA-256-Digest: oEvrMZpKgbKlmPe8O2VXCaWWDT+Msn0gCORRgJIMuxQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_076_caviar_pan
+ cakes.png
+SHA-256-Digest: ijRiK464IZrQ06GYR0Sf33hGhZAR1a9uF4fU2MTic44=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_077_tomato_her
+ b_soup.png
+SHA-256-Digest: jjgY3JYUfBjFNDD/ZxNfQ1dScIiXAN8mc4jf2UNJx5c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_078_creamy_veg
+ etable_salad.png
+SHA-256-Digest: yT5vI3gEnvHTjI0VPwQ+Ao2aytCdghSc5vYiYl0Kjz4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_079_stuffed_ch
+ icken_cutlet.png
+SHA-256-Digest: 7/7HwgFgzn/j2tQxrR3//k7VY2XfSCkTrijZNEUaxMU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_080_tomato_stu
+ ffed_cabbage.png
+SHA-256-Digest: F9u+9fc1nQn5JTpeZY7TL/NFs8xZFgqlCr0W8BqPXy0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_081_beef_kebab
+ _plate.png
+SHA-256-Digest: 3/IMYENl60nKwQArgdAJetC1IQWnMKfRz/51uS0XRNI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_082_stuffed_br
+ ead_rolls.png
+SHA-256-Digest: M/5YUc5OjcPVqIF3yDkGJ/qyZ01XwlJYlzBVq964KY8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_083_creamy_pot
+ ato_dumplings.png
+SHA-256-Digest: mKZ6Ey0u9gx6uq0JBQbjZSPq4WPpcLTTEIdeyOcFPt8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_084_berry_chee
+ se_pancakes.png
+SHA-256-Digest: xdig7/Ek1Ny/KjXntaSaCB9ABrNk6Prfe4gnwfwfNvQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_085_salmon_her
+ b_soup.png
+SHA-256-Digest: yUz6WZhXYvkVlb22iQpsF9p0wMpdzTzHixc6TfhlQmQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_086_buckwheat_
+ butter_bowl.png
+SHA-256-Digest: uYEU9fhmBH2unOqxwY0m6q6LQ9iwRgAvpvC7II2tinY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_087_meat_patti
+ es_with_mash.png
+SHA-256-Digest: yVTkD/MKQmNKjucYFpBX/17R0T/TMQMxjUDJeMc2gTQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_088_beetroot_l
+ ayered_salad.png
+SHA-256-Digest: fPIceXa1BEc6FtRut7UNnQQULRThXjVv66VIatQm40Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_089_braised_be
+ ef_grain_bowl.png
+SHA-256-Digest: iRECQRKRYIwBphP11uK9lxMoeQ5pGIczTFWEndey0mE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_090_rustic_veg
+ etable_stew.png
+SHA-256-Digest: /A6shL+MKAWppkl6truYneGqmkRRtCw5qFNdVkv7yts=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_091_stuffed_ch
+ icken_bun.png
+SHA-256-Digest: 5LZpOANI2P8IyflkAlfg0IZ08KIJfGwDZzw/XIZmqzM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_092_golden_emp
+ anada.png
+SHA-256-Digest: /dNa5iJwi7bC3WjmrlSKHQ8smr0quedeWAnfLnu5sZI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_093_vegetable_
+ tagine.png
+SHA-256-Digest: J+BPVjoKOcuXF6NJCUVPwfxgPXDexGNZgeWs23gHkXc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_094_lamb_tagin
+ e.png
+SHA-256-Digest: qznFRqMzB/y9UqI/QbUR0cm9k8MtvGNpClWyiiq1wZs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_095_chickpea_v
+ egetable_tagine.png
+SHA-256-Digest: FrkbABKWHMGGauCKhMQIRBo9NUqni+iGtWCsMmlR7aI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_096_herb_veget
+ able_soup.png
+SHA-256-Digest: mTuEHGdMXyR8ukTv9dJmHdMvOKPoTQHIX7Sz5hDyTBA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_097_powdered_s
+ ugar_pastry.png
+SHA-256-Digest: EvUr4yTtInLIJjSrvnrixTThFRpkl3byc2nJtT4Nyig=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_098_tomato_bee
+ f_tagine.png
+SHA-256-Digest: gPpf2xmQBjrkdgcTXDR+c4nDDt11Y+DBHknbwiU2IAQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_099_beef_egg_n
+ oodles.png
+SHA-256-Digest: b14FsdDNh5fLgCGDGJ5iu3bB7vHQgtTNV69GT2qEKw0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gl_100_roasted_ci
+ trus_duck.png
+SHA-256-Digest: 9DTXz6IK60FAN/9IdllQlIQsMvCV/3chswCDzQZXCjg=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_goi_cuon.png
 SHA-256-Digest: O0/j8ph4qwy/o063sTvLZ9fFYOQQMNID4ymUORFiDjE=
@@ -2605,6 +4115,41 @@ SHA-256-Digest: lcQU55elwAuF6M4rt64ZEnQA/ePe5X+G+LKi+AO47qU=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_green_curry.png
 SHA-256-Digest: ps/KIAy10aOLbiB1+b+90pZWSwlFi5Xe07R9z5MI5Uo=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_bougatsa.png
+SHA-256-Digest: m9YQT3zzK4XKNZWTJWLH/O+3vWbSDz0D4CEYkdHoGos=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_briam.png
+SHA-256-Digest: V6SYr8MmoyekFBrqpdsWcNkBnO66cLkcZ3Y2UCOfLW4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_fasolakia.png
+SHA-256-Digest: N/4fzTZVYTgAdN5lqL2OXhz7b11SKx9SNjlZXey6CT4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_galaktobourek
+ o.png
+SHA-256-Digest: 1CTAqkRkHJJYQRxV2rWt7QTNn/yyzwpHKKbyPbfuzzQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_kolokithokeft
+ edes.png
+SHA-256-Digest: jLZXJ7UYP1OFy25YimGqmzMzKE7HZ23FJlaKFlwEHqA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_koulouri.png
+SHA-256-Digest: iNuXO2MESHHGL7ooGrNSWGWFuO9rPcN2q7fFqiVt1/s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_loukoumades.p
+ ng
+SHA-256-Digest: n0YlUHAiEszEzZLNtnkMfMA3PaBtIiBTtFNpgElZuoY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_psarosoupa.pn
+ g
+SHA-256-Digest: wNaj9ld2eBickESAa3KrhxkbRnae+ZvYn3ke2wG7+/U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_revithada.png
+SHA-256-Digest: ZkM2LENQdVtHoXoJDVDIHMs7/Q4hZM/aWOD8uVvmTHU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_grx_soutzoukakia.
+ png
+SHA-256-Digest: w8xPQVKgmvmZ2S5G/C4l/CUweuTjSnirdTD3S8UcOr4=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_gyoza.png
 SHA-256-Digest: 6Y3efUc8MDk447NA+vY3kc7ZLX1xD8q/ODWl+ddKwvg=
 
@@ -2621,8 +4166,124 @@ SHA-256-Digest: gi3gFAY2jIPtdOf/fgKSs/QOUweiKmvS5i3QdhRkVtw=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_har_gow.png
 SHA-256-Digest: zFjU7mh46BFUx+zaagpmobuhaJDJibs5A4LsZfpT8pA=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_beef_brisket_n
+ oodles.png
+SHA-256-Digest: KvNjPvYHbs1piJVWECbJqjwZGSpLo5oRbk1ry5WxdRk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_cart_noodles.p
+ ng
+SHA-256-Digest: xhfLEv1gFjR5uR1BauOE3byScRcI6t4M+jDVNqT/V2s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_char_siu_rice.
+ png
+SHA-256-Digest: js0Jiry7kuqi8eCopExQ7YKb+JLocktkIQWQsy9WnoM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_cheung_fun.png
+SHA-256-Digest: nXClAhwb/n+grBKi26oM/43uY6Uy7iu82UjZFHXPi00=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_claypot_rice.p
+ ng
+SHA-256-Digest: BJh8EJFGiXKJ4m467ze/pOWhk6dYmCGM70vIEmI3dO8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_curry_beef_bri
+ sket.png
+SHA-256-Digest: XTn9/FvqpNWdW+FURD0HYauFCdkjFKzAI+ED12IHyEs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_curry_fish_bal
+ ls.png
+SHA-256-Digest: 2gcRV4t7BSUKurhsXvFEF7f9yyqpIyYLzKQBZrMCEV8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_egg_waffle.png
+SHA-256-Digest: 1QqvZIGI98iAPdoDpFEEIJ6pvN6k6vpn5RuhorjeGFs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_fish_ball_nood
+ les.png
+SHA-256-Digest: 8CtrlVbwNB3//bWmv5zD5q/pe0/xvWnpHMPVCq7UNg8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_hong_kong_egg_
+ tart.png
+SHA-256-Digest: 5joAm7XmuoOY1zlHLdqe0xo8U8n1ff1pBBEGk3L/tes=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_hong_kong_fren
+ ch_toast.png
+SHA-256-Digest: irpWWioXg1SMPs6qhHquN1FGQC+eGarnBgPFMLEdVKM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_hong_kong_maca
+ roni_soup.png
+SHA-256-Digest: Lji6n1HgvYxqkzUprTykYbTYuOU54Cqi1WSy+WJxOYM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_hong_kong_milk
+ _tea.png
+SHA-256-Digest: 7yYpqADQ3idme+yM4kZ98ErnkvNeyppW+m7GrMmQzUU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_pineapple_bun.
+ png
+SHA-256-Digest: jDAmfQxZa94QPRdcqbfkqVSTrvFWmwv0EKngveS1m+k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_roast_goose_ri
+ ce.png
+SHA-256-Digest: M7l0IUOL8hBb6O4UsUbGU8vLQO9jy9eEmOLMep8MAiw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_scrambled_egg_
+ sandwich.png
+SHA-256-Digest: jv4PQNJm6LKdFE/LjDuItWyKavGOojpWVTgppqoew8o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_siu_yuk_roast_
+ pork.png
+SHA-256-Digest: 9oAJmpH5mVqu57ircPF2opPvhkSGYyW7KulCqL9QQbI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_swiss_chicken_
+ wings.png
+SHA-256-Digest: TUStRQ+yIa+5WU3an7bBVQYZWpI6+d+p7nHGspo5bd0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_wife_cake.png
+SHA-256-Digest: KRwrQfSOSMCDJqNzWUbu/Jyb1TDfqDbouAI3ojqnHoo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hk_wonton_noodles
+ .png
+SHA-256-Digest: ZArdNidCNl0pwx0rpzTzx7y9zYjFwPlq+7AysC2ARXY=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hot_pot.png
 SHA-256-Digest: XPH2P9nbX3+fXkObQ55f7MQu+dt+i5+F4LSzJKkl/Kc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_chicken_paprik
+ ash.png
+SHA-256-Digest: PoE0DAX8gqVmOojhAx079fNosuS/r1qoaCzlTz39OoY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_dobos_torte.pn
+ g
+SHA-256-Digest: 1eMV26hB4cHNd0fv1KyESO33XV77yUcq/f47AIhySyY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_fishermans_sou
+ p_halaszle.png
+SHA-256-Digest: 2kRqk8DQ5Kw3hWndWdlCJPyLDRy4Rwzb5yuX3uiBfI0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_hortobagyi_pal
+ acsinta.png
+SHA-256-Digest: MUKVG9vrjkpeyFwqZnhpkzW+y14q9r5evF+jS91ORdE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_hungarian_goul
+ ash.png
+SHA-256-Digest: EwdOb6fVwhS4W8XCtGAmks6ggmC21YvtHAWXNzeRd30=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_kurtoskalacs.p
+ ng
+SHA-256-Digest: YJT45mLpeGoaJKk2yRv2gcfG4dtpYmuI0dlOVO5VTeg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_langos.png
+SHA-256-Digest: uRce4rp6QQUsKnScwIANk7tmzO1YU29r6BEpnW6nRPI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_rakott_krumpli
+ .png
+SHA-256-Digest: T8qGKCcpSYv47XYYVv7RBJtZjhMKKHb/MILNiuKlm7A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_somloi_galuska
+ .png
+SHA-256-Digest: d4yEdpmflpioQC7g3gM+eCafZ8pT7dLuLaM3YQObzJA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hu_toltott_kaposz
+ ta.png
+SHA-256-Digest: jn6kxc35L5bG7IeGWsfAEP72yywOcujIdVZY4WF19ww=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_hummus.png
 SHA-256-Digest: EJgQG1ReXDhG+1jOqFovxGFISfOz0AJpxBSdb3C6sm0=
@@ -2697,6 +4358,118 @@ SHA-256-Digest: 29nNKlqhYIL1w8oAk7yh8xmscdVQR2gDgCd2f7kgQRA=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_id_soto_ayam.png
 SHA-256-Digest: w4tiGFHZh69ftWeP8fhpLtwXFsaa45m0bsBtrRwKHTM=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_coto_makassar
+ .png
+SHA-256-Digest: 88bw6LQNn2fHulsbgLNEKjZZqOeefXgga1NSTjGgC8U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_lontong_sayur
+ .png
+SHA-256-Digest: L541KGCJFZ+BV3Y/1QKLJBcfYfFv1lOht2fMh2xRTTA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_nasi_liwet.pn
+ g
+SHA-256-Digest: lmmg0TY1pS1YAjx9KR9K4RJpB5VKZNMLncdMCNw2pRI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_opor_ayam.png
+SHA-256-Digest: WfA4rDeP2F4WZhELSdsZ1ZIte/vZ5pRXt4Q9eG+MWfE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_pecel_lele.pn
+ g
+SHA-256-Digest: nFNEfAHQgdeR4uvb1MR34/X89pLsInzAH1u6iDDY/jM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_pecel_madiun.
+ png
+SHA-256-Digest: ywl0UZVH/HDXnx1J6tMVKRxpgGN2yqtc60YzT7ixrV0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_sate_padang.p
+ ng
+SHA-256-Digest: 9/XnvpXI9hAGABOxsfPKX3zu4BuYkjp+eEDzzh24rEk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_siomay_bandun
+ g.png
+SHA-256-Digest: gLWA/oEphoJedajb0JxWUEdBMoa8ypzFbS6LqeK449c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_soto_betawi.p
+ ng
+SHA-256-Digest: 9s/LySexIvz4cu3984rResNEWq6db8qKUfh/2jGJnFI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_idx_tahu_gejrot.p
+ ng
+SHA-256-Digest: 5wN0dU6r9GBeYJSiOmSDzZkOATXlogGxWEp5cwPqUEo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_bourekas.png
+SHA-256-Digest: zK8fAq9r+Diwwpj9wsbaJnx7lTyj0VQg3QesPQFrHzc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_chicken_shawar
+ ma_pita.png
+SHA-256-Digest: +cMmPbHneyCtTLY38jdMgQSZu84WfnBQBZfhlUOTsaM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_falafel_pita.p
+ ng
+SHA-256-Digest: Ee5aDSFwtyhBCC7CJQ4EPB4WHYHObMbvesEOvbaB1yg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_hamin.png
+SHA-256-Digest: iDtFNrpixxMpu9/QS+o+EGqQFbsgt3fMW0zuYsPOSt8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_hummus_plate.p
+ ng
+SHA-256-Digest: iSDX9GYo+Z2kg/GQilmYVKAaZ0tI+7semjrk7gYYyNg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_israeli_chicke
+ n_schnitzel.png
+SHA-256-Digest: BLhce3hxXkOcnr1amfc5VyQE2qurpHksXjHTmoXbI0o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_israeli_cousco
+ us_salad.png
+SHA-256-Digest: 3Kt5gtqxknjTXJai7UMoW0WHzbIl6ePJNzGsnYKRtqg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_israeli_salad.
+ png
+SHA-256-Digest: 1mnHMX8IktqkKrIzbvxq39DyrNRzTti/Jqik3p9RitI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_israeli_shaksh
+ uka.png
+SHA-256-Digest: Nso2QhOwMMsJEnzImv3lDvuPV+vanRpLkq+Frqdf3EQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_jachnun.png
+SHA-256-Digest: Tvc9KbJy1Nl9ccQ0E6Nvy3yBUWe0r9wAbnttwkKr4uc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_jerusalem_bage
+ l.png
+SHA-256-Digest: 4JXn+x/ODyADTpBkEW76e/BC5pxWMWjnNg/NeYGAq1c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_jerusalem_mixe
+ d_grill.png
+SHA-256-Digest: HgBTzT5QxB2AeFOpzrArxYfvZa4b/xxcojD3gQJLe7c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_kubbeh_soup.pn
+ g
+SHA-256-Digest: rw9HR46ueciTsmItxhde/qLdfDOCOYL/43QaXVNdTHk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_kubeh_hamusta.
+ png
+SHA-256-Digest: FV0n92dCLJjRVChPZyrYVQW7+LLH4N4e7oVlloSyTV4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_labneh_plate.p
+ ng
+SHA-256-Digest: VQ2mrjK/pEVCSaOgabGSNkHmesVb4HOxzIIGe+7DMvo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_malabi.png
+SHA-256-Digest: yJAZm06QTwkEqfws0Qz/cSnpEHaOpv8LFxum8XveW40=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_malawach.png
+SHA-256-Digest: ntySWEgyg4y5jzW0x9b91aNdbXbiQ2hZPyPwIpz+mNs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_ptitim.png
+SHA-256-Digest: kZPMmJ30fhrnGfoDt8N9JBBGh3iO/Mr71cusXVqaaZ4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_sabich.png
+SHA-256-Digest: yt7QLWEd61PRF1cZUP6QmETFzOL3MgIQru8pLy9OmZI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_il_schnitzel_pita
+ .png
+SHA-256-Digest: NvunWhNwQBpXHszGlF0GQwc8n4ttUUg9FXJGhVyiVCs=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_in_aloo_gobi.png
 SHA-256-Digest: bqYUEfQv05sg4lv8I30ou00FeN1hOX0efbV6Wzir5mA=
 
@@ -2769,6 +4542,150 @@ SHA-256-Digest: gbiLP278UN8YeeFvaw6U1kldD0+dFJQfAYsLAdMJQiE=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_in_vada_pav.png
 SHA-256-Digest: GO6/2SRze5XMhgbu9AOoO0pnGz92Qi6YoAborTNl0rE=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_aloo_tikki.pn
+ g
+SHA-256-Digest: JqxndNvQK+LuDeEhsznGcLmvq34ort2StkPWjiAe1nw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_appam_with_st
+ ew.png
+SHA-256-Digest: fSEGInpq34D6cugX61Q9QE30/N1DlIIO9cSxlibzr14=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_baingan_bhart
+ a.png
+SHA-256-Digest: 8gk/6EFQFRO1/rk24Y51QZ3cMOVTC37ED+cvu9kUeI0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_bhel_puri.png
+SHA-256-Digest: wOsON8COUFUPmFccY+lPh7Ujpug09pGcQkXmqWJ6JKM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_dhokla.png
+SHA-256-Digest: tJbeLQyg3m4vkqI1cQh9okGucasQv7HeP9dIeaOqwq0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_kadai_paneer.
+ png
+SHA-256-Digest: 8Aa4TE+Do0ao4nvxusGBBRa2ADz34QvDci2ozP9rzJk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_khandvi.png
+SHA-256-Digest: VnyrLR2ZJet44APWFcmYBCl4ee1VKLsvquZn5eTQkew=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_malai_kofta.p
+ ng
+SHA-256-Digest: NrAhbjO/5HBs7u1Q7j0kwzTQ0w9PY0EEhoDi4W/C6r8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_pani_puri.png
+SHA-256-Digest: efNthJUsAzgqblSBueeFrubA7ivg4VTr3UxAqVlUHjs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_inx_pesarattu.png
+SHA-256-Digest: wTAe+xPc+vNVnf3F+dulOvukJS54gsZ4sJ7czVkc4Bo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_iraqi_biryani.
+ png
+SHA-256-Digest: z89yXwfGqdFiZkreApTglcYNNybAYEt5odM4YsHm52w=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_iraqi_dolma.pn
+ g
+SHA-256-Digest: gArMUXggAO5xSoFdHJW/nS0r+xMV26e7VwnyJQHOcDI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_kahi_with_geym
+ ar.png
+SHA-256-Digest: vgNoJ8jAsjWYcKKjeyhaIy4rQoaxeS/GNz63+OIPx+U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_kleicha.png
+SHA-256-Digest: sKdf5x9BIH8Un6Z5HFVneNj4ZJCfEz/1AAWCHUOxCjs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_kubba_mosul.pn
+ g
+SHA-256-Digest: gKwevP2xYqjI/KKOJBjKS4XJO/ufOyojZiS4XM4Bdqg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_masgouf.png
+SHA-256-Digest: jS+d3kcDZu3huI78CjhkKkwUkE7l7rP4kI9c9AOc2rk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_quzi.png
+SHA-256-Digest: 4x9UQPhk2qaWXph4OGQAZnurJGmj4K9MvjE5HQjqBSs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_tashreeb.png
+SHA-256-Digest: LtPO/xkYErNRTCfgpTNxAnrvWH0dJ1nx3aRGriNPcJQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_tepsi_baytinij
+ an.png
+SHA-256-Digest: VXvFifp76qzrCnx4NBTiTIZwfCkmYFYoRjhD67tLzjM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_iq_timman_bagilla
+ .png
+SHA-256-Digest: MqI9rp7InseKS3z/TqiKbYhOJd5AvD98ufcyMAv/w7U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_adas_polo.png
+SHA-256-Digest: 1phn504Y4ZBD9qy2kMYZZwhRhhxKCsHLa0poAdpHsTI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_ash_reshteh.pn
+ g
+SHA-256-Digest: zVlDoCSf/mDBf/vG/ftBH2tSRqoId/bObIrIjxNJhKA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_baghali_polo.p
+ ng
+SHA-256-Digest: n6jireSq0TlZOREfFiSi1qJxY4/RHEcFOLk3rqep974=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_chelo_kebab.pn
+ g
+SHA-256-Digest: 4mSegaTiVEWSAO1cU4UzaEnRD9PRz2g1ssaCigxxCGk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_dizi.png
+SHA-256-Digest: aw9O8sn6Zt52gZljVM1q6tRPwk6X0OlZKqcewGLzSJ4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_fesenjan.png
+SHA-256-Digest: 5gKgmRV8TG+JvJWgrlaX0XaGpgSHLcVojYn79dOrJF8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_ghalieh_mahi.p
+ ng
+SHA-256-Digest: ecbbjAtNnK10gT2Ioif69bz6I7VQ1X6gi72T3WfnfHI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_gheymeh.png
+SHA-256-Digest: Hh81oHu/kRSEi1YNy8Lmxx2Ud7++mrX1dIyLbpzU1h0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_ghormeh_sabzi.
+ png
+SHA-256-Digest: cdVs09o4Xds+hQsLU74MXDhnfeg8R8sv9UF9ViRx/d8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_joojeh_kebab.p
+ ng
+SHA-256-Digest: XaJ3tIeGbkdVFWoPafjHAx0Yys6qjjUvQr/BUxjiIjA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_kabab_torsh.pn
+ g
+SHA-256-Digest: SelKhdhf9au+vmmvpXqRBNYeXWNfDirvzztd5wyErM8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_kashk_e_bademj
+ an.png
+SHA-256-Digest: fkaKDeHIiv5rmfRpJh5FqSdt4e2QW6EfXxRLGCWf5fM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_kuku_sabzi.png
+SHA-256-Digest: 3OfTOIRDT352rOIMnNrCaVCREsfTUGXHVl2JSCe/ifE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_loobia_polo.pn
+ g
+SHA-256-Digest: heTkIDsgLtaCU0htLTaW//2optytuNOUPMbJhUSQ3iE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_mirza_ghasemi.
+ png
+SHA-256-Digest: 7f9fTLd4q4mqKpOeliclTim6FVtEPYuOabiy3xMM2C0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_morasa_polo.pn
+ g
+SHA-256-Digest: KATbrU0E8+LvMpnNf0Oj5U2/jEeLTEOzoNyhw9/kxvU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_sabzi_polo_ba_
+ mahi.png
+SHA-256-Digest: det981nPlRrTXif4mhDDDSWz1rp4efdzxIQmYKwkRMM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_tahchin.png
+SHA-256-Digest: R8wNNbOcpOt0wZar32/B/Vum7bP5gMr9c40wSWt2fYg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_tahdig.png
+SHA-256-Digest: bcmJmUcoGhlXj3mYjZuYdDybEW25PHvaXFmDhu7xqEs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ir_zereshk_polo.p
+ ng
+SHA-256-Digest: wPa83KiT10SoQZwH7ImhxJtCYm0LOPLFpq1wyzA8HAY=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_it_arancini.png
 SHA-256-Digest: tTjma3e6XleQYF4NFgAghx5RSuUFC2UwD6SDgfLHeik=
 
@@ -2839,11 +4756,85 @@ SHA-256-Digest: m1ft/l9n+Dr4qb95AEWMgkoQSCnBsxP8MTXPlGPCnzA=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_it_tiramisu.png
 SHA-256-Digest: ZytnHHNnZyckO/SdXLZlgPmB42SeoKXb3puhd2ap1IY=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_amatriciana.p
+ ng
+SHA-256-Digest: TcaZZsOAgCFbNuQnMzb0TTmlDO1EgA0rOdzJPlmH2R8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_cacio_e_pepe.
+ png
+SHA-256-Digest: MED27hIaiBjFT66wNec1XatjWm1Stx4U3n1jyYLZkyg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_calzone.png
+SHA-256-Digest: JokD9+ReXhJani8i/Xjau4WjEZJVA/lint0b20Iq59k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_cannoli.png
+SHA-256-Digest: 2leVQV3WX5FGzn8epr2BAkaTaFI7yNBqRIZsDK9+77w=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_focaccia.png
+SHA-256-Digest: 3g5mRKCiwACVRcghKQkO/PwUBulk0JGOHLFMNmxAjfs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_panzanella.pn
+ g
+SHA-256-Digest: qeILb7mkQByC874Ovc36PCrHLxHg0bBIzxSrR4ARv9k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_pasta_alla_no
+ rma.png
+SHA-256-Digest: fiWjzy8SqebkHYdbaNjO0uZZHhnx95yuwIhlVllmm78=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_polenta.png
+SHA-256-Digest: p+jofS49j8wASEf9r2vF5qcAAxSVfVT+D1ntg/iQ8IU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_ribollita.png
+SHA-256-Digest: N9GhKO/3kpMjuRpLlTIwG63Bgiw3ATc7WcJQF7A9SO0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_itx_saltimbocca.p
+ ng
+SHA-256-Digest: aiCvu+Dx1pvOHXDgnca8bBMsmlv712fM3uPcvSzzhdU=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jajangmyeon.png
 SHA-256-Digest: eIgsmDkWJLT6rQNafUpGIL3WnHMMGMPOyjoYnP0badE=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_japchae.png
 SHA-256-Digest: 9HVi9eprl8qOtBq+MHt92NV+p9PbgSyx/rvCsPs6l40=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_galayet_bandor
+ a.png
+SHA-256-Digest: u+W8S8XpKGqdAtAjE9Kq1azDqPKH0126lrodoO1w6T0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_jordanian_koft
+ a_tahini.png
+SHA-256-Digest: ZQGX8SBNKnpW9kD3WOLSrmZI7n6CgUqL7TG4mFZ3GBs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_knafeh_nabulsi
+ yeh.png
+SHA-256-Digest: Gy4Mc2wJBgGfN0gup/fmAb6WO4nNp1/ltVryP2+wsNY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_mansaf.png
+SHA-256-Digest: nQNEB91ZvMDbNjouVmDHALRlYvUXqRVwFd1DsCO/T5I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_maqluba_jordan
+ ian_style.png
+SHA-256-Digest: WX/5kllGfnta3YHJkrZvNVREtCx0gogCDIFuzc6m2bg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_musakhan.png
+SHA-256-Digest: y9mE+e4UpD9ehOVnmo+PhOSIIiHj8m5R0NcArofsvPA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_rashouf.png
+SHA-256-Digest: IBdrxIOfgu3IRqTSggV+YhE8qpd4lCjJiOeOXe/L2Ng=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_shishbarak.png
+SHA-256-Digest: yBxW+MDUv2Lm1/PB7Bs5Ar4bPP9Y6vs5IJozoWsANos=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_warak_enab_jor
+ danian_style.png
+SHA-256-Digest: hshR2/fyk+PgjJtOAyStA34LKBesUZRW0roXMP4qzUc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jo_zarb.png
+SHA-256-Digest: xc/bh4k1afusPZ9POHuZMHlbLjD24Dp+WuOwbvpbEO0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_chawanmushi.pn
+ g
+SHA-256-Digest: 9zm9Vi0jQYfQoD5kECL1o7ic8ceJCgEheoNhrsehXo8=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_chirashi_don.p
  ng
@@ -2860,12 +4851,18 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_katsu_curry.pn
  g
 SHA-256-Digest: mu/2p4wDC2Se+8L3n8AymfLeU3uH8lV76Dcv12BKsU8=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_katsudon.png
+SHA-256-Digest: ETos8aHo1U/5CJls9sXqieTs3v3TL7kQ3okm2FrHtS8=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_miso_ramen.png
 SHA-256-Digest: DV+k4VNiJ1qoUugUBpxrWfJWhN8c+cpG6LCsuLKj0uc=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_okonomiyaki.pn
  g
 SHA-256-Digest: 3BaKmn2mkHcV3IbysHJW0Vh9kq43PjQg/eHgy+tF9q4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_omurice.png
+SHA-256-Digest: RupdUuYdSo1dmDl54dvg6abpwvaZkwOzKMR+rdYqlFs=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_onigiri.png
 SHA-256-Digest: P90f/L6ttIb5eFJdvQVMcn2MLcJNewmpm6FRk82WpoE=
@@ -2879,6 +4876,14 @@ SHA-256-Digest: Muwj3bfMfC+d+boDdQc8CMk0pcVnUybWWtXMJEpfQKg=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_sashimi.png
 SHA-256-Digest: xIxtYiYG203W4SC2EOKZc82uj/8pYdkbmCaNDvJcj9I=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_shabu_shabu.pn
+ g
+SHA-256-Digest: JT5av4cC8sLpduNFoIhdN9rSpcafzH/IrkZ+u1LmM68=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_shirasu_don.pn
+ g
+SHA-256-Digest: fibCRsiZe46JrRjZmo5AxRj3ReCgQkPHv1GedMMf6/E=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_shoyu_ramen.pn
  g
 SHA-256-Digest: WRH1j0R2e+BILTPMtN3ApRcyC6p98cs5cGNx3+03yZo=
@@ -2886,11 +4891,17 @@ SHA-256-Digest: WRH1j0R2e+BILTPMtN3ApRcyC6p98cs5cGNx3+03yZo=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_soba.png
 SHA-256-Digest: vzCQsBsPYLb5Ai1yL6S6h+1YEKzPZIMO3xxH9EuQ5Kw=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_sukiyaki.png
+SHA-256-Digest: r0QyYfHD2J9340tHmtpHU6TsQeQXdXKlEO1o3j2KHs8=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_sushi.png
 SHA-256-Digest: 82HUQFvGbDZLbF1XQbYo881NsYpNFcASXShcP1V5ZA8=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_takoyaki.png
 SHA-256-Digest: p6acH2jf7FSvnNCOwhtu6duSpv6QRMuCQ53qY6no0Mc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_tamagoyaki.png
+SHA-256-Digest: tWBxDT6ke2swCGM+AmsiQiL1uL7NlAZOzD4EV08sz5w=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_tempura.png
 SHA-256-Digest: cIINe0arcrh3BbB1VX/56kwiuOtrDf9nzY1pI661AZc=
@@ -2902,11 +4913,20 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_tonkotsu_ramen
  .png
 SHA-256-Digest: h5q9pKUUo+9JNCU3p2jRBlYcMfm0bmOJrVkyWJOQuiQ=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_tsukemen.png
+SHA-256-Digest: 4Kp98IdV2Oo3fu4dhwDc7+eDo8DJuh/WaalsF7SaR+E=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_udon.png
 SHA-256-Digest: cevy1EU/k9UT3B0CQT95IRRxgYi06zNd/T/viaYcqQE=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_unagi_don.png
 SHA-256-Digest: vIJiCu6eJ5XqHWV9t+LNbElptzt04hYujpUoi/+RPSk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_yaki_udon.png
+SHA-256-Digest: snHdSQh9H/wHEio8l0+ADS/H3BGpvFBNFYchcqNPu1g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_yakisoba.png
+SHA-256-Digest: R2pdgZDI15Sk9hPAAfJWwUh0gmux1gpXpjqktz0CLTw=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_jp_yakitori.png
 SHA-256-Digest: ZrZlGOf2ypiWjGoeBcM2wliYrDRhMw4ADvEiw2/t7VM=
@@ -2917,20 +4937,103 @@ SHA-256-Digest: Rki3UPdYZdj6HXI6goHkyr5fggy8Lb5r/kkaO3l+i4Q=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kebab.png
 SHA-256-Digest: fsixcXK/HdgdqaxcNnYNMNOCVMm+rlnzmk9NdQZLEwY=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_ang_dtray_meuk
+ .png
+SHA-256-Digest: GjXGysmbBizklj/mLTeQwr4okv8ytiLIuVwa8NTL0x4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_bai_sach_chrou
+ k.png
+SHA-256-Digest: VZIN4ieEPzX5iE2wD4B9P7M7/p0+ywAF8oYckSQatqc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_beef_saraman.p
+ ng
+SHA-256-Digest: lfu2x+HwZc2Uqadc8iI9s/nSMoE1L6pK54Ipa1/rzw4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_cha_houy_teuk.
+ png
+SHA-256-Digest: TFecFc8GT5GrfT9lq2YajzKTRHr0N9IQb9gDTGhuCOQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_cha_kroeung_sa
+ ch_moan.png
+SHA-256-Digest: s+LPcSro5PLrx5m8RFqvgR3oGxpqDLx5SJCVG+dXkro=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_fish_amok.png
+SHA-256-Digest: UdL6s6Y3KaEK70dGc4Ewiyrhg9hachdfLEqDcxOx66s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_kdam_chaa.png
+SHA-256-Digest: bEdHG84Yr7iL1kaMiA1IgRD2Xbi+yoBiGc+os+ZxIJA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_khmer_red_curr
+ y.png
+SHA-256-Digest: bUm1DqKABpyN60XGa3wEXW6CjDtpKQZxO/2KKsFnrVE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_kuy_teav.png
+SHA-256-Digest: +8B9eD8VK967lIh8MV6el0Nq0t3sFufJnsM3mWMTZJI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_lap_khmer.png
+SHA-256-Digest: UauU5LnkdIP6TxDYf8A9RMSVpdHp7M+a84JAG7C7Gjk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_lok_lak.png
+SHA-256-Digest: UfI31sxIfdBM/C04Z7le7hQaHw3kX1UilABt4mY189M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_nhoam_svay_bek
+ .png
+SHA-256-Digest: OOt1UUvWmE01/JGaDlaFIKz7QjoTX3Q+5UxG7Y2whoY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_nom_banh_chok.
+ png
+SHA-256-Digest: QvrWhkpZC+mgEy8ed9TLSQKsK8IKhGgLO/urGkU9xNs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_num_ansom_chek
+ .png
+SHA-256-Digest: TmamQf0C5VmoEOrM2tJ2ZveEDQNSYZ488j66yrNVjUU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_num_krok.png
+SHA-256-Digest: /RHFW/f916QO1DfPRSyHYmunQ+8IAzOvoqDWdua9Y70=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_num_pang.png
+SHA-256-Digest: R0nAVXYjIPP+UvZ4aENNKbSH9Nsn/1k9e99R0fecPEM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_prahok_ktis.pn
+ g
+SHA-256-Digest: df2hyEOSUuneOllp/EQZLi5tLQhoJjBDbEMrROLuARQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_samlor_machu_k
+ roeung.png
+SHA-256-Digest: EXGU8//WCa/vo6cKSKgEIDehjAEhTMnJ+4lEVpOb3ww=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_stir_fried_mor
+ ning_glory_khmer_style.png
+SHA-256-Digest: ja4huGgXkdNOPKe1HDPliZmjW8/YVxzPNeKoc6QRZmE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kh_twa_ko.png
+SHA-256-Digest: uyFPbVTMJKei2AJeOpjlRlWxf9RARhHDsxZv5Ji6HXg=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kimchi.png
 SHA-256-Digest: RG7DT4uCoGg7VlfUi59gHAycKp37AlXMBDRYOWg4WVU=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_bibimbap.png
 SHA-256-Digest: 2x+jr2p8WV17lKmDLFhwm+O2hYt6e6XmUrEHZXEX2BM=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_bingsu.png
+SHA-256-Digest: K3K1Dt5mdgO+BhQDV3nFejG/NlMH3odRpkPeeInIhz8=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_bossam.png
 SHA-256-Digest: FlEBjjiZjX/PvOSrD/voa95e3ai+VPUWjpf5ol7d+/A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_budae_jjigae.p
+ ng
+SHA-256-Digest: jrdnY6AkgZmzgfVUN1rwTIFBX+4j3j6D+BTM/3xy+i8=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_bulgogi.png
 SHA-256-Digest: bMWeDJcJBSdYRtZ79T6/rphVtCysgoJz0xnvflPZB0E=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_dakgalbi.png
 SHA-256-Digest: D9HeoBZp8iYtAj8uPo1uzS2/FoR7rYz1fjhmB7hRQLg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_dakgangjeong.p
+ ng
+SHA-256-Digest: 0C6nkyW8LcWYlJDo50t3CwQDZEcStw05+bwWPy9AJ3E=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_doenjang_jjiga
  e.png
@@ -2939,9 +5042,26 @@ SHA-256-Digest: G2MCaa3sdkWCU2m7oKUFWFrCjZdCdUmszK2S4WUOnB8=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_galbi.png
 SHA-256-Digest: GpVGgIjhrexiUjbu2dqMyZRo6eCkNz5CNoEnJfR2xUs=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_gamjatang.png
+SHA-256-Digest: +hqzfAme2EsH5sNL9eVQAnqQTK3f4IJ6Si2T8bu9HLs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_gomtang.png
+SHA-256-Digest: K1PXI0vhaI1xgJNvGHYWLfRY2ysuq2aeT3gOvqgXUDs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_gyeran_jjim.pn
+ g
+SHA-256-Digest: CPL+nxjAyUrZUe2oPQT+zQ45zdJZPZuIepV4i24V07E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_gyeran_mari.pn
+ g
+SHA-256-Digest: 3KRVsrHoz5YriB8IhJA9uhPapqqg+M7CnmmQ6DgmjNM=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_haemul_pajeon.
  png
 SHA-256-Digest: rDlDD2u+lNIeviokXJncd02ya0w9Fgzbx5kIOWTAAI4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_hotteok.png
+SHA-256-Digest: zehksJdjVcy/aMIbSdv27mCzQlB90kI0GkCAe+ePFis=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_jajangmyeon.pn
  g
@@ -2949,6 +5069,10 @@ SHA-256-Digest: /SgJeRylvCouO+uk9b1k61VPpp7LVZpSXwgHpXH9o0A=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_japchae.png
 SHA-256-Digest: fN2sA7ZifKuS0YyBnRWbw1s3ZrcYQvS41UGRe8w55p0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_jeyuk_bokkeum.
+ png
+SHA-256-Digest: iCRUuPjRe+evrjAVnAIgqfr1PjvzrPP5XmaY0L4e51w=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_kimbap.png
 SHA-256-Digest: ejx/b1vgcHaCZ014XPGTRbHwv+IDgnAN2xbR81AYKLA=
@@ -2978,6 +5102,10 @@ SHA-256-Digest: lKoPC/oQhIDiTv5pbj6rzIyQD673GSWQWyaaGDSpzmw=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_samgyetang.png
 SHA-256-Digest: llZeMxGcv0w47MqYRIR17rQ7LtWKnUaOid6h1V+F+XM=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_seolleongtang.
+ png
+SHA-256-Digest: 4yKhesuAG2CCnfZBzzJA6kMZY6HNiFISKc0v9c36nzQ=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kr_sujebi.png
 SHA-256-Digest: VSfHpMzG+ojbLwlZv+qNy8+1FzRF8vADSpUHsOeWEhE=
 
@@ -2991,6 +5119,75 @@ SHA-256-Digest: iQK5jz4pCdn/cSiVGQiDWc9tnsaA6/BZYYcqkjXciN0=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_kung_pao_chicken.
  png
 SHA-256-Digest: XVc7Glhgf0lrolTU+vyiCLfFooj2YKRQ1u3fXgn6iak=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_gaeng_nor_mai.
+ png
+SHA-256-Digest: EJvQPpZ+XANFiRwT26B/hqcDkPt/Rh1/iLztT3k8cXU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_jeow_bong_with
+ _sticky_rice.png
+SHA-256-Digest: m+nmhZLD1ZK7uZokk49eYkkIk9AUJjzuchPy8poH0Ec=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_jeow_mak_len.p
+ ng
+SHA-256-Digest: Al1gbKV2ahRXU95c8QUET/vtcOx2yBZvirV3bFun7Vo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_khao_jee_sandw
+ ich.png
+SHA-256-Digest: ++itb4nhZjJ95q7j3QnJxwQtLPjauaAYozr9WKhs3is=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_khao_niao.png
+SHA-256-Digest: dxyF/xJzyNUj1VL14PiYCV85fH4AoA9r7TjFghUnPQ0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_khao_nom_kok.p
+ ng
+SHA-256-Digest: eN7MxTrl29+BOfR60kvO0AeOm3XIBbipiuSdiw21Y1s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_khao_piak_sen.
+ png
+SHA-256-Digest: hZJXLOYrQlusJSCvHZY+7L9EYY1QiZQ/CTT9GILkHOc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_khao_poon.png
+SHA-256-Digest: txeKPCeqqwwXD5MALeXgSQQm16Lkzwg2NSy1IdvXhA8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_laap_pa.png
+SHA-256-Digest: lOXkZML4iXp6xrLPYT63wBukp0WB11NwzUXr4ScLCBI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_lao_khao_tom.p
+ ng
+SHA-256-Digest: c6dLuJHl+4P6OhlmyKQh1UXnbzvCYTkPb6eIfP6mFIU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_lao_laap.png
+SHA-256-Digest: YvYmWdmRSfXS/rzmEr4DQGcFCQ0SSdo9IqyBIwfYLI4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_lao_sai_oua.pn
+ g
+SHA-256-Digest: kw3Pl2mOTSEzjMyHAPD41dzWfj6naOWRB5tDmQRvcR4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_mok_kai.png
+SHA-256-Digest: Rrwe4OgGOVyscn2wPgylaaAG5lgu4f5JCdJlfl6JUmw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_mok_pa.png
+SHA-256-Digest: ipwGbKd0bTevCvXIfUQSrkyJrdE9sl4dM0WuQhHxXro=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_nam_khao.png
+SHA-256-Digest: U/PAOzPCwgj3/ALdQyzVN0lCVQxP2WQQ4MKL47F6wXQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_or_lam.png
+SHA-256-Digest: KCiIMrgpYb27qRBvzNUpGWY/4VOEHO/1nJZYbFvYDE0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_ping_gai.png
+SHA-256-Digest: UTaUDw+jl4HIPiBNzPHOoRN6tmSdj0AyqqkpVh0p7FM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_sai_kok.png
+SHA-256-Digest: y8qhMZYHCxuHLF7qgwj4F/WPjmjFuY/867GFbgrzCkw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_seen_hang.png
+SHA-256-Digest: BLgv298ikBu1OQf2ePzyTA0SXm684gUjhWI74mkVLZw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_la_tam_mak_hoong.
+ png
+SHA-256-Digest: opE0iwCPDOpfEsn+rjY31jxwgD3Ub3prdW20MqtnXYk=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_laksa.png
 SHA-256-Digest: QAbDNEvNoUutf2PSgyOcO9w0pwyfU7NjCcqbFy1K/nk=
@@ -3065,8 +5262,117 @@ SHA-256-Digest: MihDLrqdSafNGwto1e9JUZHM2Pt+ua9MY84WQ7KCBeo=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lb_warak_enab.png
 SHA-256-Digest: NEEbTHSyY8I0aGkOjxEcPJ3DUJrdMempzb9aJdi3cq8=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_batata_harra.
+ png
+SHA-256-Digest: mSPif5VN4n0DsiEZLVk1i62hqxwAUr2WMYxUegWl1hQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_fatteh_hummus
+ .png
+SHA-256-Digest: EMhIsfTiy4KQ+Pf8CMmTW1x6uu4zkL/QrH5BjbQROdE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_kibbeh_nayyeh
+ .png
+SHA-256-Digest: VQt9/IjRxfL6IXXS7xqQWI5hnlQSGn8E/IGpn+mNpb8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_knefeh.png
+SHA-256-Digest: Eo3smFzF2KPyXgqF3v90Wp2uKyV7j/+yqJ3VHj68htc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_lahm_bi_ajeen
+ .png
+SHA-256-Digest: TaHl4hFI95JzNn3+b1trX7uFany40ZGmFuqDtQ0FhS4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_makloubeh.png
+SHA-256-Digest: OkKK5cPttVvpdCMNWAqDohSWIXOquSEYlXlqc4FsErM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_mloukhieh.png
+SHA-256-Digest: flHKjteGwk/yv69/KIwmijjVjJFRCq2n41HMLcb1Hq8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_samkeh_harra.
+ png
+SHA-256-Digest: O9cb150yEsykdoXAeQAR3ClRi4j3bnkXKgwFIbQRj4E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_sayadieh.png
+SHA-256-Digest: b12K3fVBoezNfey3aU4WRepSbr5ojd1FhMzkiNnuAFQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lbx_shanklish_sal
+ ad.png
+SHA-256-Digest: EzqETupi69gducTYuHpRVswnkOxMjLF7a7mXPzgoBsk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_chicken_kottu.
+ png
+SHA-256-Digest: 88KgK1gZ5OPECQCylfgchjmQWXhOdB9rnE2wc8/YA4A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_devilled_chick
+ en.png
+SHA-256-Digest: WxTTbTJPcKDAogXBMSQ+yk9zHZ4AWHIL3IUAqpbNNgA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_egg_hoppers.pn
+ g
+SHA-256-Digest: AItt3KuoUDNeBnInvthS9k2hLlVAavw8e//SD4zyhb8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_fish_ambul_thi
+ yal.png
+SHA-256-Digest: bjJUAqv3nvuHzc8BQMAr+DQ47AbRLdgh+7tTpOp1ouk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_hoppers.png
+SHA-256-Digest: b/TdJPiiUf18Dl4j3i+V9H1TpejZkuUAPyZgo9RyIkc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_isso_wade.png
+SHA-256-Digest: 470Ic/CKoB7i531tOWFW6Mf5AchH7HkXT2ZGZ7CMOl4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_kalu_dodol.png
+SHA-256-Digest: Vu1GJ/QkyD4DZVYousygvRyrDa0KpDzbf3RF7yFZIjE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_kiribath.png
+SHA-256-Digest: k50+94exCElBSWK0W+CP4FDAvbXWEtO2EebxrVKWOHw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_kottu_roti.png
+SHA-256-Digest: utTiSDssSsE/NXSexgk95XhfisXL1UzTHxIcLqz9W00=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_kukul_mas_curr
+ y.png
+SHA-256-Digest: PrKIndkxw4SNR/ilQXukRrwagiroDv7rZKnQJEYB8xE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_lamprais.png
+SHA-256-Digest: 88gN7ZumHF1av5N5ZnMuPs0bWtGfN7mwrAKyYA/Ij80=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_parippu_vada.p
+ ng
+SHA-256-Digest: RIwynGGZ4+knt1HWX6777H58L6ImYxwdou3Hs2y98NI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_pittu.png
+SHA-256-Digest: +iK1lzQQ/NlRbvZ4N17CYuOY5axtygogaTE6crqymSY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_pol_roti.png
+SHA-256-Digest: PyFw3i45PLOXwesyLHouoLK/rHxIuADmi/BxColq/q8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_pol_sambol.png
+SHA-256-Digest: Bwxb8nuFyODzzAc2ypl5NrDBoeBbWVnQUvtWjE4yR6Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_sri_lankan_cra
+ b_curry.png
+SHA-256-Digest: AK4qnEWXW2R0wNLuXTD8nlLRWINvkD3sFvuJJMy5/4Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_sri_lankan_dha
+ l_curry.png
+SHA-256-Digest: +MQSSyWz6Fq6lRB1km9ryfUVJ/+cKFIrOD0kOYcXHfM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_sri_lankan_ric
+ e_and_curry.png
+SHA-256-Digest: jxnqZ00Rl3mUPCGNFG3Pj/neI5JWuD6Ni6wMvVOQMs0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_string_hoppers
+ .png
+SHA-256-Digest: SNORNmcu9b4EQrBlJhBwUoUXdSYgFrsClu8a92yj/RM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_lk_watalappan.png
+SHA-256-Digest: 6Z8V7+Fk7AqiUtG/jgoYqsJUctIgIiQi5sCcgxmx3hU=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_baghrir.png
 SHA-256-Digest: CEIDzH5PHBuAhkClmgezQysxy/UGJ/E6yo8jmsMHbLc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_berkoukes.png
+SHA-256-Digest: cQJTZfR1aV/f+b24GqxsWHoEcZ0bjQZFRMNMW7ow6tg=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_bissara.png
 SHA-256-Digest: vkFXJ8FcNtD9bsOSh8fmsrCKQJXT+Au0NrWcaCCgg2s=
@@ -3074,9 +5380,20 @@ SHA-256-Digest: vkFXJ8FcNtD9bsOSh8fmsrCKQJXT+Au0NrWcaCCgg2s=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_brochettes.png
 SHA-256-Digest: n3nFzREINAWPv0X0QCnXwcANs7Cx1HKyuqLawj8Co08=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_chebakia.png
+SHA-256-Digest: RL1aCXiDHGbl9NnCNcA6T+n82TKJYrkXJk2KCaiO78M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_chermoula_sard
+ ines.png
+SHA-256-Digest: DMl/J5qwZ2zWzGb7thXszjnK914Hu8HMFmkVwcDvkXQ=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_chicken_cousco
  us.png
 SHA-256-Digest: Iyygx1NTNjgEMgVZps6k/Y+pzeClsK0dU/UDxiJzdC4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_chicken_pastil
+ la.png
+SHA-256-Digest: L7Y1HiLEJ9GFCEFKt92QbyFOq8/1YoYotHGjX1YeYWk=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_chicken_tagine
  .png
@@ -3096,6 +5413,14 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_kefta_tagine.p
  ng
 SHA-256-Digest: 3tVG+ole0C9n8I2sZn2BrGcV+Z2tp3rREYw/h3uHlNQ=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_kefta_tagine_w
+ ith_eggs.png
+SHA-256-Digest: j2RUGhFCVoCKGTHmQwRJvveY7t3Hh/as6Rk4GgtpyYY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_khobz_moroccan
+ _bread.png
+SHA-256-Digest: cQewVv6nscDpUWqSeqIT9H4UkkfZnkuPt2grnk6Reok=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_lamb_couscous.
  png
 SHA-256-Digest: BbLEsCMhqR48EJc5SwBRCrUh6O/PM4nYuaWwGPzLDCQ=
@@ -3114,6 +5439,10 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_moroccan_lenti
  l_soup.png
 SHA-256-Digest: ZYTxwKEoeJIEkDewyoEPZ7HziHYVDy6ZX/mXgXUXVdQ=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_moroccan_sardi
+ ne_balls.png
+SHA-256-Digest: tPldGg4upfSmwIL1TlpH3CGmzsAfXGQ6t7NN82OVoKY=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_msemen.png
 SHA-256-Digest: clC/E5KbCjBZ5Eau/Oq6BE8j0+C+BlLSImolZg7rMHs=
 
@@ -3122,6 +5451,16 @@ SHA-256-Digest: 2xkXsYYwfLgSSshk+hG3uPC9F8JIOIrILUPqljbLmDc=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_rfissa.png
 SHA-256-Digest: Q0Zf2TN5ZTwxJNrOipKHtVvTZq2lUPDijhlYnIJTYFs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_seffa_medfouna
+ .png
+SHA-256-Digest: vFb/Vj6wMpGP9eOA2SiwNp/BCY03MyOQovXdWBH1yy4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_sellou.png
+SHA-256-Digest: JMfhjRgnzTVhtUDtChR7N8saTM5p1cQRo5ctHiUzjZI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_taktouka.png
+SHA-256-Digest: MF4kUevO4Qxg4o4N2dCtRpAFUktkismQa0gx7FHkZhs=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ma_tanjia.png
 SHA-256-Digest: Rh40uWSwJchZz2vnvRUsVsHPwLhAz2HeFGBTsvejLXo=
@@ -3146,6 +5485,82 @@ SHA-256-Digest: 99yhuG3StmZANm9mhB9hsDPYIZIMjo/Dxm8C8k7+ZjI=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_meatballs.png
 SHA-256-Digest: pcWrAyMkx4ISu9l0SPLSRx0kGQcrTNDang88LInZlN0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_bein_mont.png
+SHA-256-Digest: nw05ctd1H1vo8YSFAxbb4df4gGGH+1Sj6xIGDhIKKIs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_burmese_coconu
+ t_rice.png
+SHA-256-Digest: HVpdMVLYmRlKBnFAS7jYwbxDTTTKB8YTPiu4F+24DkE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_burmese_curry.
+ png
+SHA-256-Digest: JkFaxHgydTwhImCntJBtNbQobMtVV4XM3G6r33uP4Ok=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_burmese_fish_c
+ urry.png
+SHA-256-Digest: vNLa7sZhDrgS8vXlfBnwZfJfdOd5sREvq2r1GMiORQs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_burmese_khao_s
+ uey.png
+SHA-256-Digest: tQ3R7t3KCOOyfgoXSkJZ0aTMunDPr3uu/GbA9NaKKBI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_burmese_pork_c
+ urry.png
+SHA-256-Digest: Qg8ybGodsVGAsiMycXardB+nWgZMZ8B9yVfG5xi5J1A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_burmese_samosa
+ _salad.png
+SHA-256-Digest: 9Y0G223NxK0eSd5thubriOOccYk4OHCATchOOBPDKxw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_htamin_jin.png
+SHA-256-Digest: 3j7Hl79T/4oeEC4sjQcRBwTD7peVLqpsd51l3U+gaHs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_htamin_thoke.p
+ ng
+SHA-256-Digest: ctEHi+z568mScOVUPG8DSvPj7uxwhS6wzx7g0JHLbtE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_kyay_oh.png
+SHA-256-Digest: ylXrJ0CQTznefcHCgnS5Wzayixu4CTBFIdKv8l27Xf8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_mandalay_meesh
+ ay.png
+SHA-256-Digest: jmuE2GE8vDOwzgFz7Dn+KjcUB9Hx1KGe0zwuMr418vk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_mohinga.png
+SHA-256-Digest: mIUOnRei9/n+DLoFuN4/wC3lsMODcsRLEpXAp37naEE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_mont_lin_ma_ya
+ r.png
+SHA-256-Digest: if/gIzC7wSV0kaPZFX3FjsWL8/L/zAeaayKtMLQyTd8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_nan_gyi_thoke.
+ png
+SHA-256-Digest: 6mW1KGcl9qpDewPTRfkGwyRJbHfD/tMgqYETUq5WpEI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_ohn_no_khao_sw
+ e.png
+SHA-256-Digest: p6nlEefPJzvEPjcvoDtX6aJYq9fFPlhOf/+25PU0ZvM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_shan_noodles.p
+ ng
+SHA-256-Digest: F52NEGKpHJ2tEZaQJykCHYoMw9UVAhWoPibOK3Sc9UU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_shan_tofu_nood
+ les.png
+SHA-256-Digest: 5RgBZNTDnZEsK/IRczTi6t31eceXnDZe1Y+QcaqFl20=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_shwe_yin_aye.p
+ ng
+SHA-256-Digest: hOpiOjIXv/GFZISXIKTxLFGCNIGIt5ceaSKofXFG3rc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_tea_leaf_salad
+ .png
+SHA-256-Digest: b1JBp0GnT/iIZlChO9b8PqqcdyEMOvhjnpdpchVbguU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mm_wet_tha_dote_h
+ toe.png
+SHA-256-Digest: 8FKqJ+nFpKJ6X20+c8G6NKJij0eaCicciO1wzFD0e0Q=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mx_birria.png
 SHA-256-Digest: D93fqseArZiY703GD8wfT4O4xDBX+2BPIfg+dCZtpn8=
@@ -3213,6 +5628,39 @@ SHA-256-Digest: r/gkGID/vEacD30DARsc/Em4c3onn7ed+XAYEkbwGos=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mx_tostadas.png
 SHA-256-Digest: ORqJCYL1Tfbtpcly3xoGnaP4xmbnTgnkqCaLJfbr9zE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_aguachile.png
+SHA-256-Digest: 46PUUEKcQU1qpEwyYEWnuOxL00mIipOsmSKbMipYgPw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_alambre.png
+SHA-256-Digest: B9jBaUH+WOfVKCGJolks4js9goaIwXh17CGF+/fzuTI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_barbacoa.png
+SHA-256-Digest: cO63pTh0gRs6Wl7QSBMyvU7tULdL79exsb7A28GH/vA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_camarones_a_l
+ a_diabla.png
+SHA-256-Digest: rBfscAtWHI575MuWM7xNfXH1J8zyQ3+QYqsL57bZYHA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_chile_relleno
+ .png
+SHA-256-Digest: 5jsV0oh0MkG0MQIZx7ELGpyNi8Sq052CKRQ8JSeKTyo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_menudo.png
+SHA-256-Digest: cQEqfaDWplwHox+oWFhDavyQ3zLDQwF2O3us48tDB+4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_pambazo.png
+SHA-256-Digest: 4cVm4O4Cod4cvGWaEttArEcyUVdwUJRs98UCyaEcpWo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_tlacoyos.png
+SHA-256-Digest: LzPGUjLDfxzYD7ejfBcRxXQxYe7Qqlnr8k+PqV+aSvc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_tlayudas.png
+SHA-256-Digest: bnAYDubMsPCGViIe8Wh4w3mptKjsMK2QKx2pKgoAr3c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_mxx_torta_ahogada
+ .png
+SHA-256-Digest: m+wzeCtj5YZKahGMAoPj+7e5hmnHGgVbk7jDJVLPfn0=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_my_asam_laksa.png
 SHA-256-Digest: tfMtrb+IvgC/HRtxs80hQe698l+WvxJJSCsq6rsCU7Y=
@@ -3284,8 +5732,361 @@ SHA-256-Digest: 22cQSZcKHO3ODMJe+SUz86XaYxtVHG5y3kUXo+sS1HI=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_my_wantan_mee.png
 SHA-256-Digest: Wfudw3kNu7UCKgHeVHrpSGkel56duxl6pmVjcsGocA8=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_apam_balik.pn
+ g
+SHA-256-Digest: Q7NywvBY2DhF+JLSlImZorLDBe6FzxMIHY6bXq8PdLo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_ayam_percik.p
+ ng
+SHA-256-Digest: pfYQyHUZ+F4rZAoDdIBFrEMb326cW2tjQCdnh6V8hWg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_ikan_assam_pe
+ das.png
+SHA-256-Digest: RUaFZWSRw6I1TNkhWE/OrHT+nuybzxepzdEiF5datT4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_kuih_teow_sou
+ p.png
+SHA-256-Digest: VBJv/0fHFuqaNvr5UWp+fvchPt7UzensmHuImkfJ2l4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_laksa_johor.p
+ ng
+SHA-256-Digest: jEMxf/UcG3v6FcDA47okQKZUxLL6lgPSQJhka44+jWM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_lontong.png
+SHA-256-Digest: midIn5zkr0609mbU/T78fhg1NMLh6gIrIw1CIdEctfM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_mee_bandung.p
+ ng
+SHA-256-Digest: pLtk5i6qcDkK9X6gHI2XKOieLtl5AbqsrHYeWIYBn4I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_nasi_dagang.p
+ ng
+SHA-256-Digest: DtdJyvpZDJw0lpjymJQ91T3ApBdsoDe+o59+uIMG3hQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_nasi_tomato.p
+ ng
+SHA-256-Digest: +6jvm8DY2IsdEFrHC8vVdkRBw5xjd88IWtFKz7yhT1Q=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_myx_otak_otak.png
+SHA-256-Digest: Md8W+WcS0mFBUV+QALMIOE9H507XUTBOymXIfsijbU4=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_naan.png
 SHA-256-Digest: Z+3KlvVfTu8ppihPdBfl1MjvMU48OkWEyCQ6rv65bdo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_abacha.png
+SHA-256-Digest: 5+xhbylN3D4c8B1/WCfhed3Dk8zfjdkNlxL8mx8UvPw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_afang_soup.png
+SHA-256-Digest: k6TrJKTAGnUY8RwwPCeTl1e+PKt5teXkW2dvFpQJIK4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_akara.png
+SHA-256-Digest: Q9awdSb8J8pNWQjTO6ma6g/7/p/WIqiNU3Gr72sqfNA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_amala_and_ewed
+ u.png
+SHA-256-Digest: PH7HNBQiW+vNUsRDKEYqowhwOwPx64BwUPlhVhiwdsg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_banga_soup.png
+SHA-256-Digest: j21r/+ErcHoDib/mN/2Uuu4qqcYkrLa4r66FgkNY9MA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_chin_chin.png
+SHA-256-Digest: lFsfAjiBepSFbHQfip2BCwtofV17CZB5yVpcSlLRrcA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_efo_riro.png
+SHA-256-Digest: VxORuSmDWK+ekVsIMeWmAf7ld4Tv+lhp8TsRdyvu71U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_egusi_soup.png
+SHA-256-Digest: +VpgHaaIIXnGyjdYecPF8LmB4PCmEkGfsO38qIs00zs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_jollof_rice.pn
+ g
+SHA-256-Digest: jX7TIo8C8rYZeg4i6O+MlHmqUD5kGpkHYLPBy+LpiWA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_moi_moi.png
+SHA-256-Digest: KBCdmHkFaROMjW+0NNv7Aj2+xXolqR5uWX0gxf/im8I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_nigerian_fried
+ _rice.png
+SHA-256-Digest: mkoLRo90kxSGmUQ0ABdpo/koiriWPiWN9jlXIiO056s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_nigerian_peppe
+ r_soup.png
+SHA-256-Digest: cjl5f2IAzKgdr4353gaYn5/32gR0dikG9LYU0v9b2VU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_nkwobi.png
+SHA-256-Digest: kCl1XryKDMn1NP6AF7pvQAaApp/rx0mVeZKLtKpsmWs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_ofada_rice.png
+SHA-256-Digest: 30w0kqlQbVzRAeueQvtyZ3LCWwqIn7qfIkNIiA9nWH8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_oha_soup.png
+SHA-256-Digest: grAxDUX5caUv3BMj3BfhRtpE0Lhl7gqe4L4ul9/pFp4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_pounded_yam.pn
+ g
+SHA-256-Digest: ZnRiLuZMkaCh7wCkwXDs3OX+sX7FkZWDTfi1ojsgnmI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_puff_puff.png
+SHA-256-Digest: 41UhqbAjjpWgMlMmhU/g+dqCnzfhLDUQ3rSDJld4hcE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_suya.png
+SHA-256-Digest: qqMecXOG/GKTQq58k0wTSz3A96/JraIi23H6CDo29eI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_tuwo_shinkafa.
+ png
+SHA-256-Digest: w6XHQqCJ8KX5gsz6E/0pCh+KcRod3JUogTP6JAaDhiI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ng_yam_porridge.p
+ ng
+SHA-256-Digest: qRDRAJilrmMDwoATUh3KJpaD0KvuB03tkHQqvmFwUqI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_bamischijf.png
+SHA-256-Digest: AJDciGx18OG/sBKwV0sO1tgCFNBfW/3kNUaGyVthgP8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_bitterballen.p
+ ng
+SHA-256-Digest: +pSJk8XVASH+UTwh6Pmk0FYN7gZxl5zKX/mUzrTUOSY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_broodje_kroket
+ .png
+SHA-256-Digest: 2Sios1BMwjg4gnyK5HKA8v60eALdLG1tT2mvcuDNe/Q=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_dutch_appeltaa
+ rt.png
+SHA-256-Digest: 5Uo9r4prQCHzeEJYcOgUJ7FNl1MdD+rH5h9BngFHYvk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_dutch_uitsmijt
+ er_royale.png
+SHA-256-Digest: grR2oXJaXHjbVOk8zLfOZ6nSrjPyXGwkUzhJ4sK0Qcc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_erwtensoep.png
+SHA-256-Digest: /VewPbNZFdcegYvFXkKfVqJC2ma+sx5xcSXzvWx84A0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_frikandel_spec
+ iaal.png
+SHA-256-Digest: 5KtjDtji1YqC8orFe6Y6dRUDhd9ZAWnpEIGu4EuevH8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_hachee.png
+SHA-256-Digest: XxvoaafVplxUxEjlx/aep7CAYFKu1mv3C8K/PL1gey8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_hollandse_nieu
+ we_haring.png
+SHA-256-Digest: WfOk8JeiTgkdZSg3x/zF97Sbk5hHzW8sOIQkmPa5t7A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_hutspot.png
+SHA-256-Digest: KLBvrB5KPs4G6edLGHnZnRUVhjqJALDhE+To97BVBt4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_kapsalon.png
+SHA-256-Digest: NPdU+pIFG/0KMO+UWdX34OrZPv++38g4OGewK2B6zpM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_kibbeling.png
+SHA-256-Digest: w7je41XGEgcm67hadOg3bxHmvunYWQVee+nXjdXVcE0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_kroket.png
+SHA-256-Digest: gQojXF+Ul8Xwx2/ltkk02tBQx2cQdg//ux6zO2yTs/Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_oliebollen.png
+SHA-256-Digest: D/QVO1MrSNWa3jJWGZx0Ebn49puN7ofe0l2cNg/TTJ0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_pannenkoeken.p
+ ng
+SHA-256-Digest: xF4+YzCAOYN7w9F/drlsEepLuGyoM0yML5zL74h55Pw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_patat_oorlog.p
+ ng
+SHA-256-Digest: sjAmiR985ySUdaD1BGuFNZg88vjHyEzLcANbOFIoErY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_poffertjes.png
+SHA-256-Digest: 09Mx9uaIFvQXcJJAjlio+B8WMuyRAsp6HKXJQuf8wDg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_stamppot.png
+SHA-256-Digest: 6Mwg9YedEvAKtOsvS8oH8Ois4eHqN0V+51yqkM4PIm0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_stroopwafel.pn
+ g
+SHA-256-Digest: PL1OcKYAxruSxHRUoow6pXrGN733Gs8bhQyzf1FfeIg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nl_uitsmijter.png
+SHA-256-Digest: P/rseVpJcSrE+RSSPu0my9d2bVNp5DtlWs4jcfk5g0o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_farikal.png
+SHA-256-Digest: GKHcTD+drN8pOM/+LiAYddMlDHvfInPY2ZqFWa3OwrI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_fiskesuppe.png
+SHA-256-Digest: RXoRmgViS+3n8ExXdZ1dW7aQVxyG1p4d7urPUCQXFHQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_kjottkaker.png
+SHA-256-Digest: 1NqsmhkfSJ/7XQav1QepzGRQmv3eDX5f1OU7UyCBVuA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_krumkake.png
+SHA-256-Digest: uSFdEReOter8WG8N5JUj1wyaJwUh08rlJaLdkUfLH2M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_lapskaus.png
+SHA-256-Digest: 58A56hoWSld/4ShHGN6A8wxfxD0CWM5+FB9m7AO91uI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_lefse.png
+SHA-256-Digest: 5I/Q9YcVwUb7KBrmC90Z1EoUMj+LXGgIeXHyjBjrecM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_norwegian_salm
+ on_gravlax.png
+SHA-256-Digest: XgncRvay17O+cS9CDM8rGM0DyqDZ28FLkfRTQQ/xf28=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_raspeballer.pn
+ g
+SHA-256-Digest: oD+SyoZUQVkZB0VlB4FkHIffGewrt27l/PRrKVD+rlw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_reker_smorbrod
+ .png
+SHA-256-Digest: yyuS//Vr2xW5beQb2qqFTLrthJ9dLfQbr9ffdStHi5A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_no_skillingsbolle
+ .png
+SHA-256-Digest: AQ+mMDZBesRwx/T2xLcGvQ6WC9lXneqpSXGZtQbxkmQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_aloo_sadeko.pn
+ g
+SHA-256-Digest: g+GAQmMcs1ttTCo5MJss9kErziw7ENCFOvBwMq5B24g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_aloo_tama.png
+SHA-256-Digest: Mrd6M7j7fzmVk/FF9ItNDRy603+26tNcRnx2u33bFlM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_buff_momo.png
+SHA-256-Digest: sqxXAZCrxtbb1X23AXp6MeXC2hkh6lfb4PG6PoPxjcQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_chatamari.png
+SHA-256-Digest: 5sTXlEa0RpNrXfDPRV1Q45od1mgjvbjukMAQ548APcQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_choila.png
+SHA-256-Digest: iKJOAODf+lHJVdXoZj+igC+NYjD7jJdM/lg+F2AHzQo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_dal_bhat.png
+SHA-256-Digest: DYypueTkYsvTJ1aBvKtL7zCmy+9XJkm3qkiNZF/ymPE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_dhido.png
+SHA-256-Digest: ooGKftqNM4poatf+G/z0r2xx+XikUtnRUPq9ouZ1Et0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_gundruk_soup.p
+ ng
+SHA-256-Digest: 2A8zb2ny8lNIB2XF65cZVfI+6yD3GVTuDqppgV6ORoA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_jhol_momo.png
+SHA-256-Digest: WgOsVsIbXRgcHLsdJpHJBg1rV03OQGUwafbSDXmRFK4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_nepalese_chow_
+ mein.png
+SHA-256-Digest: s1XdYUDuMZOIQrWJORuf7hunVmbdZiWekW9ZpMTifQ0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_nepalese_kheer
+ .png
+SHA-256-Digest: Wgi96KKdszLaZxrdS038s9CsU07jnPQfGOmi8v+asRc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_nepalese_momo.
+ png
+SHA-256-Digest: aEL6t3k5143wmKBi2PAQD/MrkwJVc7lLnOoYIEUuQ9c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_nepalese_mutto
+ n_curry.png
+SHA-256-Digest: Q4Qub0UNiqfkieDqzyHbXSO3oo/kD2DvYDcaNNBhO3U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_newari_bara.pn
+ g
+SHA-256-Digest: lQgsqISgAM441NnmEKj/6nGjoiPI9G+pYvVa79R+ijw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_newari_khaja_s
+ et.png
+SHA-256-Digest: mcCghrt9evAz727YYbHi+I824Fhbd4BXVCWqnVvfyQA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_samosa_tarkari
+ .png
+SHA-256-Digest: F1vwWQChkZ9yV/GFe0PxxK8xRNB6+h9hL/DIts3+IJ8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_sekuwa.png
+SHA-256-Digest: tnDQiOGcw7v+HVMqqpgvl/S+YZYEz6WolwQ8j7om2GE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_sel_roti.png
+SHA-256-Digest: +N8c7VTrmx0Z5FrtVyfPd1fxqxTiHSg+QkClCMZkYDM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_thukpa.png
+SHA-256-Digest: N1Eqm7RKLMqYIWFe+U6ZcZZKWQRfcxKwCu9bkqZQ3Z0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_np_yomari.png
+SHA-256-Digest: QW2eQyyVwkPDmQDHXsLY7zx7ZDn3qW2UvHBvTPzGyCg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_bluff_oysters.
+ png
+SHA-256-Digest: iNv+YBYz87+L+ZT8EcJ1BPafn4HsNAO2HPcM36+QdPg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_boil_up.png
+SHA-256-Digest: c0r3vo4cCcrUTeB5ekvN6pm+gI5rDiuvM4K8A/5Dxjo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_cheese_roll.pn
+ g
+SHA-256-Digest: ZgOnayJ5pjCCjISzJhPUmrgdtLOF4mX8d0UhioYvVFI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_feijoa_crumble
+ .png
+SHA-256-Digest: XtzMY5WiVWKp59NpcR3drIUMmW+SDTs0Oo1VRITsB2w=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_green_lipped_m
+ ussels.png
+SHA-256-Digest: 8HbcVNG508q7/xhyiXpWNyfK/F93M0JxamZDaYPraFA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_hangi.png
+SHA-256-Digest: oLSfIZsWikNLdyafz3Y8Ny4C3xpGM3U1mark3o7QmkY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_hokey_pokey_ic
+ e_cream.png
+SHA-256-Digest: s0pPMxfBvl4J1GN2+MN0YaCCaPzXuX8QHfoSeqZflE0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_kiwi_burger.pn
+ g
+SHA-256-Digest: wiQqeIppbgg3a25WKJ+D1YW1pg7TQlPEyh/KovHqhwQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_kiwi_meat_pie.
+ png
+SHA-256-Digest: NwaanbX8uV8ggjBiIQaanwLUDvfIBuJTQukQLW1fk2s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_kumara_chips.p
+ ng
+SHA-256-Digest: 054//+PaqCDrhbR8dQOeOt0t9tng1yuv5KvM0kgsbW4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_lamb_pie.png
+SHA-256-Digest: Qnylx/le0PBe1hKZ5yGQ+1AuGbxRj5+a1+ZBBkj7n4o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_lolly_cake.png
+SHA-256-Digest: Mg0JGJ1GfEGMSeUEj7bGhyfFlbljPGcbM3uJYUyNQC4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_maori_fry_brea
+ d.png
+SHA-256-Digest: G8L/MJyAKvWYonudX7fSXsuWNL6M/9L9cVER8iqNP9o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_mince_and_chee
+ se_pie.png
+SHA-256-Digest: ysEVdLzw7aAm10o37/eLPZoP98pBQ8orPAQYutK8BuI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_new_zealand_fi
+ sh_and_chips.png
+SHA-256-Digest: 5xDeWShEqsQwjEF3NitDnfIF47pkj9RwlKVocljd49g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_new_zealand_la
+ mb_roast.png
+SHA-256-Digest: zK7GRjZ8c7HIo4+C33oJY93+jI3sSreCsS1YTx+n1yU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_new_zealand_pa
+ vlova.png
+SHA-256-Digest: AcZnfV5RLEFmomULpfKCs/+U6GbX7zhyoDqfWHGxLUw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_paua_fritters.
+ png
+SHA-256-Digest: aM9mQfi9dQJAqbBZ46VcJ9wvwHVeYktOkr+X5KifswE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_rewena_bread.p
+ ng
+SHA-256-Digest: mcnp/lhtcX8hqU/287V4d8LwFj2X8eR54GNQAZSIuLc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_nz_whitebait_frit
+ ters.png
+SHA-256-Digest: mVI23Y6PXrx5RMzz2n6JS735CPISTVfV7E6DHJFx1ls=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_okonomiyaki.png
 SHA-256-Digest: 5Mz7oIQ7DTUhePbCShm/tdCUZiEWGciw7pYGEqg188w=
@@ -3378,6 +6179,43 @@ SHA-256-Digest: 1ZOywdA+7OXWANy34p3b1Qti+F0kse+p5AQnlAMKkiU=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_peking_duck.png
 SHA-256-Digest: +LhyoHnBhvy7nXAFmd96kAg1lvtrSKHYByd6cYhcLew=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_arroz_con_pat
+ o.png
+SHA-256-Digest: mDJvR9DywuICzvKLXmBTRyMOKgVDFHD5AgVKWFxVkW8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_chicharron_sa
+ ndwich.png
+SHA-256-Digest: 5bnB2rX1IY69ZNKputRRRADqPhghz8Pp3hqfED0MtBY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_choclo_con_qu
+ eso.png
+SHA-256-Digest: sri1WvmKqw6Vs8P4zxT3+3qMelfj3+CREv82BE7nWPE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_cuy_chactado.
+ png
+SHA-256-Digest: Avmvpta4KxWdI1tlCcFlAKtV8NkEqtb3No/eLYINbUk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_papa_rellena.
+ png
+SHA-256-Digest: mf6mm//Se++YEePIP+/4hcITdtCqwHnzYynkperubK4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_parihuela.png
+SHA-256-Digest: G/9nWuvSWqugD9m1FL95YJ19GJURBilfV0xNhxECz6A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_picarones.png
+SHA-256-Digest: uSELgGXPo2qVifa67XY3Aa/iwMNwXs5UHuShW9jli0E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_pollo_saltado
+ .png
+SHA-256-Digest: dcrxba93JsqMKSTE2ptGx1Ra+2LBJzzVKYJ5qIq9gdY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_sudado_de_pes
+ cado.png
+SHA-256-Digest: L2YS5iHo41DEMji0oAIASG59MEk9XvsHcHs4hqvkUE8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pex_tiradito.png
+SHA-256-Digest: bXs9UFB4CZj82RGItjoL1Oogx5YNCHy2+1AK/dflDJI=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ph_arroz_caldo.pn
  g
 SHA-256-Digest: 1jDhq/o4QzdlXt6ZwfZ5rXBJSJF8TwuNe/TJCPLAYzQ=
@@ -3447,11 +6285,231 @@ SHA-256-Digest: sXA4+aYCmzlv/bjMpnRLx6pn/1PeNOmgjXhneccecj4=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pho.png
 SHA-256-Digest: 2H80WxvkyhxaqiOkScjrxVzKxG1Nbt7BEcpZDyW0zmI=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_batchoy.png
+SHA-256-Digest: AqwOvrSkRjand5C1dojWZEfZ77SFW5aT8bosCf6TwgA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_bibingka.png
+SHA-256-Digest: 467HyFffNs5ZYThEMMCCSx7MdLe7a/FglRouJROS39Q=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_caldereta.png
+SHA-256-Digest: LCQSzLZibd4xvjIs3mmwzT9OJMa1MGVjfTYqleGOa38=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_ginisang_mung
+ go.png
+SHA-256-Digest: En9y40MVIiHRifwYq66rBFnSu4GDlih5m6wzTtMhPek=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_kwek_kwek.png
+SHA-256-Digest: 3POrgG/0nsThOYoZFtB+Wmtxt5tk1bxyXuZ91KqOyIU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_mechado.png
+SHA-256-Digest: h3WMzubLteSdV1xLaCIG8yQA1K8eh1WF9XtDzMr2qkw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_palabok.png
+SHA-256-Digest: wKFvt/Jyj0p1q872STBKdhJ+w5ur6N3PTBCJoP0WkVw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_pinakbet.png
+SHA-256-Digest: Av+qnCqpAGmPLejfgZJfQyIkhyvkMJCDd6sxOcTdPtA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_pochero.png
+SHA-256-Digest: r0nqz/BjZMLEk5CpPenn3vFwPraQHsb60Y64sWp+AZA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_phx_turon.png
+SHA-256-Digest: SgRuM7E4xCOs8hG2UIHg5m6SzrtmsD3ULkM6i7JpuwM=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pizza.png
 SHA-256-Digest: bU9HHNtz2cCbel3cbBxvUJuRMp1hnBa1iNpTZcJ9NCc=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_aloo_gosht.png
+SHA-256-Digest: ySzmNrX6e6UjuytgKe9dkSMBQPaJ/u4/S9wDAD0+Oec=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_aloo_paratha.p
+ ng
+SHA-256-Digest: WLzn05gwjPm90UuOKOwgcassgDYBAUKRdkS0NrF/q6o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_beef_pulao.png
+SHA-256-Digest: Hj6+SMqAdtEWHramldiUyXWm4dGRhwWTXS5fRkZhLO4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_bun_kebab.png
+SHA-256-Digest: u37E3KRWvyTwsv1XCs4LM9yKAdLLfkSzdigh1rPmlpY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_chana_chaat.pn
+ g
+SHA-256-Digest: jf+JHTj1S4Eg9CLX2hDUoykqjDgC2Bt5qitl8fxRtRM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_chapli_kebab.p
+ ng
+SHA-256-Digest: wkk3uryo0vwgJxdgMEnzLTmAcoreDIu/PmAppZYcQmk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_charsi_tikka.p
+ ng
+SHA-256-Digest: 0sy5fKoObtdtuP9GdYDBdL+ynXho2ua25ZdFLbmYPdE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_chicken_handi.
+ png
+SHA-256-Digest: DWZTd82843CCpytO664gMLZWtU50eFNp0b9zDTXgmcw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_chicken_karahi
+ .png
+SHA-256-Digest: hm7HzXXKzvWFZNxZ8sAUJWCWdjXJm3TDysuXP+Fjhlk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_daal_chawal.pn
+ g
+SHA-256-Digest: I7uarv20tcmYUiMjx07fdTMpB4OEB5YUrofhnRudq5Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_keema_paratha.
+ png
+SHA-256-Digest: KlxhMTCrTd7qurqyGe+jvytMDCwz743dkRk817nMz04=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_lahori_chargha
+ .png
+SHA-256-Digest: s2J7yiNSkzn91Bzf0nJDlP+CH75C1JTKO7XgPIkyxlc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_nihari.png
+SHA-256-Digest: y8p4HOpdgN8gefEXfiHL5OSBf2Whgl7Oc5Q/UlUj+os=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_pakistani_hale
+ em.png
+SHA-256-Digest: 4nSwLLV0aeo1n71b2LTdR3dfLy4SDabv8R4A3CH9El8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_paya.png
+SHA-256-Digest: aw06W20tdN0hRLu+gicllQn2Kf7lyahI73K4CubWh6E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_rabri.png
+SHA-256-Digest: 3eAkmlscfCrEusoh0Q6VA47BEYdYtjx9Hn95UkNp2PY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_samosa_chaat.p
+ ng
+SHA-256-Digest: KCKjTCzvMq22m+3kKDPNm1IZ8Mjcwzg3BmaEXoxuGiU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_sarson_ka_saag
+ _with_makki_roti.png
+SHA-256-Digest: e8lIu5Ul67gS6TAgt8QvyavRKhvtRxTQhISuSxY4DMM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_seekh_kebab.pn
+ g
+SHA-256-Digest: 7kuGw9obAEX++zPpEZ/T4lZOpQkoZ92lxhacDPXYB7s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pk_sindhi_biryani
+ .png
+SHA-256-Digest: /ZgvMWzwIyQ4m9h0i4LAKZA+8kE9WFc4vaU66amoliw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_barszcz_czerwo
+ ny.png
+SHA-256-Digest: 5HAC+SOiR0HDFNAwDwXj6lWitsTZyuNnw5c1CEpFXX0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_bigos.png
+SHA-256-Digest: 84pdagrsP2I5r7GENiDXrMF3f77cv60u/eK7HxSQ8Mc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_golabki.png
+SHA-256-Digest: ifhlY77R9vBOmkO0SzrXDZHKN0Qjeta+ZwbiUkc7dCw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_kielbasa_with_
+ sauerkraut.png
+SHA-256-Digest: lIBea83+Y+HnRQDz6BqWjqhrlWsWTGLUSRx7c4szTCU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_kotlet_schabow
+ y.png
+SHA-256-Digest: DkyHjZAwV7Q16tao/HikOs6N9wfaDXr2nLudUGYAVH4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_paczki.png
+SHA-256-Digest: p5SeW3Bf6VF60YSN+V6KU1111ZVYjiEWV7VJtxq9XVA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_pierogi_ruskie
+ .png
+SHA-256-Digest: 9VSwEdwwz81yE0LZ3wsZwPIXm0WuF/MRN/LEHS1Zr2s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_placki_ziemnia
+ czane.png
+SHA-256-Digest: K6ouVGAiFn2iF1VQvuHBNK866+uPNQWglICT8DJil0A=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_sernik_polish_
+ cheesecake.png
+SHA-256-Digest: KINAtX1t53u3TR0cs8TRLbEi9VXRzErTe4t1jqW2jUU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pl_zurek.png
+SHA-256-Digest: k2k1acvGhqyHcRGQB4HsuGDi/RkbVsIznljeEPSTDOY=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_poutine.png
 SHA-256-Digest: 2hp1jQB4fpXw+T16roFdATJodAuIDQAbsClMJmeNqZ4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_acorda_alentej
+ ana.png
+SHA-256-Digest: U0BtrJORNEO1YYBqxYxJd4htNWxp1BuqgzExmhWOVi8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_alheira_sausag
+ e.png
+SHA-256-Digest: +hGTyeXI6vF2AmWpO2ufTtYtTMWffIOheMoqXXPHPbM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_arroz_de_maris
+ co.png
+SHA-256-Digest: fFRzuCvpaF7q0U7eSkoHF216R7tgVjXsvopCtihdKmI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_arroz_de_pato.
+ png
+SHA-256-Digest: zIRoCe4h0kgnDiyIe1tfn42ND09qgt5kYJr0VYRaoqg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_arroz_de_polvo
+ .png
+SHA-256-Digest: pGVsJifLRWKzTUOOzW3BpjlDQyJfb71cMci3HPKIN48=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_bacalhau_a_bra
+ s.png
+SHA-256-Digest: TJoLJenzXmfbVI6fa9+2UIFvzGeMcrwYjNUkY+d2bGM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_bacalhau_com_n
+ atas.png
+SHA-256-Digest: CDThoGRc1ykaSWLABqVB7yiJVhofmfr9fzmQ5adzxDU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_bifana.png
+SHA-256-Digest: jRlxc0fZDvq2gTXyxUohxsuOnbz4Ywn9+xiACyQBuO8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_bolas_de_berli
+ m.png
+SHA-256-Digest: 57fNvdp8CiGikhsfVLzxdqaOMqUSAW8D46Oc1mM1g1E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_caldo_verde.pn
+ g
+SHA-256-Digest: bGoKaht7Dg9RfC+nDB1YoSE6+Qai0kBQqAq1sLXBxA8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_carne_de_porco
+ _a_alentejana.png
+SHA-256-Digest: /C+USJCjdPMynV1PbdyvISUOEUAk0msLLzwKG7+wamA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_cataplana_de_m
+ arisco.png
+SHA-256-Digest: YpfOj6JQ6WbuMxiygWbljlSzF+pGokwOm2lTg/dE6ig=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_cozido_a_portu
+ guesa.png
+SHA-256-Digest: w/EqwMcvAa1piVb07EwlxXi6qE7BBgwMA4r99ZNkBt4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_feijoada_a_tra
+ nsmontana.png
+SHA-256-Digest: LcAMo1lPi2H8Ze4fsuQ6Xu5canfWaViDQNvLEcjW8TQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_francesinha.pn
+ g
+SHA-256-Digest: blgn3diE7ir8gWsBhJchWxaLzBDbQKoADbCOiwVWxKQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_pasteis_de_bac
+ alhau.png
+SHA-256-Digest: kDJ8mgr+DcQx4UgaIv0cTZulEnSsDwzvJNu+D78OAqw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_pastel_de_nata
+ .png
+SHA-256-Digest: had1U7iLieVYZEYCMTF+jowZXa18WNCNKYYmYSDPZ8E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_piri_piri_chic
+ ken.png
+SHA-256-Digest: PyuyBcFvCyviHaetYThyLK20HXaqwfSMiF0Qrv7VI0Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_polvo_a_lagare
+ iro.png
+SHA-256-Digest: lTxnSPlrOJJ8j49vBkzpVeECpGHVT5fttxNOYLrRoUs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_pt_sardinhas_assa
+ das.png
+SHA-256-Digest: Tzc7Q3NHJxmDgG4DzhTwJtFAfwcKGLlphI8vi6zBk5Y=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_quesadilla.png
 SHA-256-Digest: qyH/RwWDu7xjQ7+7kEqGnSaQ17P7yDnOETgQ/CwyCXs=
@@ -3481,6 +6539,40 @@ SHA-256-Digest: ZJchOOymNe3t21bOEAPjV9MOW6HcrZYlHf0xAin1aDA=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_risotto.png
 SHA-256-Digest: 45mLwr8gkhAz0X4+g70rle3HNYoBPgD5crNm2N05qr0=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_ciorba_de_burt
+ a.png
+SHA-256-Digest: PcjUosZcb8FaMPa0l0LQvB3zugH29pcC0tyYQGwPbo8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_ciorba_radaute
+ ana.png
+SHA-256-Digest: 5Fim2Ao3pYERelyQrOz34noOizn4O3tNGcy8zNF3Kfc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_cozonac.png
+SHA-256-Digest: W99QzuEeCAuSsqBW1XG0f0RYvVO/1khit8F+hwFWn6E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_mamaliga_cu_br
+ anza.png
+SHA-256-Digest: 1u2inlWMh63UiyYaHVhpPjviavVWGYs9Yl/IFOrY/C0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_mici.png
+SHA-256-Digest: QI/jXiutmx/QkWwCi/+hpDVgG9vWgamH+fdtnRPxjoI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_papanasi.png
+SHA-256-Digest: XJV+BWDx1lE9z8bwmaSFVIwE47wlF4Fx9ud1/CPSxSI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_placinta_cu_br
+ anza.png
+SHA-256-Digest: f3nPeneQ9/02wqBNYPZRwQMojqno+6ejFVb5ofIxeVg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_sarmale.png
+SHA-256-Digest: 02fwUQX+KhF8n3tMw3WViAUZK3owHHZ9y2zgvEQd8/E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_tochitura.png
+SHA-256-Digest: iPvFvXuCWO0JXSTL4g9oiZs7wSKs0Y68CXAh0xf06ow=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ro_zacusca.png
+SHA-256-Digest: Jf+TKLXMYpuCJuRyiObtU9vhFhBZ9/cXMPjYligovNw=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_rogan_josh.png
 SHA-256-Digest: A5BQOCRZxYbTFhPrGzN9sb3U60nEMyLju+va/pV1yOI=
 
@@ -3498,6 +6590,10 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_buckwheat_with
  _beef.png
 SHA-256-Digest: f1+uybYB1u333JAaymEao+3H4Jj5SS6qBnNoK5JoiGI=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_cabbage_pirog.
+ png
+SHA-256-Digest: CZPxuZJ9fiFWrwPDkeiZo01p9ilJfIFrREfOIbDAEE4=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_cabbage_soup.p
  ng
 SHA-256-Digest: eqJkb1dENT6gTzuQ8TKV/gz6/Yw3sq6KySvPWfUZTcg=
@@ -3512,6 +6608,10 @@ SHA-256-Digest: aaMBK4O9pdb04ZuwN9mTsVCsEMMyEfMAq4pw4UykZeI=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_golubtsy.png
 SHA-256-Digest: xKHv0luTHzL437eC5HhQIG/4AQQkimpPfB15VvGNs9k=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_guryev_porridg
+ e.png
+SHA-256-Digest: AdvQc95olm05SYxXgj7QzJQJd5jfOewwlK9YQw+sLmE=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_herring_under_
  fur_coat.png
 SHA-256-Digest: 5H3Kw7+TEo+4/M9b0LsYmI6UqB40iJGeVWmr/T2FZAk=
@@ -3521,6 +6621,22 @@ SHA-256-Digest: YgaZqKODwC7gv1ugb1AwJn0TQMMsOSYggvMuB8+rd8k=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_kotleti.png
 SHA-256-Digest: CZTS2fMMFfwL43pJGv1nPqn0wzIwoTQZz5rsqSr2t3o=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_kulebyaka.png
+SHA-256-Digest: NoOqQm3/8tqWXPbpZoazZQrWcH9BFMgGodfot+/pBr0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_kurnik.png
+SHA-256-Digest: yiBVqu9gf8n+zvKP1gIpoOqzzBSYM5V59A5t9DZxliQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_medovik.png
+SHA-256-Digest: XYRXbgh8nWupkt4r3SUSLHaZ7exDRtupdoW0H9cVP7Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_napoleon_cake.
+ png
+SHA-256-Digest: vqaSld9q3vuwSkG4/u7wJH8auJOs4B/YOD1IzE2SHUU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_okroshka.png
+SHA-256-Digest: QCea/yEgO47N08P8/MCU5wWA4kQ30WyrFLbD90YveCE=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_olivier_salad.
  png
@@ -3536,6 +6652,16 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_potato_zrazy.p
  ng
 SHA-256-Digest: 0jwlhfZt8LGInC11P6olQdeEreBMAhk7otBINNOPfq8=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_pozharsky_cutl
+ et.png
+SHA-256-Digest: KZrhGHVO6TmVYzS4Bpl1MU9St6iUxHfq9sHRePYM2Bc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_pryaniki.png
+SHA-256-Digest: 5TfiqK4cY19FUENmvj08JT9bnu1JWt+ciwkOORNNu88=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_rassolnik.png
+SHA-256-Digest: CnJ7bjnbrTbTCGQDmHIN083q6ERV4KF0ACRE8VLrxZU=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_shashlik.png
 SHA-256-Digest: +rsDeyVa7GgtY4qvkM/Nzg9RJVuP5r2qRS5ikEhlaSY=
 
@@ -3550,6 +6676,71 @@ SHA-256-Digest: xETNYBklBW9s+mvIGjyhnsMB0hasGB93z/eILXM4cBw=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ru_vareniki.png
 SHA-256-Digest: 62sQygOp/VFtnPg7ArKspNDlgckSnETt3/8p0zeD4+Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_arika.png
+SHA-256-Digest: BcWzendZESMK6iTiVtljgyHMt+ce0c0Q1tttZjI5Nus=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_aseedah.png
+SHA-256-Digest: KO1hDprIGifO0pL08UhIhM/qZ9jZAaXtGOcMqRDB+1E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_haneeth.png
+SHA-256-Digest: 3GhhQGylSH/pW/SxOfqlFP02wv8JeO6+QW2Jv98iZw4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_hanini.png
+SHA-256-Digest: XPMPkH2m2Vy4lVrLjr1dTezLlkMuswxEhis64ByoF/k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_hashi_kabsa.pn
+ g
+SHA-256-Digest: 6m96rpF2/E7NxhTUWfJZ+y6XE1NfGg2zBSneeicjYVs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_jareesh.png
+SHA-256-Digest: YoW0xRW/jdP/aHLSyD2yxtgv+OTPpcUJVsXDcXgZZqU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_kabsa.png
+SHA-256-Digest: p+dCxeh2O4HklBrY40RzGx/W0FgdarWeE72jjwumGvU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_kleeja.png
+SHA-256-Digest: copGnAtCMtUWqzaOgfXqrFxzTtxDmBntk1pETd3Ztfc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_maamoul.png
+SHA-256-Digest: GpZvwswUgxfp+2P/+yANAUqoHVQkwk6LFSBXPlIr+aA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_madfoon.png
+SHA-256-Digest: dJvSFRbnBF+Il/8gnOVDXC2UemDp3HUoQPSohPRyHPU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_margoog.png
+SHA-256-Digest: gTiL1HGNl6ZqoW4YfHVYRjdcRHJW+Ni+5kt4Vupa4BU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_masoub.png
+SHA-256-Digest: P7gHUa4h3dFvC8gNcxq4ZRqTzUg6T/+Qqr3VRXTcgLo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_matazeez.png
+SHA-256-Digest: EGmmuSmXFTb0Jznrhkj+6LjEr8SzP7LxUhMIHyOqA6M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_mutabbaq.png
+SHA-256-Digest: Qsj7cbyKDo0bk9BWxlm1bM48CmZOJPMTGqQnR0xtKAg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_qursan.png
+SHA-256-Digest: /p9gSQuho9htH9iA5X19krA2f7KFVnp/CX+9BSr+AOM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_saleeg.png
+SHA-256-Digest: YEHpuob7mEp5AYCOPMSCY9FkRV1OARsHx9itKQXx71M=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_saudi_ful_meda
+ mes.png
+SHA-256-Digest: vwefolBioF7a4SiuRV6wNpEU7TrjBySXR/fhTZD6tsY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_saudi_mandi.pn
+ g
+SHA-256-Digest: PwkLShQVclhlYqqKyqLLkrfrYGhT3imeU+mYmtwDj8Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_saudi_samboosa
+ .png
+SHA-256-Digest: S0pLG5lc0WgA/Z9yXHAH5AHmUWtIlpQ2v2V4gDP/8fg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sa_saudi_shakshou
+ ka.png
+SHA-256-Digest: aEKHe7hRuH6G5YLX4gRxhPejDahb5igQOeBoTvbIM2s=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_salad.png
 SHA-256-Digest: dz6RM7fqxSsqu1O5PuH2r+H7EH/R8xEv5Ex7Qj0qvio=
@@ -3568,6 +6759,76 @@ SHA-256-Digest: eSonsfuCZVh8yOqHAP4B5KNqn8lOW5wWN6n7/iPlwBQ=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_schnitzel.png
 SHA-256-Digest: ohldPs0Fv3YFX48lPw8T3Xd8EF64MVOZ8R7d55Kq5bU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_artsoppa.png
+SHA-256-Digest: wMxmvfFFL92l7qwaIER1CYXtM3VIgPY8CA+T0JSJ1I0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_falukorv.png
+SHA-256-Digest: XFCIWnGTRx80PGUdyWfl05mtlI7Qo158Zw/6U+YoZB0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_flygande_jakob
+ .png
+SHA-256-Digest: 53ivflUf3Mu/aCGz9pMeUhP8yixvJL8D/b9U3THZbaQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_gravlax.png
+SHA-256-Digest: 6KqLx2dkcPbL7XyjkAmetBsEjgplg+WgYw9bqY9haco=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_janssons_frest
+ else.png
+SHA-256-Digest: f/rXGUUzBHEgMRzJFyCgY9tQnZ/Khszz84GFfnRAXNc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_kaldolmar.png
+SHA-256-Digest: ZjV1bW4ms/G0CULPNw5gTD4NbyC54y8QXHWGxyMkh6g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_kanelbulle.png
+SHA-256-Digest: CuHXKNxiEGhFFTL6jn3Vy9KKAyIjtPMBsg4toW65ghw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_kladdkaka.png
+SHA-256-Digest: dbiFpoo7jihvhT54QYSoGs6V0atLA1VaPrj0fmNDqc0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_kroppkakor.png
+SHA-256-Digest: +vEmIqe4sFSLzD0B0m+QVh1Mdq7upHY3ERx+Imaics4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_pannbiff.png
+SHA-256-Digest: 8tA0fMu0jWGj8hz4GuqUjqPwOsM0C74gSdLIQ7GAUZU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_prinsesstarta.
+ png
+SHA-256-Digest: v6Im4KsEW8h5ZLS1lsRgb2y51PHyl+BBVqJFtDH4480=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_pytt_i_panna.p
+ ng
+SHA-256-Digest: t5hxHePUvRFoboZyoPyD/90FP6eocMPzTJOemiNFJRM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_raggmunk.png
+SHA-256-Digest: 4u07z9HWGBcSjAl7EE/8NpHf0m7Ohnul/pQWq3yfkQ4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_semla.png
+SHA-256-Digest: I+3Dmir8CVuLOy5pwW4GaxJHO4Cz9Kn4k1sSZa+PluA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_smorgastarta.p
+ ng
+SHA-256-Digest: 0SDUyQR0DZUiT5o0VpSHMJ1zU5pXGioDF+G3dpjeO68=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_swedish_meatba
+ lls.png
+SHA-256-Digest: yE6GfedlXwD1+BYkSom6qjh4nu5i0TMrhR4Z3h6+RpQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_swedish_pancak
+ es.png
+SHA-256-Digest: ckGKv2OSEqZQDQhHxZ5iwwlBlwS2OeyeKZxu2dgGIWk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_toast_skagen.p
+ ng
+SHA-256-Digest: VsjAFZQdTy7E2LLDsryRVniJx9C8qDib+x3mRX0+4wQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_vasterbotten_p
+ ie.png
+SHA-256-Digest: 1GHbgydcXG4m0QEbVADyZdZw2Fb7Wf2hqEQATx46bVo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_se_wallenbergare.
+ png
+SHA-256-Digest: HyQh6SfMrrPU+Z9R5bldGjG81ws9X2cAtCLkpTxhdUo=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_bak_chor_mee.p
  ng
@@ -3589,15 +6850,30 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_char_kway_teow
  .png
 SHA-256-Digest: eeA8Pt/397VcoCbE5HoS5Sh0NB/kczpOq/T3Z0Ojijc=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_char_siew_rice
+ .png
+SHA-256-Digest: 9vJWE6nCvE6Nwj0I6Spr9t7R1JmE7JFCsC+Ke1p0uas=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_chili_crab.png
 SHA-256-Digest: 8tQcpFQ6dM4QNmk8CRf9DNSrSh7mYb7QCTzCT2jwIyE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_chwee_kueh.png
+SHA-256-Digest: OML3SoeQzSy5Zyeys10aFAtegic6mu+uWa3QkgensqE=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_curry_puff.png
 SHA-256-Digest: vZcmwqZhZ7qcZR42wUFNXsOH63zIk4hhtGpzd0KecUo=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_economic_bee_h
+ oon.png
+SHA-256-Digest: Q9+rLTKABYeaEeO9KoxmyDL4UTtQL3PhNat/HjQloBc=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_fish_head_curr
  y.png
 SHA-256-Digest: MjOjBKdKxxzeyLv6alP8/GwtT6Kxkz/gTjJMqNOcTa4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_goreng_pisang.
+ png
+SHA-256-Digest: CrODWVC6CMsrh52fzW+qvfytFUK3Lp/HCSM6RsKF4LQ=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_hainanese_chic
  ken_rice.png
@@ -3606,6 +6882,10 @@ SHA-256-Digest: 1rx4j9NGMDgL+xWoNI1Md8xbPB9mU6388IeP84LH/34=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_hokkien_mee.pn
  g
 SHA-256-Digest: jamtuG7vX9994Bqxo1OFsHq1vQPfKTVZIHUknhgx9BE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_ice_kachang.pn
+ g
+SHA-256-Digest: vV9g8yDInPUDQ+rz16qopugz3L+8YZMjOd4UbtDk6tQ=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_kaya_toast.png
 SHA-256-Digest: QBBZ1xMJqYsltmjWe+ZS3gE3qCcV9pobiE1r0YGC7bI=
@@ -3625,6 +6905,10 @@ SHA-256-Digest: s2pHc5vCA9aptKDYNQj2eELKi8GPsdwhpdfltTLTAgM=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_nasi_lemak.png
 SHA-256-Digest: hGydtAwRwruNDjLpyvVOI4iEgIgaiht1jabApaMIjqw=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_nasi_padang_si
+ ngapore.png
+SHA-256-Digest: JKIV3lz6y07WkN5VyuCeS0jhsbvsXfmkJACuns/QzmQ=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_popiah.png
 SHA-256-Digest: RI8dAmY5m89o/1icuGNHbGsF2bl7syWJ7jK5iR38LZ0=
 
@@ -3633,6 +6917,21 @@ SHA-256-Digest: 8h2z92Tp6qxeo+bD5I7VdUetMFHrHheui8FNsp3jm0Y=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_satay.png
 SHA-256-Digest: d/Y5f2GN4rK7RoDWd4U9CgEzwJBnrEP3EiDMVhEc+9c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_singapore_fish
+ ball_noodles.png
+SHA-256-Digest: nqsaWAfr8u39MmsgYVjiCF88OrcwskETa4Oa9GMPl0E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_singapore_oyst
+ er_omelette.png
+SHA-256-Digest: ZZk10oBSxCYEATE6W79EtrRMy6FFAIGmhyb/EKepeUo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_tau_huay.png
+SHA-256-Digest: yCPvqE1fFkDNuLRk+DRQoYaQJuvBU2eQbCfs8sJpwnc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_thunder_tea_ri
+ ce.png
+SHA-256-Digest: amiw+M3/4nx0O3LahAuTjEH6qqEobcmA/QFbqljJHak=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sg_wanton_mee.png
 SHA-256-Digest: sPVtjka8ylNPyPPU0O/DHIfjmxc0V5x5XO43tA3HyYQ=
@@ -3665,6 +6964,44 @@ SHA-256-Digest: HNKxh5d4H5McydjYI57CaPVivVTvePWkkbEtUtU2j9w=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sweet_sour_pork.p
  ng
 SHA-256-Digest: mG+ILcgn0vaStzOHvWqk35s/NfMAcynnEkH+RleQ6ww=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_fatteh_shamia.
+ png
+SHA-256-Digest: ztaODL0tOsBr39YAkQ2e5aSiS8QoirpKhkq6GpUQw4E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_freekeh_with_l
+ amb.png
+SHA-256-Digest: L/7oKdx6cw8bYjksgJ6RVt8TwWyklJDswLCMiZVgmvk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_halawet_el_jib
+ n.png
+SHA-256-Digest: S5nZ1QQptasjI4wDnDvSFjsNrQmQFG1PDZeluMjZD7I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_kebab_halabi.p
+ ng
+SHA-256-Digest: eskCXKGLPrpQa/q0ggij6ekNEYu4pwzttopC4TGxIj0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_kibbeh_bil_san
+ ieh.png
+SHA-256-Digest: K4fbA49uQeXcNSeFHWOAXG6FihNmnjeXNW2GCJu8qUs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_maamoul_syrian
+ _style.png
+SHA-256-Digest: al5U7U8/Hqyaf54C3NDGpDBZ623mGw2FVfecHoDONx8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_muhammara.png
+SHA-256-Digest: aN/1rmm2l+LiG0/N4uOJp44Ls8i5Aitscr2+/R1LteY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_shish_barak_sy
+ rian_style.png
+SHA-256-Digest: iochCJl1hSxZx2+l1eWFCiowj0mELbIgpNIgultUkF0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_syrian_shawarm
+ a.png
+SHA-256-Digest: C45uLzNuRL/Y8++jqCihKEiPXZTBj1OwEoH/7a8B1Ww=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_sy_yalanji.png
+SHA-256-Digest: XvmLZO7uEldENNKgWwEQPhSpIiNRHHdVrzgoa83eloo=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tacos.png
 SHA-256-Digest: ImUW7/IVxz1XyGU11+qRetz4MIncn8E2ZlwBXEbZ+Mk=
@@ -3749,6 +7086,43 @@ SHA-256-Digest: PzwxmFOYXQyJyeO6pDnxPk7DkWXdBFBPq+iDMnJeliA=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_th_tom_yum.png
 SHA-256-Digest: QIxMrjN6URbc/WCjWX1nkB/j74Wd8CuRH35IOriiGI0=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_hor_mok_pla.p
+ ng
+SHA-256-Digest: 0YD8o8QtD5ErSCmQVzEO9MRa0MJrr7mRAhvcq5shg+U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_kanom_jeen_na
+ m_ya.png
+SHA-256-Digest: cv3rS1n/X3chv1J+woLZdqHn2C6nZhrU59L7JjItlDM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_khao_kha_moo.
+ png
+SHA-256-Digest: 147/bCh96NDuPh8cNgw/UGfpehEpjKAalA4GqAiming=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_khao_kluk_kap
+ i.png
+SHA-256-Digest: gxsEWm8GFWFXID2sVKPwfWAw72IWV6eIDhOH7HcagXs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_khao_moo_daen
+ g.png
+SHA-256-Digest: EQv16H4g+Ix1Su6lr0N9Tz0pkUfZ6JdTThD0eVGXwSA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_pad_woon_sen.
+ png
+SHA-256-Digest: hvVU8iMpw7QNVHFiSslOr/xJTFdYVGlsPouNHeymw8I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_pla_pao.png
+SHA-256-Digest: CCs/xY1Tw1ds2SFxOV5KYxo6S/bQt56X5uvdKFOpXw0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_rad_na.png
+SHA-256-Digest: vlYLBnnessIbzNQcuaTa14yFlt5646c7HkKzXygA0ms=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_sai_ua.png
+SHA-256-Digest: RgqS1wAxzCQwCAGpoyBwUD6Du4WiBgUq58AIUIqoL0I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_thx_tod_mun_pla.p
+ ng
+SHA-256-Digest: 1aYN0vyncnmIDxGXHqUOWPBkwAv9AHKYv5HO0IQDmcs=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tiramisu.png
 SHA-256-Digest: r55kXspWMk4Zw2cwGCqAYCruKOQ7rMHV4BcrAJ6GTd8=
 
@@ -3828,6 +7202,147 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tr_testi_kebab.pn
  g
 SHA-256-Digest: z1+bXeMkl73WpFGkt4/W9LF9VCWQ/kYN7bUhKp9BzhE=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_ali_nazik_keb
+ ab.png
+SHA-256-Digest: Zqflb3/o24T2pkmWnKjB70x5gtfHSSi7eeLkt+NMLp4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_cig_kofte.png
+SHA-256-Digest: 30ROkQQltHo2F9gIIMwwXmILQbpTPlKbbROa6ner5Lg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_ezogelin_corb
+ asi.png
+SHA-256-Digest: 9fbwpKec+UsHM3qDodwwCIYQHFtgFAf3zIx0Nnf4o+E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_karniyarik.pn
+ g
+SHA-256-Digest: OI9Bxjf62N0dVMjs7D2QG367ODO/Llzl2vMK//Zl0vs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_katmer.png
+SHA-256-Digest: UPX6Jg5657wJMrxvJknevnAljAa1KKb4hzNnAgHWatg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_kokorec.png
+SHA-256-Digest: BGmghjvuUDfZCqYpD8NL4s7qmYeCj/oBZu2swE6sSVM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_kunefe.png
+SHA-256-Digest: yVTy3LjS+0UrzzsAkrM5K4164Gmkoh5dRAGT6TMSVDM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_mercimek_koft
+ e.png
+SHA-256-Digest: XlapDehzr/sI7yN7mlj8VUeswCCn1d+0plYI8D3T6oc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_midye_dolma.p
+ ng
+SHA-256-Digest: A9YjlT+7JaYFgWRAZoeAtIZVS475ja8TDnPy8YUCrNk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_trx_yayla_corbasi
+ .png
+SHA-256-Digest: VbcjTQb+8nkRgurFuFPQhkP5JJ1KqCN5X3HAll8JsXI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_a_gei.png
+SHA-256-Digest: mi22qkl4uQldi8o1tJz3enBbxWRlo1jUS4N4f6/2lXA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_ba_wan.png
+SHA-256-Digest: aRlGBNI0r0uDR5Nw28XSY0SLVqUdNDLIcyIQ89n4rHo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_chiayi_turkey_
+ rice.png
+SHA-256-Digest: 3ERhfAyAqAKuHrtDGb1FP2nVKZr7vHF+HAKIe8tA1uE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_coffin_bread.p
+ ng
+SHA-256-Digest: G2x+j9GRsURXRCpt63ED1BDZKq3aaPvIcbqFw6Tz3PQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_dan_bing.png
+SHA-256-Digest: 2wbn7CJwakZdsT0LhpFqAd9fjEuBoeFvLPAxL/luFZo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_danzai_noodles
+ .png
+SHA-256-Digest: wNfw3eBCm5qtiCxtaWoWl4w8nSxIzYcbGYLeE55iYfs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_fan_tuan.png
+SHA-256-Digest: lSwFjyetE8AWKSsVWGpq5OPtj/3Sy87CKhPtv26OTdY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_gua_bao.png
+SHA-256-Digest: 9GgBuRfg9Lqq3mtxu/XnjmnMygsmEMLDaNdv1++Lfts=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_iron_egg.png
+SHA-256-Digest: LKYvssfM7JvSDHcPEpLm2aNGGENBhoeYOizcoZQNhOM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_lu_rou_fan.png
+SHA-256-Digest: 0u6vhLQOYTTbd7ukVBQVJ4vMg+J6PiDtVoWZ50FMdMQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_oyster_omelett
+ e.png
+SHA-256-Digest: xqHYaiZWG14pV0VxWd1Enti9YROYr/FTByw7f3opgHo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_oyster_vermice
+ lli.png
+SHA-256-Digest: Ic+xmGJHLYm5ODUtRFX6SXRap9vMzsDKWeTVgFPNgvk=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_pineapple_cake
+ .png
+SHA-256-Digest: y9EJXUstunGNPu0FR8G6aLCUWdtXWP30ynQHqxqnHnY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_scallion_panca
+ ke.png
+SHA-256-Digest: Yxk5DPOjLjG+XsMS0+eidfc0j3pQt95UHygeW80n+5g=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_stinky_tofu.pn
+ g
+SHA-256-Digest: YqBiMyyzwK1bLqBlplDar3+IZ/c0oUzrTHqH9047sVg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_taiwanese_beef
+ _noodle_soup.png
+SHA-256-Digest: xI+O4DHm6+NfSLCTJ9MZcIpdS5O99uGge8MQC/7XMIY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_taiwanese_frie
+ d_chicken.png
+SHA-256-Digest: nnTCktjxi6Yb9ET3YWZ92l1aMkGWNOmvRj6w/jbSdVU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_taiwanese_saus
+ age_rice.png
+SHA-256-Digest: E3DOp9xttSy0RB24o51a3QhZlnx4JeDQ/pdbgam5J9s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_three_cup_chic
+ ken.png
+SHA-256-Digest: EBSBauILEWFiATIeGF0mweh2XHHEKUZDue/LMLsBk0Q=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_tw_wheel_cake.png
+SHA-256-Digest: OdZe/97WUxMJY1/sy4gdaJlpTQAMmxrZ03VvSe0Tb1U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_banosh.png
+SHA-256-Digest: WrFDNwcdXMSZxix+7p8A7+9a450U/xiUHMS9qJaBv8E=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_chicken_kyiv.p
+ ng
+SHA-256-Digest: 9xZp2nH8/fDwufKQoIC5nSG8Jgqq4kd2YJf7KJXdzDI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_deruny.png
+SHA-256-Digest: XUi1eyk/OGYhAPolxZEgWKrOD1SFJBf0qJtPqy1MaIw=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_holubtsi_ukrai
+ nian_style.png
+SHA-256-Digest: Wp3FEsekiDLYUCAMbUhjetZYy/9B+pepmr5tLivWb1U=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_kholodets.png
+SHA-256-Digest: JXZQiiBeFvJjPpMRZkdSPK6kEIziE8gT5bgun4Krm+Y=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_nalysnyky.png
+SHA-256-Digest: QKpq+pcA8ypUObbl28ka7vhuvOEg+8CIH1ZqMsXVYcE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_pampushky.png
+SHA-256-Digest: LZFV9B0BMuIIgUZDbREfTEw017P23A7OdrWZ7UUd0EI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_syrnyky.png
+SHA-256-Digest: /qe33boul1zIcTSDG/6c29BWk4WHgWUxr3zH/xxIm+w=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_ukrainian_bors
+ hch.png
+SHA-256-Digest: 31iq3AjgvmA1Su5Qtm1p9pDcAVCf3diyuWvIzFjkAVA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_ua_varenyky.png
+SHA-256-Digest: MtBx5K6FEVsQpLM/bDT0UkI04gmLw6q6IeJ9YQakhA8=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_udon.png
 SHA-256-Digest: 07wo1g+bBWTXJ0eLadsMfvag5Ikj7BErqw7AZFoj9Qw=
 
@@ -3906,14 +7421,61 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_us_pulled_pork_sa
  ndwich.png
 SHA-256-Digest: Kn9mQhFHDPBiTFgt8RushkF59hrtXNOf7na/s33LUDQ=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_biscuits_and_
+ gravy.png
+SHA-256-Digest: +xXSRPsyF450pF0ehCNK1F9wLsXEHPCm1WuaFiOmvh4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_chicago_deep_
+ dish.png
+SHA-256-Digest: SxvbnhyVt214jAWiLyuu/OeSth8dIdYDR4bvx55iUPo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_corn_dog.png
+SHA-256-Digest: E3LJQsbshRk9N7dB47RBSdSsNPOBynKfkmZMiGGT4cQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_gumbo.png
+SHA-256-Digest: CuHShwySZRuEe7epr8qCMnMCn1QZxlWSNWHtojLRKl4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_jambalaya.png
+SHA-256-Digest: 3bbw3UeiawhC8r5ZXhKDQDpil5I+CHC74MDtKGAazy4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_key_lime_pie.
+ png
+SHA-256-Digest: HXgAWb5IKkCUh6zOWb8bLqvFXt/QUmiPiiIzzPVpfkI=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_nashville_hot
+ _chicken.png
+SHA-256-Digest: sBVnx8S1aocxOJP4iKuWL1mVTYfZHQ/LCKxSXXWM19I=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_new_york_pizz
+ a.png
+SHA-256-Digest: KgRWCJRCBx2Zq4EiRCA2EWoT244R1fdBxqJPFhtwPRg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_reuben_sandwi
+ ch.png
+SHA-256-Digest: GosRrmAaAAARpwQQuAjgeJaXgmTTH4v4o5pp4WC2DdU=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_usx_shrimp_and_gr
+ its.png
+SHA-256-Digest: C034Wn9dBF6xedbJx3dmoIwRqg3nq58vW81tweOD6h8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_banh_beo.png
+SHA-256-Digest: UATthc0xZjrJVUmouFNsnbF5jCI2Paa8eMPHkRk6Z0Y=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_banh_canh.png
 SHA-256-Digest: al5yWVhIVjDPxH3KhfWe8mG5kO8ivaM6o6xZz4m92C0=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_banh_cuon.png
 SHA-256-Digest: nZ7DGZEZ22j5891vRSsar4LVJ98PGiRbtAK4LIBMDVg=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_banh_khot.png
+SHA-256-Digest: T70NZVUbekFNeO5v6K3fHXXP4pNyt1ti1vupJp7culg=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_banh_mi.png
 SHA-256-Digest: UIt7POqzwwGBRFo6Gkai2YfRsZCw/0CyJ5YmkWjKEWE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_banh_trang_tro
+ n.png
+SHA-256-Digest: KPMjx6Y5BPxcZCev3LGYIThYma6N/NY1jlvwBztRwo4=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_banh_xeo.png
 SHA-256-Digest: npod5FnQYToKdGMswsV9CUCbKBLMUfP5acKzkfOeIIM=
@@ -3926,6 +7488,16 @@ SHA-256-Digest: rayD1jv4qg73rDMMT/04flj5gq2Gc9PZmm7GaJ0p4b4=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_bun_cha.png
 SHA-256-Digest: i/UoSgNv3H/vDeifP5wltL6GqPdWgrQaDsSPtqSnyuc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_bun_dau_mam_to
+ m.png
+SHA-256-Digest: TQ+vhUm36EXhXdVGkDOPqJeQdifdoQSXNTuecJ8oGRE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_bun_mam.png
+SHA-256-Digest: aERzc/4oLwtkcqa0iG+6o7KriUbiJM3N5F1IVWy+gUE=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_bun_moc.png
+SHA-256-Digest: Qfwk+bonhV1myvH//2S6sSDJBeNEMzqIuwxFmVGM5HA=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_bun_rieu.png
 SHA-256-Digest: HaXhieGYxMIcqES1s22+QL8w2kIdT0KK+yUSYm1rhzs=
@@ -3940,6 +7512,10 @@ SHA-256-Digest: 1ZeD+LdjUWiC4K6xNsklEPrxaCEFJU+Oh7cPOadS4Gs=
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_cao_lau.png
 SHA-256-Digest: ++5UX7DrboCyrvlACoK1C6xANNGuLcZa6urq8fuKVGs=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_cha_ca_la_vong
+ .png
+SHA-256-Digest: tA15S5XJi9APwR9RzVbK1fCGGdV3hXi+nR8WqAm0+A0=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_cha_gio.png
 SHA-256-Digest: LOeukVPTmi+rHDGjAM66JVhu1C32bSQO3AiOXvUbyjY=
 
@@ -3950,17 +7526,28 @@ Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_com_ga_hoi_an.
  png
 SHA-256-Digest: LBJ9iNLph+PmO3nql3z6LxNF0GA+cVo3/ZanaqJZeao=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_com_hen.png
+SHA-256-Digest: P4ozc4Sct8xAB724NEoZuyQ2RiB6tgnfQMy1OhaRy0A=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_com_tam.png
 SHA-256-Digest: nPZYoL6W4/9FB+O9HUpw8S+VdXQR0KFH37UyleedLL8=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_goi_cuon.png
 SHA-256-Digest: LwF2LuYIL4HDAFUemx5DgOhixw0E1Dj4hO1sEl8A5y8=
 
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_goi_ga_bap_cai
+ .png
+SHA-256-Digest: oB6U3rCK1AT0Z9KcDcjv/ClHmrZY4AA6D04l1tgcVVo=
+
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_hu_tieu.png
 SHA-256-Digest: xDoDoPQNFqf9M+kWSsebYAv6fWsrMYRQwQ9gxZnde44=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_mi_quang.png
 SHA-256-Digest: Kl1H1ZwVGvIvY4uCYrXhckNBeROERBPZv4AvnhoXOTM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_mi_vit_tiem.pn
+ g
+SHA-256-Digest: Tk6brcttw50cbw6yJYQTFVtSmvZdRSvYLvHcNAPhYFs=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_vn_pho.png
 SHA-256-Digest: HV2P6j/1t9oDZbUC0+xyM48uOGW1u781AKy/XAyF6nM=
@@ -3976,6 +7563,79 @@ SHA-256-Digest: i17gw8fSR4KQ5rNcNL0IDkjR71YPkoZELY+F9ogGMd8=
 
 Name: base/res/drawable-mdpi-v4/src_assets_foodicons_xiaolongbao.png
 SHA-256-Digest: eeOvUqOWSM6NTKie+OSq2HLkn5d/FUpB1GxSFkx+JWs=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_biltong.png
+SHA-256-Digest: ZPtly8Bd5M/MPXh5c9fcVTkGxfNkHjZN2wPhuO5e5Qo=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_bobotie.png
+SHA-256-Digest: 0Yqxsf6jYyxEBa36NFcXMAeqCM2UuyhQLpAbaEmKhkg=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_boerewors_roll
+ .png
+SHA-256-Digest: KtBBTPr6OvLo3lwxMoPolpTjAoGH9oFNc0UBqmZ67sc=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_bunny_chow.png
+SHA-256-Digest: FtOfbAz4FYXl7x1YZgqQEmYxKzPXeUIwS+knQxGLmm8=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_cape_malay_cur
+ ry.png
+SHA-256-Digest: a6kQjtbRNxFuKYFfj3padDuvvPm5XXvpsTkw4Nx/9uY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_chakalaka_with
+ _pap.png
+SHA-256-Digest: a/3tO0Y+L7w2fS5Jgg07ESoHfnr4RN3t2W/433k8YWA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_durban_curry.p
+ ng
+SHA-256-Digest: jB0dzDrHVtefu31Jx12/tyZiwKbuFqqFB2OGMeJe2oM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_gatsby_sandwic
+ h.png
+SHA-256-Digest: pJ8Kfgbq9i/Inyh7uWfVJzT7Yedtuk/dXelJjcLMrwM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_koeksisters.pn
+ g
+SHA-256-Digest: 1RFUVDOW+OfgI87uY2Tix6v2mFzOyId/OxPLKf/04GM=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_malva_pudding.
+ png
+SHA-256-Digest: vGZsg3Bl6LypdNvOHbyZ9BP0VpIyp/mCrm9gft4V8BQ=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_melktert.png
+SHA-256-Digest: ccy475E3iOXPMGZqZV7KW7DyfJaJQ5TRyqnyJdD8OpA=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_pap_en_vleis.p
+ ng
+SHA-256-Digest: ADaKuXYo6MNj4ZH1sRs+lM+l+FGQZwSFkP5P4ZncY+c=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_potjiekos.png
+SHA-256-Digest: a8r9rAc5IS7n/gyyHcxWnrJVGP2sL5zuHxUhsmpyu6k=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_snoek_braai.pn
+ g
+SHA-256-Digest: 1q6YHdf5QHUAHueDy/lA9pQqgUWL8cVeeslktBLCda4=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_sosaties.png
+SHA-256-Digest: iLBOsI1MnFb3kukYpJcQnsdBI7xMa59G5IuboBK04l0=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_south_african_
+ braai_steak.png
+SHA-256-Digest: o2cLmQJmxm3/I0HMZ7vBZUNRfyw1kV3Lnp6fIQDMj/Q=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_south_african_
+ samoosas.png
+SHA-256-Digest: ZSjydUHDqrxLOMMda4QKObDqPYxnSAsnZy6sPuAb1wY=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_tomato_bredie.
+ png
+SHA-256-Digest: kZ30jFRPWP4EslLPAkAKsg44A8jOUYXGUZXjjqCkQ30=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_vetkoek.png
+SHA-256-Digest: 2Lp+S67pP7lm6dcHYsps8CXqqvpSKTcCXQRviagfz+s=
+
+Name: base/res/drawable-mdpi-v4/src_assets_foodicons_za_waterblommetji
+ e_bredie.png
+SHA-256-Digest: 3u2HwRbY9sNLR1hwI/lAepXa3bCKyap570954VuvISs=
 
 Name: base/res/drawable-v21/abc_action_bar_item_background_material.xm
  l
@@ -5553,7 +9213,7 @@ Name: base/res/raw/com_android_billingclient_registration_info.binaryp
 SHA-256-Digest: 6h0wfiZ6eQnA3aApM0ChVXZgEcOSldBprJe48pouwr4=
 
 Name: base/res/raw/keep.xml
-SHA-256-Digest: M3a3C/NZ4Kg77ziCVbindQgdjoohkw/JklRZST5mFQg=
+SHA-256-Digest: hnMugqA/VXNNkeqkiUcmK/44c/8GQMxlXgMIgqbBX3U=
 
 Name: base/res/xml/com_android_billingclient_phenotype.xml
 SHA-256-Digest: 2VXlUZ/yR3wahwtZaz8RpMkewSwjCoP6SinbCZv7lRs=
@@ -5578,7 +9238,7 @@ Name: base/res/xml/rn_dev_preferences.xml
 SHA-256-Digest: Jxw3gD9eW67n09FGMNnNVFQkB9yE/AS2eua6FTviHjU=
 
 Name: base/resources.pb
-SHA-256-Digest: y6gaDEQxKkFLvIL4IOlCBviELvQ9feqDy2ZOrUkGNhY=
+SHA-256-Digest: 7aw6Nx8fMhlXEPM2yNRMSqZCIXRJG/OqIWxw0sWrPpY=
 
 Name: base/root/DebugProbesKt.bin
 SHA-256-Digest: A9nW74eQUKa8Q5nB7XNmogfYD43gVCD2dviCygX3QDc=
